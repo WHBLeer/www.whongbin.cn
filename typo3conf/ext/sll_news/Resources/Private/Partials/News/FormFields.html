@@ -1,0 +1,83 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label class="col-form-label">标题<font color="red"> *</font></label>
+				<f:form.textfield property="title" class="form-control" placeholder="新闻标题" />
+			</div>
+		</div>
+		<div class="col-md-5">
+			<div class="form-group">
+				<label class="col-form-label">作者<font color="red"> *</font></label>
+				<f:form.textfield property="author" class="form-control" placeholder="文章作者" />
+			</div>
+		</div>
+		<div class="col-md-1">
+			<div class="form-group">
+				<label class="col-form-label">置顶</label>
+				<div>
+					<f:if condition="{news.istopnews}">
+						<f:then><f:form.checkbox property="istopnews" id="istopnews" checked="checked" value="1" /></f:then>
+						<f:else><f:form.checkbox property="istopnews" id="istopnews" value="1" /></f:else>
+					</f:if>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label class="col-form-label">发布时间<font color="red"> *</font></label>
+				<f:form.textfield property="datetime" value="{news.datetime->f:format.date(format: 'Y-m-d H:i')}" class="form-control flexDateValue" placeholder="Y-m-d H:i" />
+				<script>
+					var date=new FlexDate({
+						e: '.flexDateValue',
+						format: 'yyyy-MM-dd HH:mm',
+						value: "<f:format.raw>{news.datetime->f:format.date(format: 'Y-m-d H:i')}</f:format.raw>",
+						clearBtn: true,
+						todayBtn: true,
+						confirmBtn: true,
+						min:'2010-01-01',
+						max:new Date(),
+						zIndex:999,
+						bindClick:true,
+						confirm: function (value) {}
+					});
+				</script>
+			</div>
+		</div>
+		<div class="col-md-6">
+
+			<div class="form-group">
+				<label class="col-form-label">类别<font color="red">*</font></label>
+				<f:form.select property="categories" options="{categories}" optionValueField="uid" optionLabelField="title" prependOptionLabel="--请选择--"  class="select2 form-control select2-multiple input-sm" multiple="multiple" id="multipleSelect"  />
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-form-label">封面图 <a href="#album-model" data-uk-modal
+				class="{f:if(condition: {news.album}, then: '', else: 'hide')}" id="showModel">预览</a>
+		</label>
+		<div class="custom-file mb-3">
+			<input class="custom-file-input" id="exampleInputFile" type="file" name="tx_sllnews_news[album]"
+				accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
+			<label class="custom-file-label" for="customFile" id="albumLabel">
+				<f:if condition="{news.album}">
+					<f:then>{news.album}</f:then>
+					<f:else>选择图片</f:else>
+				</f:if>
+			</label>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-form-label">简介</label>
+		<f:form.textarea property="teaser" cols="80" rows="2" class="form-control" />
+	</div>
+
+	<div class="form-group">
+		<label class="col-form-label">内容<font color="red"> *</font></label>
+		<div id="whongbin-content-textarea"><f:form.textarea style="display: none;" property="bodytext" /></div>
+		<f:form.textfield name="ckRichText" id="ckRichText" style="display:none" />
+		
+	</div>
+</html>

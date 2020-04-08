@@ -1,0 +1,66 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<f:render partial="Messages" arguments="{flashMessages}" />
+
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<div class="card topaction">
+				<div class="topaction-left">
+					<f:link.action action="new">New Type</f:link.action>
+				</div>
+				<div class="topaction-right">
+					<div class="btn-group">
+						<f:form action="list" name="search" object="{search}">
+						<div class="input-group">
+							<div class="input-icon">
+								<input type="hidden" name="id" value="{pageUid}" />
+								<f:form.textfield name="keyword" value="{keyword}" class="form-control  input-xs" placeholder="请输入查询条件" />
+							</div>
+							<span class="input-group-btn">
+								<f:form.submit class="btn btn-success btn-sm" value="搜" />
+							</span>
+						</div>
+						</f:form>
+					</div>
+				</div>
+				<div class="card-body">
+					<f:widget.paginate objects="{types}" as="typePagination"  configuration="{settings.paginate}">
+						<table class="table table-hover mb-0">
+							<thead>
+								<tr>
+									<th><f:translate key="tx_sllfriendlink_domain_model_type.title" /></th>
+									<th><f:translate key="tx_sllfriendlink_domain_model_type.slug" /></th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody> 
+								<f:for each="{typePagination}" as="type" iteration="itemIteration">
+									<tr>
+									<td>{type.title}</td><td>{type.slug}</td>
+										<td>
+											<f:link.action action="show" class="btn btn-sm btn-default" arguments="{type : type}">查看</f:link.action>
+											<f:link.action action="edit" class="btn btn-sm btn-info" arguments="{type : type}">编辑</f:link.action>
+											<f:link.action action="delete" class="btn btn-sm btn-danger" arguments="{type : type}">删除</f:link.action>
+										</td>
+									</tr>
+								</f:for>
+							</tbody>
+						</table>
+					</f:widget.paginate>
+				</div>
+			</div>
+		</div>
+	</f:section>
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+   <file source-language="en" datatype="plaintext" original="messages" date="2017-11-27T17:38:32Z" product-name="timeline">
+      <header/>
+      <body>
+         <trans-unit id="extension.title">
+            <source>Create TimeLine</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent">
+            <source>TimeLine-Event</source>
+         </trans-unit>
+         
+         <trans-unit id="tx_timeline_domain_model_timelineevent.description">
+             <source>Create a TimeLine on your website</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_title">
+            <source>Title</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_event_title">
+            <source>Link to the Details</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_description">
+            <source>Description</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_start">
+            <source>Start-Date</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_end">
+            <source>End-Date</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_format">
+             <source>Date-Format</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_side">
+             <source>Direction</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_side.left">
+             <source>Left</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_side.right">
+             <source>Right</source>
+         </trans-unit>
+         
+         <trans-unit id="tx_timeline_domain_model_timeline">
+             <source>TimeLine</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.item_layout">
+             <source>Layout</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.item_year">
+             <source>Show the year only</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.item_color">
+             <source>Back-Color</source>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.item_fore_color">
+            <source>Font-Color</source>
+        </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.ts">
+             <source>From Typoscript</source>
+         </trans-unit>
+          <trans-unit id="tx_timeline_domain_model_timeline.order">
+              <source>Order</source>
+          </trans-unit>
+          <trans-unit id="tx_timeline_domain_model_timeline.order.asc">
+              <source>Ascending</source>
+          </trans-unit>
+          <trans-unit id="tx_timeline_domain_model_timeline.order.desc">
+              <source>Descending</source>
+          </trans-unit>
+          <trans-unit id="tx_timeline_domain_model_timeline.order.none">
+              <source>None</source>
+          </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.custom">
+             <source>Custom CSS-File</source>
+         </trans-unit>
+      </body>
+   </file>
+</xliff>

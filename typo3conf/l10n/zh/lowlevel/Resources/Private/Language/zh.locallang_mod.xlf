@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-09T06:02:32Z" product-name="lowlevel">
+		<header/>
+		<body>
+			<trans-unit id="mlang_labels_tabdescr" resname="mlang_labels_tabdescr" approved="no">
+				<source>Here you can check the integrity of the database tables configured by the $TCA. For instance all records must belong to a page record. In addition the existence of uploaded files attached to records (normally residing in uploads/* folders) are verified as well. You can also get a view of the total pagetree including deleted pages. Finally you've got access to a global database search facility.&lt;br /&gt;&lt;em&gt;Access for 'admin' users only!&lt;/em&gt;</source>
+				<target state="needs-translation">在這裡你可以檢查由$TCA設定的資料庫的可靠性。例如所有的記錄一定要屬於一個網頁記錄。加上附加於記錄上的上載檔案(一般存於uploads/*資料夾中)也會被檢查。你也可以檢視所有樹圖(包括己刪除的網頁)。最後你已有存取整體資料庫搜尋工具的權限。&lt;br/&gt;&lt;em&gt;只許「管理員」使用者使用!&lt;/em&gt;</target>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tablabel" resname="mlang_labels_tablabel" approved="yes">
+				<source>Database integrity check</source>
+				<target state="translated">資料庫可靠性檢查</target>
+			</trans-unit>
+			<trans-unit id="mlang_tabs_tab" resname="mlang_tabs_tab" approved="yes">
+				<source>DB check</source>
+				<target state="translated">DB檢查</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

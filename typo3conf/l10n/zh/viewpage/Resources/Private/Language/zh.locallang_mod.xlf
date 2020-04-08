@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-08T08:00:22Z" product-name="viewpage">
+		<header/>
+		<body>
+			<trans-unit id="mlang_labels_tabdescr" resname="mlang_labels_tabdescr">
+				<source>Shows the look of the current page and lets you edit the content directly.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="mlang_labels_tablabel" resname="mlang_labels_tablabel">
+				<source>View page</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="mlang_tabs_tab" resname="mlang_tabs_tab">
+				<source>View</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

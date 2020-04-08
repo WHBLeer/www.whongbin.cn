@@ -1,0 +1,34 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
+        subclasses {
+          Tx_SllFeUser_User = Sll\SllFeUser\Domain\Model\User
+          
+        }
+      }
+      TYPO3\CMS\Extbase\Domain\Model\FrontendUserGroup {
+        subclasses {
+          Tx_SllFeUser_Group = Sll\SllFeUser\Domain\Model\Group
+          
+        }
+      }
+      Sll\SllFeUser\Domain\Model\User {
+        mapping {
+          tableName = fe_users
+          recordType = 0
+        }
+      }
+
+      Sll\SllFeUser\Domain\Model\Group {
+        mapping {
+          tableName = fe_groups
+          recordType = 0
+        }
+      }
+
+    }
+  }
+}

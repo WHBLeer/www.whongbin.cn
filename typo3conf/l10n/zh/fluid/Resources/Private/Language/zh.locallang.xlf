@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-09T02:36:13Z" product-name="fluid">
+		<header/>
+		<body>
+			<trans-unit id="viewhelper.format.bytes.units" resname="viewhelper.format.bytes.units">
+				<source>B,KB,MB,GB,TB,PB,EB,ZB,YB</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="widget.pagination.first" resname="widget.pagination.first">
+				<source>first</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="widget.pagination.last" resname="widget.pagination.last">
+				<source>last</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="widget.pagination.next" resname="widget.pagination.next">
+				<source>next</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="widget.pagination.page" resname="widget.pagination.page">
+				<source>Page</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="widget.pagination.previous" resname="widget.pagination.previous">
+				<source>previous</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="widget.pagination.records" resname="widget.pagination.records">
+				<source>Records</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="widget.pagination.refresh" resname="widget.pagination.refresh">
+				<source>Refresh</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

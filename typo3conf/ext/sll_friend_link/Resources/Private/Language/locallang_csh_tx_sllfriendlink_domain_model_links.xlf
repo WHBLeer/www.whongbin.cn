@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-29T13:58:40Z" product-name="sll_friend_link">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>站点名称</source>
+			</trans-unit>
+			<trans-unit id="webmaster.description">
+				<source>站长名称</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>联系邮箱</source>
+			</trans-unit>
+			<trans-unit id="links.description">
+				<source>站点链接</source>
+			</trans-unit>
+			<trans-unit id="introduction.description">
+				<source>站点介绍</source>
+			</trans-unit>
+			<trans-unit id="icon.description">
+				<source>站点图标</source>
+			</trans-unit>
+			<trans-unit id="nofollow.description">
+				<source>nofollow</source>
+			</trans-unit>
+			<trans-unit id="type.description">
+				<source>链接分类</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

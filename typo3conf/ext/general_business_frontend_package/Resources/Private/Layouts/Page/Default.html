@@ -1,0 +1,19 @@
+<f:if condition="{SILENT}==1">
+    <style>
+        html {
+            -webkit-filter: grayscale(100%);
+            filter:progid:DXImageTransform.Microsoft.BasicImage(graysale=1);
+        }
+    </style>
+</f:if>
+<!-- Header -->
+<f:render partial="Header" arguments="{_all}" />
+<!-- /Header -->
+
+<!-- Main Content -->
+<f:render section="Main" />
+<!-- /Main Content -->
+
+<!-- Footer -->
+<f:render partial="Footer" arguments="{_all}" />
+<!-- /Footer -->

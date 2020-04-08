@@ -1,0 +1,98 @@
+﻿<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers" 
+      data-namespace-typo3-fluid="true">
+    <f:layout name="Default" />
+    <f:section name="content">
+        <f:if condition="{settings.situation}==0">
+            <div class="row align-items-stretch retro-layout-2">
+                <div class="col-md-4">
+                    <f:link.action pageUid="{settings.previewPid}" extensionName="news" pluginName="pi1" controller="News"
+                        action="detail" arguments="{news : newss.left.0}" class="h-entry mb-30 v-height gradient"
+                        style="background-image: url('{newss.left.0.coverimg}');">
+                        <div class="text">
+                            <h2>{newss.left.0.title}.</h2>
+                            <span class="date">{newss.left.0.datetime -> f:format.date(format: 'M d, Y')}</span>
+                        </div>
+                    </f:link.action>
+                    <f:link.action pageUid="{settings.previewPid}" extensionName="news" pluginName="pi1" controller="News"
+                        action="detail" arguments="{news : newss.left.1}" class="h-entry v-height gradient"
+                        style="background-image: url('{newss.left.1.coverimg}');">
+                        <div class="text">
+                            <h2>{newss.left.1.title}.</h2>
+                            <span class="date">{newss.left.1.datetime -> f:format.date(format: 'M d, Y')}</span>
+                        </div>
+                    </f:link.action>
+                </div>
+                <div class="col-md-4">
+                    <f:link.action pageUid="{settings.previewPid}" extensionName="news" pluginName="pi1" controller="News"
+                        action="detail" arguments="{news : newss.center}" class="h-entry img-5 h-100 gradient"
+                        style="background-image: url('{newss.center.coverimg}');">
+                        <div class="text">
+                            <div class="post-categories mb-3">
+                                <f:for each="{newss.center.categories}" as="category">
+                                    <span class="post-category bg-danger">{category.title}</span>
+                                </f:for>
+                            </div>
+                            <h2>{newss.center.title}.</h2>
+                            <span class="date">{newss.center.datetime -> f:format.date(format: 'M d, Y')}</span>
+                        </div>
+                    </f:link.action>
+                </div>
+                <div class="col-md-4">
+                    <f:link.action pageUid="{settings.previewPid}" extensionName="news" pluginName="pi1" controller="News"
+                        action="detail" arguments="{news : newss.right.0}" class="h-entry mb-30 v-height gradient"
+                        style="background-image: url('{newss.right.0.coverimg}');">
+                        <div class="text">
+                            <h2>{newss.right.0.title}</h2>
+                            <span class="date">{newss.right.0.datetime -> f:format.date(format: 'M d, Y')}</span>
+                        </div>
+                    </f:link.action>
+                    <f:link.action pageUid="{settings.previewPid}" extensionName="news" pluginName="pi1" controller="News"
+                        action="detail" arguments="{news : newss.right.1}" class="h-entry v-height gradient"
+                        style="background-image: url('{newss.right.1.coverimg}');">
+                        <div class="text">
+                            <h2>{newss.right.1.title}</h2>
+                            <span class="date">{newss.right.1.datetime -> f:format.date(format: 'M d, Y')}</span>
+                        </div>
+                    </f:link.action>
+                </div>
+            </div>
+        </f:if>
+        <f:if condition="{settings.situation}==1">
+            <div class="row mb-2">
+                <div class="col-12">
+                    <h2>Recent Posts</h2>
+                </div>
+            </div>
+            <sll:widget.paginateFe objects="{lists}" as="newssPagination" configuration="{settings.paginateFe}">
+                <div class="row">
+                    <f:for each="{newssPagination}" as="news" iteration="itemIteration">
+                        <div class="col-lg-4 mb-3">
+                            <div class="entry2">
+                                <div class="news-img">
+                                    <f:link.action pageUid="{settings.previewPid}" extensionName="news" pluginName="pi1" controller="News" action="detail" arguments="{news : news}"><img src="{news.coverlist}" alt="Image" class="img-fluid rounded"></f:link.action>
+                                </div>
+                                <div class="excerpt">
+                                    <f:for each="{news.categories}" as="category">
+                                        <span class="post-category text-white {news.tagclass} mb-1">{category.title}</span>
+                                    </f:for>
+                                    <h2><f:link.action pageUid="{settings.previewPid}" extensionName="news" pluginName="pi1" controller="News" action="detail" arguments="{news : news}">{news.title}.</f:link.action></h2>
+                                    <div class="post-meta align-items-center text-left clearfix">
+                                        <figure class="author-figure mb-0 mr-3 float-left"><img src="{news.authorimg}" alt="Image" class="img-fluid"></figure>
+                                        <span class="d-inline-block mt-1">By <a href="javascript:;">{news.author}</a></span>
+                                        <span>&nbsp;-&nbsp; {news.datetime -> f:format.date(format: 'M d, Y')}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+            </sll:widget.paginateFe>
+        </f:if>
+        <f:if condition="{settings.situation}==2">
+            
+        </f:if>
+    </f:section>
+
+
+</html>

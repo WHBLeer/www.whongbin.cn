@@ -1,0 +1,44 @@
+rootPageId: 1
+base: 'https://www.whongbin.cn/'
+languages:
+  -
+    title: 中文
+    enabled: true
+    languageId: '0'
+    base: /
+    typo3Language: ch
+    locale: zh_CN.UTF-8
+    iso-639-1: zh
+    navigationTitle: Chinese
+    hreflang: zh_cn
+    direction: ltr
+    flag: cn
+errorHandling: {  }
+routes: {  }
+baseVariants: {  }
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: .html
+    map:
+      .html: 0
+  NewsPlugin:
+    type: Extbase
+    extension: news
+    plugin: Pi1
+    routes:
+      - { routePath: '/page-{page}', _controller: 'News::list', _arguments: {'page': '@widget_0/currentPage'} }
+      - { routePath: '/tag-{tag_name}', _controller: 'News::list', _arguments: {'tag_name': 'overwriteDemand/tags'}}
+      - { routePath: '/{news_title}', _controller: 'News::detail', _arguments: {'news_title': 'news'} }
+      - { routePath: '/archive/{year}/{month}', _controller: 'News::archive' }
+    defaultController: 'News::list'
+    aspects:
+      news_title:
+        type: PersistedAliasMapper
+        tableName: 'tx_news_domain_model_news'
+        routeFieldName: 'path_segment'
+    defaults:
+      page: '0'
+    requirements:
+      page: '\d+'
+disableStaticFileCache: false

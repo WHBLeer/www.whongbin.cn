@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-09T01:22:18Z" product-name="core">
+		<header/>
+		<body>
+			<trans-unit id="colorpicker_black" resname="colorpicker_black">
+				<source>BLACK</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="colorpicker_colorValue" resname="colorpicker_colorValue">
+				<source>Selected Color</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="colorpicker_fromImage" resname="colorpicker_fromImage">
+				<source>Capture color from image (click on image)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="colorpicker_fromList" resname="colorpicker_fromList">
+				<source>Select HTML color name</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="colorpicker_fromMatrix" resname="colorpicker_fromMatrix">
+				<source>Select color from matrix (websafe colors)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="colorpicker_setClose" resname="colorpicker_setClose">
+				<source>Save and Close</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="colorpicker_title" resname="colorpicker_title">
+				<source>Color Picker</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="colorpicker_white" resname="colorpicker_white">
+				<source>WHITE</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_autosize" resname="forms_autosize">
+				<source>Auto size</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_checked" resname="forms_checked">
+				<source>Checked</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_cols" resname="forms_cols">
+				<source>Columns</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_config" resname="forms_config">
+				<source>Detailed configuration</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_default" resname="forms_default">
+				<source>Value</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_eform_formtype_mail" resname="forms_eform_formtype_mail">
+				<source>Send button label</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_eform_html_enabled" resname="forms_eform_html_enabled">
+				<source>HTML mode enabled</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_eform_recipient" resname="forms_eform_recipient">
+				<source>Recipient email</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_eform_subject" resname="forms_eform_subject">
+				<source>Subject</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_element" resname="forms_element">
+				<source>Element type</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_extra" resname="forms_extra">
+				<source>No Wrap</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_fieldName" resname="forms_fieldName">
+				<source>Field</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_label" resname="forms_label">
+				<source>Label</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_max" resname="forms_max">
+				<source>Max</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_multiple" resname="forms_multiple">
+				<source>Multiple</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_options" resname="forms_options">
+				<source>List options</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_preview" resname="forms_preview">
+				<source>Preview of element</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_refresh" resname="forms_refresh">
+				<source>Refresh without saving</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_required" resname="forms_required">
+				<source>Required</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_rows" resname="forms_rows">
+				<source>Rows</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_size" resname="forms_size">
+				<source>Size</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_special_eform" resname="forms_special_eform">
+				<source>Special configuration for mail forms</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_title" resname="forms_title">
+				<source>Forms wizard</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type" resname="forms_type">
+				<source>Type</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_check" resname="forms_type_check">
+				<source>Check box</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_file" resname="forms_type_file">
+				<source>File upload</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_hidden" resname="forms_type_hidden">
+				<source>Hidden value</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_input" resname="forms_type_input">
+				<source>Input field</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_label" resname="forms_type_label">
+				<source>Label</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_password" resname="forms_type_password">
+				<source>Password field</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_property" resname="forms_type_property">
+				<source>Property</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_radio" resname="forms_type_radio">
+				<source>Radio buttons</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_select" resname="forms_type_select">
+				<source>Selector box</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_submit" resname="forms_type_submit">
+				<source>Submit Button</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="forms_type_textarea" resname="forms_type_textarea">
+				<source>Text area</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_addColumn" resname="grid_addColumn">
+				<source>Add column</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_addRow" resname="grid_addRow">
+				<source>Add row</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_column" resname="grid_column">
+				<source>Column number</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_columnHelp" resname="grid_columnHelp">
+				<source>The column position defines in which area the content is rendered in the frontend.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_editCell" resname="grid_editCell">
+				<source>Edit cell</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_labelColumn" resname="grid_labelColumn">
+				<source>Column Number</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_labelName" resname="grid_labelName">
+				<source>Name</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_labelSave" resname="grid_labelSave">
+				<source>Save to cell</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_mergeCell" resname="grid_mergeCell">
+				<source>Combine with next cell</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_name" resname="grid_name">
+				<source>Name</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_nameHelp" resname="grid_nameHelp">
+				<source>Enter a name for the cell.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_notSet" resname="grid_notSet">
+				<source>not set</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_removeColumn" resname="grid_removeColumn">
+				<source>Remove column</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_removeRow" resname="grid_removeRow">
+				<source>Remove row</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_splitCell" resname="grid_splitCell">
+				<source>Split cell</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="grid_windowTitle" resname="grid_windowTitle">
+				<source>Set cell name and column number</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.accept" resname="imwizard.accept">
+				<source>Accept</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.aspect-ratio" resname="imwizard.aspect-ratio">
+				<source>Aspect ratio</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.cancel" resname="imwizard.cancel">
+				<source>Cancel</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.crop-height" resname="imwizard.crop-height">
+				<source>height</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.crop_variant.default" resname="imwizard.crop_variant.default">
+				<source>Default</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.crop_variant.social" resname="imwizard.crop_variant.social">
+				<source>Social media</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.crop-width" resname="imwizard.crop-width">
+				<source>width</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.image-manipulation" resname="imwizard.image-manipulation">
+				<source>Image manipulation</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.image-title" resname="imwizard.image-title">
+				<source>Title</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.no-image-dimensions" resname="imwizard.no-image-dimensions">
+				<source>No image dimensions could be determined.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.no-image-dimensions-message" resname="imwizard.no-image-dimensions-message">
+				<source>Unable to provide image manipulation, because original dimensions of the image are unknown.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.open-editor" resname="imwizard.open-editor">
+				<source>Open Editor</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.original-dimensions" resname="imwizard.original-dimensions">
+				<source>Original dimensions</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.preview" resname="imwizard.preview">
+				<source>Preview</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.ratio.1_1" resname="imwizard.ratio.1_1">
+				<source>1:1</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.ratio.16_9" resname="imwizard.ratio.16_9">
+				<source>16:9</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.ratio.191_1" resname="imwizard.ratio.191_1">
+				<source>1.91:1</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.ratio.3_2" resname="imwizard.ratio.3_2">
+				<source>3:2</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.ratio.4_3" resname="imwizard.ratio.4_3">
+				<source>4:3</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.ratio.free" resname="imwizard.ratio.free">
+				<source>Free</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.reset" resname="imwizard.reset">
+				<source>Reset</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.selection" resname="imwizard.selection">
+				<source>Selected Size</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.set-aspect-ratio" resname="imwizard.set-aspect-ratio">
+				<source>Set Aspect Ratio</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="imwizard.supported-types-message" resname="imwizard.supported-types-message">
+				<source>Image manipulation is only available for supported types</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="localizationStateSelector.customValue" resname="localizationStateSelector.customValue">
+				<source>Custom value</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="localizationStateSelector.defaultLanguageValue" resname="localizationStateSelector.defaultLanguageValue">
+				<source>Value of default language</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="localizationStateSelector.header" resname="localizationStateSelector.header">
+				<source>Translation behavior</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="localizationStateSelector.sourceLanguageValue" resname="localizationStateSelector.sourceLanguageValue">
+				<source>Value of %1s language</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="rte_undoLastChange" resname="rte_undoLastChange">
+				<source>Undo/Redo last change (%s ago)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_addColumn" resname="table_addColumn">
+				<source>Add column to the right</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_addRow" resname="table_addRow">
+				<source>Add row below</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_bottom" resname="table_bottom">
+				<source>Move to bottom</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_down" resname="table_down">
+				<source>Move down</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_end" resname="table_end">
+				<source>Move to last column</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_left" resname="table_left">
+				<source>Move left</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_noData" resname="table_noData">
+				<source>No table,field or uid given</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_removeColumn" resname="table_removeColumn">
+				<source>Remove column</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_removeRow" resname="table_removeRow">
+				<source>Remove row</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_right" resname="table_right">
+				<source>Move right</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_smallFields" resname="table_smallFields">
+				<source>Small fields</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_start" resname="table_start">
+				<source>Move to first column</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_title" resname="table_title">
+				<source>Table wizard</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_top" resname="table_top">
+				<source>Move to top</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="table_up" resname="table_up">
+				<source>Move up</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop" resname="tsprop">
+				<source>TypoScript property lookup</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop_addToList" resname="tsprop_addToList">
+				<source>Add to list...</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop_mixer_indent" resname="tsprop_mixer_indent">
+				<source>Indent +2</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop_mixer_outdent" resname="tsprop_mixer_outdent">
+				<source>Outdent -2</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop_mixer_transfer" resname="tsprop_mixer_transfer">
+				<source>Transfer &amp; Close</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop_mixer_wrap" resname="tsprop_mixer_wrap">
+				<source>Wrap</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop_prefix" resname="tsprop_prefix">
+				<source>Object prefix</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop_title" resname="tsprop_title">
+				<source>Object title</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop_tsconfig" resname="tsprop_tsconfig">
+				<source>TSconfig online</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsprop_TSref" resname="tsprop_TSref">
+				<source>TSref online</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

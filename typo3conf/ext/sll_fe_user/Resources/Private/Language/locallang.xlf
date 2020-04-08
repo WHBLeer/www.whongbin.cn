@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-29T14:50:00Z" product-name="sll_fe_user">
+		<header/>
+		<body>
+			<trans-unit id="tx_sllfeuser_domain_model_user">
+				<source>用户</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.name">
+				<source>名称</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.usergroup">
+				<source>所在组</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.username">
+				<source>用户名</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.email">
+				<source>邮箱</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.telephone">
+				<source>电话</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.openid">
+				<source>Openid</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.headimgurl">
+				<source>微信头像</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.nickname">
+				<source>昵称</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.crdate">
+				<source>加入时间</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_user.tstamp">
+				<source>更新时间</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfeuser_domain_model_group">
+				<source>用户组权限</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

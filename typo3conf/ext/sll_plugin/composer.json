@@ -1,0 +1,24 @@
+{
+    "name": "sll/sll-plugin",
+    "type": "typo3-cms-extension",
+    "description": "\u96c6\u6210\u4e00\u4e9b\u5e38\u7528\u63d2\u4ef6",
+    "authors": [],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sll\\SllPlugin\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sll\\SllPlugin\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "sll_plugin": "self.version",
+        "typo3-ter/sll-plugin": "self.version"
+    }
+}

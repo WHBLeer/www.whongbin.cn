@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-09T00:09:46Z" product-name="backend">
+		<header/>
+		<body>
+			<trans-unit id="addMoreLines" resname="addMoreLines">
+				<source>Add more lines</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="canNotCreateNew.message" resname="canNotCreateNew.message">
+				<source>Sorry, you are not allowed to create new subpages to this page due to access restrictions.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="canNotCreateNew.title" resname="canNotCreateNew.title">
+				<source>Insufficient permissions</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="create" resname="create">
+				<source>Create pages</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="hidePages" resname="hidePages">
+				<source>Hide new pages</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="hidePagesInMenus" resname="hidePagesInMenus">
+				<source>Hide new pages in menus</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="listEnd" resname="listEnd">
+				<source>Place new pages after the existing subpages</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="newPage" resname="newPage">
+				<source>Page</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="newSubPages" resname="newSubPages">
+				<source>New page structure</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="noPagesCreated.message" resname="noPagesCreated.message">
+				<source>No pages were created.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="noPagesCreated.title" resname="noPagesCreated.title">
+				<source>No pages added</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="pagesCreated.message" resname="pagesCreated.message">
+				<source>The pages were created successfully.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="pagesCreated.title" resname="pagesCreated.title">
+				<source>Pages added</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="reset" resname="reset">
+				<source>Clear fields</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="title" resname="title">
+				<source>Create multiple pages</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

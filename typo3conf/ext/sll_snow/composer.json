@@ -1,0 +1,29 @@
+{
+    "name": "sll/sll-snow",
+    "type": "typo3-cms-extension",
+    "description": "\u96ea\u82b1\u6548\u679c",
+    "authors": [
+        {
+            "name": "\u4e09\u91cc\u6797",
+            "role": "Developer"
+        }
+    ],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sll\\SllSnow\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sll\\SllSnow\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "sll_snow": "self.version",
+        "typo3-ter/sll-snow": "self.version"
+    }
+}

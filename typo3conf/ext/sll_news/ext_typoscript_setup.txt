@@ -1,0 +1,47 @@
+config.tx_extbase{
+
+    persistence.classes {
+    
+		Tx_News_Domain_Model_Category {
+			mapping {
+				tableName = sys_category
+				columns {
+					parent.mapOnProperty = parentcategory
+				}
+			}
+		}
+		
+        Sll\SllNews\Domain\Model\Category {
+            mapping {
+                tableName = sys_category
+                columns {
+                    parent.mapOnProperty = parentcategory
+                }
+            }
+        }
+        
+        Sll\SllNews\Domain\Model\News {
+            mapping {
+                tableName = tx_news_domain_model_news
+            }
+        }
+        
+        Sll\SllNews\Domain\Model\FileReference {
+            mapping {
+                tableName = sys_file_reference
+            }
+        }
+        
+        Sll\SllNews\Domain\Model\FrontendUser{
+            mapping {
+                tableName = fe_users
+            }
+        }
+    }
+}
+
+plugin.tx_sllnews{   
+    objects {
+		TYPO3\CMS\Extbase\Domain\Model\FileReference.className = Sll\SllNews\Domain\Model\FileReference
+	}
+}

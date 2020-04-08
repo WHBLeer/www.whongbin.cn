@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-31T11:54:28Z" product-name="sll_timeline">
+		<header/>
+		<body>
+			<trans-unit id="tx_slltimeline_domain_model_event">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="tx_slltimeline_domain_model_event.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_slltimeline_domain_model_event.event_link">
+				<source>Event Link</source>
+			</trans-unit>
+			<trans-unit id="tx_slltimeline_domain_model_event.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_slltimeline_domain_model_event.start_date">
+				<source>Start Date</source>
+			</trans-unit>
+			<trans-unit id="tx_slltimeline_domain_model_event.end_date">
+				<source>End Date</source>
+			</trans-unit>
+			<trans-unit id="tx_slltimeline_domain_model_event.format">
+				<source>Format</source>
+			</trans-unit>
+			<trans-unit id="tx_slltimeline_domain_model_event.side">
+				<source>Side</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

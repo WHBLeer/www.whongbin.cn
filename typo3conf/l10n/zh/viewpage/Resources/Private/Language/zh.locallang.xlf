@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-08T08:00:22Z" product-name="viewpage">
+		<header/>
+		<body>
+			<trans-unit id="automatic" resname="automatic">
+				<source>Automatic</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="autoSize" resname="autoSize">
+				<source>Auto Size</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="computer" resname="computer">
+				<source>Computer</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="custom" resname="custom">
+				<source>Custom</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="customWidth" resname="customWidth">
+				<source>Custom Size</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="desktop" resname="desktop">
+				<source>Desktop</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="language" resname="language">
+				<source>Language</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="maximized" resname="maximized">
+				<source>Maximized</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="mobile" resname="mobile">
+				<source>Mobile</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="noValidPageSelected" resname="noValidPageSelected">
+				<source>Please select a page with a valid page type in the page tree on the left to preview the selected page in different screen resolutions.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="refreshPage" resname="refreshPage">
+				<source>Refresh page</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tablet" resname="tablet">
+				<source>Tablet</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="unidentified" resname="unidentified">
+				<source>Unidentified</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="width" resname="width">
+				<source>Width</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

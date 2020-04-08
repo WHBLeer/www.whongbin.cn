@@ -1,0 +1,23 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-10-09 09:09:00
+ * @LastEditTime: 2019-10-09 09:19:43
+ * @LastEditors: Please set LastEditors
+ -->
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+    <!--
+	=====================
+		Partials/List/Index.html
+-->
+    <n:excludeDisplayedNews newsItem="{newsItem}" />
+    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="h-entry v-height gradient" style="background-image: url('{f:if(condition: {newsItem.album}, then: {newsItem.album}, else: {settings.defaultImage})}');">
+        <div class="text">
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            <h2>{newsItem.title}</h2>
+            <span class="date">{f:format.date(date:newsItem.datetime, format:'Y-m-d')}</span>
+        </div>
+    </n:link>
+</html>

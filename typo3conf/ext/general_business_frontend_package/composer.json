@@ -1,0 +1,19 @@
+{
+    "name": "yyy/general-business-frontend-package",
+    "type": "typo3-cms-extension",
+    "description": "一个适用于typo3 9.5.x的自定义前台模板",
+    "homepage": "https://www.whongbin.com",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5",
+        "typo3/cms-rte-ckeditor": "^9.5",
+        "typo3/cms-fluid-styled-content": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yyy\\GeneralBusinessFrontendPackage\\": "Classes/"
+        }
+    }
+}

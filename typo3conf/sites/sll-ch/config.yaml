@@ -1,0 +1,62 @@
+base: 'https://www.whongbin.cn/'
+baseVariants: {  }
+disableStaticFileCache: false
+errorHandling: {  }
+languages:
+  -
+    title: 中文
+    enabled: true
+    languageId: '0'
+    base: /
+    typo3Language: ch
+    locale: zh_CH.UTF-8
+    iso-639-1: zh
+    navigationTitle: 中文
+    hreflang: zh-ch
+    direction: ltr
+    flag: cn
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: .html
+    map:
+      .html: 0
+  NewsPlugin:
+    type: Extbase
+    extension: news
+    plugin: Pi1
+    routes:
+      -
+        routePath: '/page-{page}'
+        _controller: 'News::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/tag-{tag_name}'
+        _controller: 'News::list'
+        _arguments:
+          tag_name: overwriteDemand/tags
+      -
+        routePath: '/{news_title}'
+        _controller: 'News::detail'
+        _arguments:
+          news_title: news
+      -
+        routePath: '/archive/{year}/{month}'
+        _controller: 'News::archive'
+    defaultController: 'News::list'
+    aspects:
+      news_title:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: path_segment
+    defaults:
+      page: '0'
+    requirements:
+      page: \d+
+routes:
+  -
+    route: sitemap.xml
+    type: uri
+    source: 'https://www.whongbin.cn/?type=1533906435'

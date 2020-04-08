@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-09T01:22:17Z" product-name="core">
+		<header/>
+		<body>
+			<trans-unit id="LGL.address" resname="LGL.address">
+				<source>Address</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.allLanguages" resname="LGL.allLanguages">
+				<source>[All]</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.any_login" resname="LGL.any_login">
+				<source>Show at any login</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.author" resname="LGL.author">
+				<source>Author</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.baseStorage" resname="LGL.baseStorage">
+				<source>Storage</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.caption" resname="LGL.caption">
+				<source>Caption</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.category" resname="LGL.category">
+				<source>Category</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.city" resname="LGL.city">
+				<source>City</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.code" resname="LGL.code">
+				<source>CODE</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.company" resname="LGL.company">
+				<source>Company</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.country" resname="LGL.country">
+				<source>Country</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.creationDate" resname="LGL.creationDate">
+				<source>Created At</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.creationUserId" resname="LGL.creationUserId">
+				<source>Created By</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.default_value" resname="LGL.default_value">
+				<source>Default</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.description" resname="LGL.description">
+				<source>Description</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.disable" resname="LGL.disable">
+				<source>Disable</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.disabled" resname="LGL.disabled">
+				<source>Disabled</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.disableRTE" resname="LGL.disableRTE">
+				<source>Disable Rich Text Editor</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.email" resname="LGL.email">
+				<source>Email</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.enabled" resname="LGL.enabled">
+				<source>Enabled</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.endtime" resname="LGL.endtime">
+				<source>Stop</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.error" resname="LGL.error">
+				<source>Error!</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.external" resname="LGL.external">
+				<source>External URL</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.fax" resname="LGL.fax">
+				<source>Fax</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.fe_group" resname="LGL.fe_group">
+				<source>Access</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.first_name" resname="LGL.first_name">
+				<source>First name</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.folder" resname="LGL.folder">
+				<source>Folder</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.height" resname="LGL.height">
+				<source>Height</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.hidden" resname="LGL.hidden">
+				<source>Hide</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.hide_at_login" resname="LGL.hide_at_login">
+				<source>Hide at login</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.image" resname="LGL.image">
+				<source>Image</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.images" resname="LGL.images">
+				<source>Images</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.keywords" resname="LGL.keywords">
+				<source>Keywords (,)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.l18n_parent" resname="LGL.l18n_parent">
+				<source>Transl.Orig</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.language" resname="LGL.language">
+				<source>Language</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.lastlogin" resname="LGL.lastlogin">
+				<source>Last login</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.last_name" resname="LGL.last_name">
+				<source>Last name</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.layout" resname="LGL.layout">
+				<source>Layout</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.links" resname="LGL.links">
+				<source>Links</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.middle_name" resname="LGL.middle_name">
+				<source>Middle name</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.name" resname="LGL.name">
+				<source>Name</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.normal" resname="LGL.normal">
+				<source>Normal</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.note" resname="LGL.note">
+				<source>Note</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.parameters" resname="LGL.parameters">
+				<source>Parameters</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.phone" resname="LGL.phone">
+				<source>Phone</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.prependAtCopy" resname="LGL.prependAtCopy">
+				<source>(copy %s)</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.recursive" resname="LGL.recursive">
+				<source>Recursive</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.shortcut_page" resname="LGL.shortcut_page">
+				<source>Shortcut to page</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.startingpoint" resname="LGL.startingpoint">
+				<source>Startingpoint</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.starttime" resname="LGL.starttime">
+				<source>Start</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.subheader" resname="LGL.subheader">
+				<source>Subheader</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.text" resname="LGL.text">
+				<source>Text</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.timestamp" resname="LGL.timestamp">
+				<source>Last Modified</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.title" resname="LGL.title">
+				<source>Title</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.title_person" resname="LGL.title_person">
+				<source>Title</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.type" resname="LGL.type">
+				<source>Type</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.usergroups" resname="LGL.usergroups">
+				<source>__Usergroups:__</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.versionLabel" resname="LGL.versionLabel">
+				<source>Versioning Label</source>
+				<target/>
+				<note from="developer">This label is deprecated (not used anymore) since TYPO3v10</note>
+			</trans-unit>
+			<trans-unit id="LGL.visible" resname="LGL.visible">
+				<source>Visible</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.width" resname="LGL.width">
+				<source>Width</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.www" resname="LGL.www">
+				<source>www</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="LGL.zip" resname="LGL.zip">
+				<source>Zipcode</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

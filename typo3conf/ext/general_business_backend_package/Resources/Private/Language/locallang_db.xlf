@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-08-21UTC06:04:330">
+        <header>
+            <authorName>三里林</authorName>
+            <authorEmail>wanghongbin816@gmail.com</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="tx_general_business_backend_package_pi1.name" approved="yes">
+                <source>系统配置</source>
+            </trans-unit>
+            <trans-unit id="tx_general_business_backend_package_pi1.description" approved="yes">
+                <source>在通用后台使用的基本配置</source>
+            </trans-unit>
+            <trans-unit id="tx_general_business_backend_package_pi1.icon" approved="yes">
+                <source>菜单图标(Font Awesome 4.7.0)</source>
+            </trans-unit>
+            <trans-unit id="tx_general_business_backend_package_pi1.svg_icon" approved="yes">
+                <source>菜单图标(svg)</source>
+            </trans-unit>
+            <trans-unit id="tx_general_business_backend_package_pi2.name" approved="yes">
+                <source>内容管理</source>
+            </trans-unit>
+            <trans-unit id="tx_general_business_backend_package_pi2.description" approved="yes">
+                <source>继承News插件实现内容管理</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,39 @@
+#
+# BACKENDLAYOUT: MAIN
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            main {
+                title = LLL:EXT:general_business_backend_package/Resources/Private/Language/locallang_be.xlf:backend_layout.main
+                config {
+					backend_layout {
+                    
+                        colCount = 1
+				        rowCount = 2
+				        rows {
+							1 {
+								columns {
+									1 {
+										name = LLL:EXT:general_business_backend_package/Resources/Private/Language/locallang_be.xlf:backend_layout.column.header
+										colPos = 0
+									}
+								}
+							}
+				          	2 {
+				            	columns {
+				              		1 {
+				                		name = LLL:EXT:general_business_backend_package/Resources/Private/Language/locallang_be.xlf:backend_layout.column.normal
+				                		colPos = 1
+				              		}
+				            	}
+				          	}
+				          
+                        }
+                    }
+                }
+                #icon = EXT:general_business_backend_package/Resources/Public/Images/BackendLayouts/main.png
+            }
+        }
+    }
+}

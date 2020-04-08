@@ -1,0 +1,149 @@
+.post-content-body {
+    font-family: "Montserrat", "微软雅黑";
+    font-weight: 400;
+    font-size: 16px;
+    word-spacing: 1px;
+    color: #666;
+	margin: 0;
+	line-height: 1.6;
+	word-wrap: break-word;
+	padding: 9px 5px; 
+	background: #fff;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
+@media (min-width: 768px) {
+	.post-content-body {
+		padding: 29px 20px;
+	} 
+}
+.post-content-body h1, .post-content-body h2, .post-content-body h3, .post-content-body h4, .post-content-body h5, .post-content-body h6 {
+    font-weight: 400;
+    color: #444;
+}
+.post-content-body h1 {
+    font-size: 32px;
+    margin: 0 0 45px;
+}
+.post-content-body h2 {
+    position: relative;
+    font-size: 24px;
+    padding-left: 15px;
+}
+.post-content-body h3 {
+    font-size: 1.17em;
+    color: #f66;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+.post-content-body h4 {
+    margin: 15px 0;
+}
+.post-content-body ol, .post-content-body ul {
+	padding-left: 2em;
+	list-style-type: circle;
+}
+.post-content-body ol ol, .post-content-body ul ol, .post-content-body ol ul, .post-content-body ul ul {
+	list-style-type: decimal-leading-zero;
+    padding: 10px 45px;
+}
+.post-content-body ol ul ul, .post-content-body ul ul ul {
+  	list-style-type: decimal-leading-zero;
+}
+
+.post-content-body h2:before {
+    content: '';
+    width: 8px;
+    background: #f66;
+    position: absolute;
+    left: 0px;
+    height: 75%;
+    top: 12%;
+}
+.post-content-body blockquote {
+	margin: 1.5em .5em !important;
+    padding: 0 15px 0 !important;
+    border-left: 10px solid #e6e6e6 !important;
+    font-size: 14px !important;
+    font-style: unset !important;
+    background-image: linear-gradient(to right, #eee , #fafafa );
+}
+.post-content-body p {
+    line-height: 1.8em;
+}
+.post-content-body li {
+    line-height: 1.8em;
+}
+.post-content-body a {
+    text-decoration: none;
+    color: #f66;
+    border-bottom: 2px solid transparent;
+}
+.post-content-body a:hover {
+    color: #f33;
+    border-bottom-color: #f33;
+}
+.post-content-body img {
+	max-width: 100%;
+	max-height: 100%;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 10px #555;
+	box-shadow: 0 0 10px #555;
+}
+.post-content-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	word-break: normal;
+	word-break: keep-all;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.post-content-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+}
+.post-content-body table tr:nth-child(2n) {
+	background-color: #f8f8f8;
+}
+.post-content-body table th, .post-content-body table td {
+	padding: 6px 13px;
+	border: 1px solid #ddd;
+}
+.post-content-body pre {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+	font-size: 15px !important;
+}
+
+.post-content-body :not(pre) code,
+.post-content-body p code{
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	padding: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	color: #c7254e;
+    background-color: #f2f2f2;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.post-content-body :not(pre) code:before,
+.post-content-body :not(pre) code:after, 
+.post-content-body p code:before, 
+.post-content-body p code:after {
+	letter-spacing: -0.2em;
+	content: "\00a0";
+}
+.post-content-body strong {
+	font-weight: bold;
+}
+.post-content-body em {
+	font-style: italic;
+}
+.post-content-body del {
+	text-decoration: line-through;
+}

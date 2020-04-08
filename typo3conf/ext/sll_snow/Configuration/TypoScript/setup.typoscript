@@ -1,0 +1,41 @@
+plugin.tx_sllsnow_snow.settings.desktoponly = {$plugin.tx_sllsnow_snow.settings.desktoponly}
+plugin.tx_sllsnow_snow.settings.flackcount = {$plugin.tx_sllsnow_snow.settings.flackcount}
+plugin.tx_sllsnow_snow.settings.flackimg = {$plugin.tx_sllsnow_snow.settings.flackimg}
+plugin.tx_sllsnow_snow.settings.flackcolor = {$plugin.tx_sllsnow_snow.settings.flackcolor}
+plugin.tx_sllsnow_snow.settings.minflacksize = {$plugin.tx_sllsnow_snow.settings.minflacksize}
+plugin.tx_sllsnow_snow.settings.maxflacksize = {$plugin.tx_sllsnow_snow.settings.maxflacksize}
+plugin.tx_sllsnow_snow.settings.minflackspeed = {$plugin.tx_sllsnow_snow.settings.minflackspeed}
+plugin.tx_sllsnow_snow.settings.maxflackspeed = {$plugin.tx_sllsnow_snow.settings.maxflackspeed}
+plugin.tx_sllsnow_snow.settings.roundflack = {$plugin.tx_sllsnow_snow.settings.roundflack}
+plugin.tx_sllsnow_snow.settings.shadowflack = {$plugin.tx_sllsnow_snow.settings.shadowflack}
+plugin.tx_sllsnow_snow.settings.disablesnow = {$plugin.tx_sllsnow_snow.settings.disablesnow}
+plugin.tx_sllsnow_snow.settings.jQuery = {$plugin.tx_sllsnow_snow.settings.jQuery}
+plugin.tx_sllsnow_snow.settings.activeflackimg = {$plugin.tx_sllsnow_snow.settings.activeflackimg}
+
+[globalVar = LIT:1 = {$plugin.tx_sllsnow_snow.settings.jQuery}]
+    page.includeJS.snowjqueryjs = typo3conf/ext/sll_snow/Resources/Public/js/jquery-2.1.0.js
+[global]
+page.includeCSS{
+    snowcss = typo3conf/ext/sll_snow/Resources/Public/css/styles.css
+}
+page.includeJSFooter{
+    snowjs = typo3conf/ext/sll_snow/Resources/Public/js/snowfall.jquery.js
+    # snowjs = typo3conf/ext/sll_snow/Resources/Public/js/snowfall.jquery.min.js
+    # snowjs = typo3conf/ext/sll_snow/Resources/Public/js/snowfall.min.js
+}
+
+page.111240 >
+page.111240 = USER
+page.111240{
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    pluginName = Snow
+    extensionName = SllSnow
+    controller = Snow
+    vendorName = Sll
+    action = index
+    switchableControllerActions{
+        Snow{
+            1 = index
+        }
+    }  
+}

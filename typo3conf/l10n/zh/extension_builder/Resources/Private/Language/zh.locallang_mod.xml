@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="zh" type="array">
+			<label index="mlang_tabs_tab"/>
+			<label index="mlang_labels_tabdescr"/>
+			<label index="mlang_Tx_ExtensionBuilder_domain_model_person_developer"/>
+			<label index="mlang_Tx_ExtensionBuilder_domain_model_person_product_manager"/>
+		</languageKey>
+  </data>
+</T3locallangExt>

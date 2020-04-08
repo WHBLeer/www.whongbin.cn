@@ -1,0 +1,297 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:general_business_frontend_package/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+
+
+################
+#### menu ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:general_business_frontend_package/Configuration/TypoScript/menu.typoscript">
+
+################
+#### rte ####
+################
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:general_business_frontend_package/Configuration/TypoScript/rte.typoscript">
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = fileadmin/static_file/img/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        # Template names will be generated automatically by converting the applied
+        # backend_layout, there is no explicit mapping necessary anymore.
+        #
+        # BackendLayout Key
+        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        #
+        # Backend Record
+        # uid: 1 -> 1.html
+        #
+        # Database Entry
+        # value: -1 -> None.html
+        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Home
+        }
+        templateRootPaths {
+            0 = EXT:general_business_frontend_package/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:general_business_frontend_package/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:general_business_frontend_package/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+
+        variables {
+            pageTitle = TEXT
+            pageTitle.data = page:title
+
+            pageSubTitle = TEXT
+            pageSubTitle.data = page:subtitle
+
+            pageId = TEXT
+            pageId.data = page:uid
+
+            siteTitle = TEXT
+            siteTitle.data = GLOBAL:TYPO3_CONF_VARS|SYS|sitename
+
+            BASEURL = TEXT
+            BASEURL.value = {$config.baseURL}
+
+            UUID = TEXT
+            UUID.data = TSFE:fe_user|user|uid
+
+            UEMAIL = TEXT
+            UEMAIL.data = TSFE:fe_user|user|email
+
+            USERNAME = TEXT
+            USERNAME.data = TSFE:fe_user|user|username
+
+            UNAME = TEXT
+            UNAME.data = TSFE:fe_user|user|name
+
+            UIMG = TEXT
+            UIMG.data = TSFE:fe_user|user|image
+
+            UGROUP = TEXT
+            UGROUP.data = TSFE:fe_user|user|usergroup
+
+            rootPage = TEXT
+            rootPage.data = leveluid:0
+
+            logoFile = TEXT
+            logoFile.value = {$page.logo.file}
+            logoHeight = TEXT
+            logoHeight.value = {$page.logo.height}
+            logoWidth = TEXT
+            logoWidth.value = {$page.logo.width}
+
+            bannerFile = TEXT
+            bannerFile.data = page:media
+
+            ICP = TEXT
+            ICP.data = GLOBAL:TYPO3_CONF_VARS|FE|icp
+            ICP.wrap =<a href="http://www.beian.miit.gov.cn/" target="_blank" >|</a>
+
+            themeCopyright = TEXT
+            themeCopyright.value = {$page.theme.copyright.enable}
+            themeCopyrightText = TEXT
+            themeCopyrightText.data = date:U
+            themeCopyrightText.strftime = %Y
+            themeCopyrightText.wrap =(Copyright)&nbsp;&copy;&nbsp; | &nbsp;<i class="icon-heart copyright"></i>&nbsp; <a href="{$config.baseURL}">{$config.headerComment}</a>
+
+            sys_language_uid = TEXT
+            sys_language_uid.data = TSFE:sys_language_uid
+
+            searchKeyword = TEXT
+            searchKeyword.data = GP:tx_indexedsearch|sword
+
+            SILENT = TEXT
+            SILENT.data = GLOBAL:TYPO3_CONF_VARS|FE|silent
+            
+            baidukey = TEXT
+            baidukey.data = GLOBAL:TYPO3_CONF_VARS|SEO|baidukey
+        }
+    }
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description = {$page.meta.description}
+        description {
+            override.field = description
+        }
+        author = {$page.meta.author}
+        author {
+            override.field = author
+        }
+        keywords = {$page.meta.keywords}
+        keywords {
+            override.field = keywords
+        }
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+        og:image {
+            attribute = property
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                maxItems = 1
+                renderObj = COA
+                renderObj {
+                    10 = IMG_RESOURCE
+                    10 {
+                        file {
+                            import.data = file:current:uid
+                            treatIdAsReference = 1
+                            width = 1280c
+                            height = 720c
+                        }
+                        stdWrap {
+                            typolink {
+                                parameter.data = TSFE:lastImgResourceInfo|3
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    includeCSSLibs {
+
+    }
+
+    includeCSS {
+        file0 = {$page.includePath.main}css/googlefont.css
+
+        file1 = {$page.includePath.main}fonts/icomoon/style.css
+        file2 = {$page.includePath.main}css/bootstrap.min.css
+        file3 = {$page.includePath.main}css/bootstrap/bootstrap-grid.css
+        file4 = {$page.includePath.main}css/magnific-popup.css
+        file5 = {$page.includePath.main}css/jquery-ui.css
+        file6 = {$page.includePath.main}css/owl.carousel.min.css
+        file7 = {$page.includePath.main}css/owl.theme.default.min.css
+        file8 = {$page.includePath.main}css/bootstrap-datepicker.css
+        file9 = {$page.includePath.main}fonts/flaticon/font/flaticon.css
+        file10 = {$page.includePath.main}css/aos.css
+
+        file11 = {$page.includePath.main}css/style.css
+        // file12 = https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+        file1 = {$page.includePath.main}js/jquery-3.3.1.min.js
+        // file2 = https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        file2 = {$page.includePath.main}js/jquery-migrate-3.0.1.min.js
+        file3 = {$page.includePath.main}js/jquery-ui.js
+        file4 = {$page.includePath.main}js/popper.min.js
+        file5 = {$page.includePath.main}js/bootstrap.min.js
+        file6 = {$page.includePath.main}js/owl.carousel.min.js
+        file7 = {$page.includePath.main}js/jquery.stellar.min.js
+        file8 = {$page.includePath.main}js/jquery.countdown.min.js
+        file9 = {$page.includePath.main}js/jquery.magnific-popup.min.js
+        file10 = {$page.includePath.main}js/bootstrap-datepicker.min.js
+        file11 = {$page.includePath.main}js/aos.js
+
+        file12 = {$page.includePath.main}js/main.js
+        // file13 = {$page.includePath.main}js/snow.js
+    }
+}
+
+
+################
+#### CONFIG ####
+################
+config {
+    absRefPrefix = auto
+    no_cache = {$config.no_cache}
+    uniqueLinkVars = 1
+    pageTitleFirst = 1
+    linkVars = L
+    prefixLocalAnchors = {$config.prefixLocalAnchors}
+    renderCharset = utf-8
+    metaCharset = utf-8
+    doctype = html5
+    removeDefaultJS = {$config.removeDefaultJS}
+    inlineStyle2TempFile = 1
+    admPanel = {$config.admPanel}
+    debug = 1
+    cache_period = 86400
+    sendCacheHeaders = {$config.sendCacheHeaders}
+    intTarget =
+    extTarget =
+    disablePrefixComment = 1
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    headerComment = {$config.headerComment}
+
+    // Disable Image Upscaling
+    noScaleUp = 1
+    // Compression and Concatenation of CSS and JS Files
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
+}

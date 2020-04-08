@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-10-11T16:10:15Z" product-name="SllNews">
+		<header/>
+		<body>
+			<trans-unit id="tx_news_domain_model_news">
+				<source>SllNews</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.islike">
+				<source>islike</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.dislike">
+				<source>dislike</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.reading">
+				<source>Reading</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.album">
+				<source>Album</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model_news.annexs">
+				<source>Annexs</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model__tag">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model__tag.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model__tag.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_news_domain_model__tag.parent">
+				<source>Parent</source>
+			</trans-unit>
+			<trans-unit id="tx_sllnews_news.name">
+				<source>文章管理</source>
+			</trans-unit>
+			<trans-unit id="tx_sllnews_news.description">
+				<source>网站后台文章管理 增、删、改、查</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

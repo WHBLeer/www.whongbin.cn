@@ -1,0 +1,216 @@
+#######################
+#### LANGUAGE MENU ####
+#######################
+lib.language = COA
+lib.language {
+    ###################################################
+    #### EXAMPLE FOR TYPOSCRIPT LANGUAGE OVERRIDES ####
+    #### its not needed in this example            ####
+    ###################################################
+    10 = TEXT
+    10 {
+        value = CH
+        value.lang.en = EN
+        wrap = <a href="#" class="dropdown-toggle" data-toggle="dropdown">|</a>
+    }
+
+    20 = HMENU
+    20 {
+        wrap = <ul class="dropdown-menu">|</ul>
+        addQueryString = 1
+        addQueryString.exclude = id, L, cHash
+        special = language
+        special.value = 0,1
+        special.normalWhenNoLanguage = 0
+        1 = TMENU
+        1 {
+            noBlur = 1
+            NO = 0 #set Current language
+            NO {
+                allWrap = <li>|</li>|*|<li>|</li>|*|<li class="last">|</li>
+                stdWrap.setCurrent = CH || EN
+                stdWrap.current = 1
+            }
+
+            #### NO TRANSLATION AVAILABLE STATES ####
+            #USERDEF1 < .NO
+            #USERDEF1 {
+            #    linkWrap = |
+            #    doNotShowLink = 1
+            #}
+        }
+    }
+}
+
+####################
+#### NAVIGATION ####
+####################
+lib.navigation.main = COA
+lib.navigation.main {
+    10 = HMENU
+    10 {
+        1 = TMENU
+        1 {
+            expAll = 1
+            noBlur = 1
+            wrap =<ul class="metismenu mm-show" id="side-menu">|</ul>
+            # normal 一级
+            NO = 1
+            NO {
+                ATagTitle.field = abstract // description // title
+                ATagBeforeWrap = 1
+                wrapItemAndSub = <li>|</li>
+                wrapItemAndSub.insertData = 1                
+                stdWrap.dataWrap = <i class="{field:icon}"></i><span>|</span>
+                ATagParams.dataWrap = class="waves-effect"
+            }
+            # active 一级选中
+            ACT < .NO
+            ACT {
+                wrapItemAndSub = <li>|</li>
+                stdWrap.dataWrap = <i class="{field:icon}"></i><span>|</span>
+                ATagParams.dataWrap = class="waves-effect mm-active"
+            }
+
+            # normal 二级父级
+            IFSUB < .NO
+            IFSUB {
+                wrapItemAndSub = <li>|</li>
+                stdWrap.dataWrap = <i class="{field:icon}"></i><span>|</span><span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                ATagParams.dataWrap = class="waves-effect no-link" aria-expanded="true"
+                ATagBeforeWrap = 1
+            }
+            # active 二级父级选中
+            ACTIFSUB < .ACT
+            ACTIFSUB {
+                wrapItemAndSub = <li class="mm-active">|</li>
+                stdWrap.dataWrap = <i class="{field:icon}"></i><span>|</span><span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                ATagParams.dataWrap = class="waves-effect no-link" aria-expanded="true"
+            }
+            stdWrap.debugData=1
+        }
+        
+        # 二级菜单
+        2 < .1
+        2 {
+            wrap = |
+            stdWrap.dataWrap = <ul class="submenu mm-collapse mm-show" >|</ul>
+            NO = 1
+            NO {
+                wrapItemAndSub = <li>|</li>
+                stdWrap.wrap = |
+                stdWrap.htmlSpecialChars = 1
+                ATagBeforeWrap = 1
+                ATagTitle.field = title
+            }
+            ACT < .NO
+            ACT {
+                wrapItemAndSub = <li>|</li>
+                ATagParams.dataWrap = class="mm-active"
+            }
+            IFSUB = 1
+            IFSUB {
+                wrapItemAndSub = <li>|</li>
+            }
+            ACTIFSUB = 1
+            ACTIFSUB {
+                wrapItemAndSub = <li>|</li>
+                ATagParams.dataWrap = class="mm-active"
+            }
+        }
+    }
+}
+
+#######################
+#### SUBNAVIGATION ####
+#######################
+lib.navigation.subnavigation = COA
+lib.navigation.subnavigation {
+    10 = HMENU
+    10 {
+        entryLevel = 1
+        1 = TMENU
+        1 {
+            wrap = <ul class="tabs-menu">|</ul>
+            expAll = 1
+            noBlur = 1
+            NO = 1
+            NO {
+                ATagTitle.field = abstract // description // title
+                allWrap = <li>|</li>
+                stdWrap.innerWrap = <span> </span>|
+                #wrapItemAndSub = <li>|</li>
+                #stdWrap.case = upper
+            }
+            ACT < .NO
+            ACT {
+                ATagParams = class="active"
+            }
+
+            CUR < .ACT
+        }
+    }
+}
+
+####################
+#### BREADCRUMB ####
+####################
+lib.navigation.breadcrumb = COA
+lib.navigation.breadcrumb { 
+    10 = HMENU
+    10 {
+        special = rootline
+        special.range = 0|-1
+        includeNotInMenu = 1
+        1 = TMENU
+        1 {
+            expAll = 1
+            noBlur = 1
+            NO = 1
+            NO {
+                ATagTitle.field = abstract // description // title
+                ATagBeforeWrap = 1
+                wrapItemAndSub = <li class="breadcrumb-item">|</li>
+                wrapItemAndSub.insertData = 1                
+                ATagParams.dataWrap = class="breadcrumb-link"
+            }
+            # active 一级选中
+            ACT < .NO
+            ACT {
+                wrapItemAndSub = <li class="breadcrumb-item active">|</li>
+                stdWrap.dataWrap = <i class="{field:icon}"></i> <font style="vertical-align: inherit;">|</font>
+            }
+        }
+    }
+}
+
+#[treeLevel = 0] || [treeLevel = 1]
+#lib.navigation.breadcrumb >
+#[end]
+
+##############
+### FOOTER ###
+##############
+lib.navigation.footer = COA
+lib.navigation.footer {
+    10 = HMENU
+    10 {
+        special = directory
+        special.value = 12
+        1 = TMENU
+        1 {
+            noBlur = 1
+            wrap =
+            NO {
+                allWrap = <li>|&#32;&#124;</li>|*|<li>&#32;|&#32;&#124;</li>|*|<li>&#32;|</li>
+                ATagParams.dataWrap = title='{field:title}'
+                stdWrap.htmlSpecialChars = 1
+            }
+
+            ACT < .NO
+            ACT = 1
+            ACT.ATagParams.dataWrap := appendString(class='current')
+            #ACT.linkWrap = <li class="current">|&nbsp;&nbsp;&#124;</li>|*||*|<li class="current">|</li>
+        }
+    }
+}

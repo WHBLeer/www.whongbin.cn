@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2011-10-17T20:22:37Z" product-name="sys_note" target-language="zh">
+    <header/>
+    <body>
+      <trans-unit id=".description" xml:space="preserve" approved="yes">
+        <source>Internal reminder note attached to a page.</source>
+      <target state="translated">放置於一個網頁的內部提示</target><alt-trans xml:space="preserve" origin="comprock"><target>網頁內部的提示</target></alt-trans></trans-unit>
+      <trans-unit id=".details" xml:space="preserve" approved="yes">
+        <source>This provides a simple way to attach informative notes to a page regarding backend-related issues. Use it as you like for reminders, instructions, etc.</source>
+      <target state="translated">這提供一個簡易的方法去附加與後勤有關的指示到一個網頁上。你可以用作提示或指示等用途</target></trans-unit>
+      <trans-unit id="_.seeAlso" xml:space="preserve">
+        <source>pages</source>
+      <target/><alt-trans xml:space="preserve" origin="comprock"><target>網頁</target></alt-trans></trans-unit>
+      <trans-unit id="category.description" xml:space="preserve" approved="yes">
+        <source>Select a category which describes the character of the note.</source>
+      <target state="translated">選擇一個類別來描述告示的性質</target></trans-unit>
+      <trans-unit id="subject.description" xml:space="preserve" approved="yes">
+        <source>Enter a title for the note.</source>
+      <target state="translated">輸入告示的標題</target></trans-unit>
+      <trans-unit id="message.description" xml:space="preserve" approved="yes">
+        <source>This is the note itself.</source>
+      <target state="translated">告示的內容</target></trans-unit>
+      <trans-unit id="author.description" xml:space="preserve" approved="yes">
+        <source>Enter your name.</source>
+      <target state="translated">輸入你的名字</target></trans-unit>
+      <trans-unit id="email.description" xml:space="preserve" approved="yes">
+        <source>Enter your email address.</source>
+      <target state="translated">輸入你的電郵地址</target></trans-unit>
+      <trans-unit id="personal.description" xml:space="preserve" approved="yes">
+        <source>Check this if you don't want other users to see this note.</source>
+      <target state="translated">請檢查，假如你不想其他使用者看見這告示</target></trans-unit>
+    </body>
+  </file>
+</xliff>

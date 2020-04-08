@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-03-31T11:54:28Z" product-name="sll_timeline">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>标题</source>
+			</trans-unit>
+			<trans-unit id="event_link.description">
+				<source>事件链接</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>事件</source>
+			</trans-unit>
+			<trans-unit id="start_date.description">
+				<source>开始事件</source>
+			</trans-unit>
+			<trans-unit id="end_date.description">
+				<source>结束事件</source>
+			</trans-unit>
+			<trans-unit id="format.description">
+				<source>格式化</source>
+			</trans-unit>
+			<trans-unit id="side.description">
+				<source>侧</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

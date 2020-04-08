@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-09T01:22:17Z" product-name="core">
+		<header/>
+		<body>
+			<trans-unit id="about" resname="about">
+				<source>About</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="and" resname="and">
+				<source>and</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="ascending" resname="ascending">
+				<source>Ascending</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="back" resname="back">
+				<source>Back</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="byteSizeUnits" resname="byteSizeUnits">
+				<source> B| KB| MB| GB</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="cancel" resname="cancel">
+				<source>Cancel</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="category" resname="category">
+				<source>Category</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="close" resname="close">
+				<source>Close</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="delete" resname="delete">
+				<source>Delete</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="descending" resname="descending">
+				<source>Descending</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="details" resname="details">
+				<source>Details</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="disable" resname="disable">
+				<source>Disable</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="disabled" resname="disabled">
+				<source>Disabled</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="down" resname="down">
+				<source>Down</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="download" resname="download">
+				<source>Download</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="edit" resname="edit">
+				<source>Edit</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editField" resname="editField">
+				<source>Edit field</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="editFile" resname="editFile">
+				<source>Edit file</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="enable" resname="enable">
+				<source>Enable</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="enabled" resname="enabled">
+				<source>Enabled</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="file" resname="file">
+				<source>File</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="files" resname="files">
+				<source>Files</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="first" resname="first">
+				<source>First</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="folder" resname="folder">
+				<source>Folder</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="from" resname="from">
+				<source>From</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="go" resname="go">
+				<source>Go</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="goTo" resname="goTo">
+				<source>Go to</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="help" resname="help">
+				<source>Help</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="item" resname="item">
+				<source>Item</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="items" resname="items">
+				<source>Items</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="last" resname="last">
+				<source>Last</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="left" resname="left">
+				<source>Left</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="login" resname="login">
+				<source>Login</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="logout" resname="logout">
+				<source>Logout</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="more" resname="more">
+				<source>More</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="move" resname="move">
+				<source>Move</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="new" resname="new">
+				<source>New</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="next" resname="next">
+				<source>Next</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="no" resname="no">
+				<source>No</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="ok" resname="ok">
+				<source>OK</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="open" resname="open">
+				<source>Open</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="page" resname="page">
+				<source>Page</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="pages" resname="pages">
+				<source>Pages</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="pleaseConfirm" resname="pleaseConfirm">
+				<source>Please confirm</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="previous" resname="previous">
+				<source>Previous</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="print" resname="print">
+				<source>Print</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="reload" resname="reload">
+				<source>Reload</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="right" resname="right">
+				<source>Right</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="save" resname="save">
+				<source>Save</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="saveAndClose" resname="saveAndClose">
+				<source>Save and close</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="saveAndCloseDoc" resname="saveAndCloseDoc">
+				<source>Save and close document</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="saveAndCreateNewDoc" resname="saveAndCreateNewDoc">
+				<source>Save and create new document</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="saveAndViewPage" resname="saveAndViewPage">
+				<source>Save and view page</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="search" resname="search">
+				<source>Search</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="send" resname="send">
+				<source>Send</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="start" resname="start">
+				<source>Start</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="stop" resname="stop">
+				<source>Stop</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="submit" resname="submit">
+				<source>Submit</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="to" resname="to">
+				<source>To</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="tsRef" resname="tsRef">
+				<source>TSref reference</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="undefined" resname="undefined">
+				<source>Undefined</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="up" resname="up">
+				<source>Up</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="upload" resname="upload">
+				<source>Upload</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="user" resname="user">
+				<source>User</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="users" resname="users">
+				<source>Users</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="view" resname="view">
+				<source>View</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="yes" resname="yes">
+				<source>Yes</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

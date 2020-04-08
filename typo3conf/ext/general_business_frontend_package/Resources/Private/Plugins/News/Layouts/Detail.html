@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:if condition="{settings.cssFile}">
+	<n:includeFile path="{settings.cssFile}" />
+</f:if>
+<script src="typo3conf/ext/general_business_frontend_package/Resources/Public/Main/editorMd/lib/marked.min.js"></script>
+<script src="typo3conf/ext/general_business_frontend_package/Resources/Public/Main/editorMd/lib/prettify.min.js"></script>
+<script src="typo3conf/ext/general_business_frontend_package/Resources/Public/Main/editorMd/lib/raphael.min.js"></script>
+<script src="typo3conf/ext/general_business_frontend_package/Resources/Public/Main/editorMd/lib/underscore.min.js"></script>
+<script src="typo3conf/ext/general_business_frontend_package/Resources/Public/Main/editorMd/lib/sequence-diagram.min.js"></script>
+<script src="typo3conf/ext/general_business_frontend_package/Resources/Public/Main/editorMd/lib/flowchart.min.js"></script>
+<script src="typo3conf/ext/general_business_frontend_package/Resources/Public/Main/editorMd/lib/jquery.flowchart.min.js"></script>
+<script src="typo3conf/ext/general_business_frontend_package/Resources/Public/Main/editorMd/editormd.min.js" type="text/javascript" charset="utf-8"></script>
+<f:render section="content" />
+</html>

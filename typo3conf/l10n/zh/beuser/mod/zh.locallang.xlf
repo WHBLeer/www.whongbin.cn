@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2011-10-17T20:22:32Z" product-name="beuser" target-language="zh">
+    <header/>
+    <body>
+      <trans-unit id="pageTitle" xml:space="preserve">
+        <source>Page title:</source>
+      <target/></trans-unit>
+      <trans-unit id="path" xml:space="preserve">
+        <source>Path:</source>
+      <target/></trans-unit>
+      <trans-unit id="user" xml:space="preserve">
+        <source>User:</source>
+      <target/></trans-unit>
+      <trans-unit id="group" xml:space="preserve">
+        <source>Group:</source>
+      <target/></trans-unit>
+      <trans-unit id="everybody" xml:space="preserve">
+        <source>Everybody:</source>
+      <target/></trans-unit>
+      <trans-unit id="thisUser" xml:space="preserve">
+        <source>This user:</source>
+      <target/></trans-unit>
+      <trans-unit id="mainGroup" xml:space="preserve">
+        <source>Main group:</source>
+      <target/></trans-unit>
+      <trans-unit id="editLock" xml:space="preserve">
+        <source>Edit lock prevents all editing</source>
+      <target/></trans-unit>
+      <trans-unit id="noReadAccess" xml:space="preserve">
+        <source>The user has no read-access to these DB-mounts!</source>
+      <target/></trans-unit>
+      <trans-unit id="live" xml:space="preserve">
+        <source>[LIVE]</source>
+      <target/></trans-unit>
+      <trans-unit id="defaultDraft" xml:space="preserve">
+        <source>[Default Draft]</source>
+      <target/></trans-unit>
+      <trans-unit id="notAccessible" xml:space="preserve">
+        <source>WARNING: Workspace Webmount page id not accessible:</source>
+      <target/></trans-unit>
+      <trans-unit id="compareUserSettings" xml:space="preserve">
+        <source>Compare User Settings</source>
+      <target/></trans-unit>
+      <trans-unit id="listUsersOnline" xml:space="preserve">
+        <source>List Users Online</source>
+      <target/></trans-unit>
+      <trans-unit id="backendUserAdministration" xml:space="preserve">
+        <source>Backend User Administration</source>
+      <target/></trans-unit>
+      <trans-unit id="filemounts" xml:space="preserve">
+        <source>Filemounts</source>
+      <target/></trans-unit>
+      <trans-unit id="webmounts" xml:space="preserve">
+        <source>Webmounts</source>
+      <target/></trans-unit>
+      <trans-unit id="defaultUploadPath" xml:space="preserve">
+        <source>Default upload path</source>
+      <target/></trans-unit>
+      <trans-unit id="mainUserGroup" xml:space="preserve">
+        <source>Main user group</source>
+      <target/></trans-unit>
+      <trans-unit id="memberOfGroups" xml:space="preserve">
+        <source>Member of groups</source>
+      <target/></trans-unit>
+      <trans-unit id="pageTypesAccess" xml:space="preserve">
+        <source>Page types access</source>
+      <target/></trans-unit>
+      <trans-unit id="selectTables" xml:space="preserve">
+        <source>Select tables</source>
+      <target/></trans-unit>
+      <trans-unit id="modifyTables" xml:space="preserve">
+        <source>Modify tables</source>
+      <target/></trans-unit>
+      <trans-unit id="nonExcludeFields" xml:space="preserve">
+        <source>Non-exclude fields</source>
+      <target/></trans-unit>
+      <trans-unit id="explicitAllowDeny" xml:space="preserve">
+        <source>Explicit Allow/Deny</source>
+      <target/></trans-unit>
+      <trans-unit id="limitToLanguages" xml:space="preserve">
+        <source>Limit to languages</source>
+      <target/></trans-unit>
+      <trans-unit id="workspacePermissions" xml:space="preserve">
+        <source>Workspace permissions</source>
+      <target/></trans-unit>
+      <trans-unit id="workspaceMembership" xml:space="preserve">
+        <source>Workspace membership</source>
+      <target/></trans-unit>
+      <trans-unit id="customOptions" xml:space="preserve">
+        <source>Custom options</source>
+      <target/></trans-unit>
+      <trans-unit id="modules" xml:space="preserve">
+        <source>Modules</source>
+      <target/></trans-unit>
+      <trans-unit id="tsconfig" xml:space="preserve">
+        <source>TSconfig</source>
+      <target/></trans-unit>
+      <trans-unit id="tsconfigHL" xml:space="preserve">
+        <source>TSconfig HL</source>
+      <target/></trans-unit>
+      <trans-unit id="nonMountedReadablePages" xml:space="preserve">
+        <source>Non-mounted readable pages:</source>
+      <target/></trans-unit>
+      <trans-unit id="backToOverview" xml:space="preserve">
+        <source>&lt; Back to overview</source>
+      <target/></trans-unit>
+      <trans-unit id="userInfo" xml:space="preserve">
+        <source>User Info</source>
+      <target/></trans-unit>
+      <trans-unit id="groupBy" xml:space="preserve">
+        <source>Group by:</source>
+      <target/></trans-unit>
+      <trans-unit id="update" xml:space="preserve">
+        <source>Update</source>
+      <target/></trans-unit>
+      <trans-unit id="groupAndCompareUsers" xml:space="preserve">
+        <source>Group and Compare Users</source>
+      <target/></trans-unit>
+      <trans-unit id="tooManyUsers" xml:space="preserve">
+        <source>There were too many users:</source>
+      <target/></trans-unit>
+      <trans-unit id="canOnlyDisplay" xml:space="preserve">
+        <source>This tool can only display the following number of users at a time:</source>
+      <target/></trans-unit>
+      <trans-unit id="newUser" xml:space="preserve">
+        <source>Create new user</source>
+      <target/></trans-unit>
+      <trans-unit id="usernames" xml:space="preserve">
+        <source>Usernames:</source>
+      <target/></trans-unit>
+      <trans-unit id="switchUserTo" xml:space="preserve">
+        <source>Switch user to:</source>
+      <target/></trans-unit>
+      <trans-unit id="changeToMode" xml:space="preserve">
+        <source>[change-to mode]</source>
+      <target/></trans-unit>
+      <trans-unit id="switchBackMode" xml:space="preserve">
+        <source>[switch-back mode]</source>
+      <target/></trans-unit>
+      <trans-unit id="cachedGrouplistsUpdated" xml:space="preserve">
+        <source>(All cached group-lists updated.)</source>
+      <target/></trans-unit>
+      <trans-unit id="result" xml:space="preserve">
+        <source>Result</source>
+      <target/></trans-unit>
+      <trans-unit id="showInformation" xml:space="preserve">
+        <source>Show information</source>
+      <target/></trans-unit>
+      <trans-unit id="sureToDelete" xml:space="preserve">
+        <source>Are you sure you want to delete this element?</source>
+      <target/></trans-unit>
+      <trans-unit id="delete" xml:space="preserve">
+        <source>Delete(!)</source>
+      <target/></trans-unit>
+      <trans-unit id="timestamp" xml:space="preserve">
+        <source>Timestamp:</source>
+      <target/></trans-unit>
+      <trans-unit id="host" xml:space="preserve">
+        <source>Host:</source>
+      <target/></trans-unit>
+      <trans-unit id="username" xml:space="preserve">
+        <source>Username:</source>
+      <target/></trans-unit>
+      <trans-unit id="whoIsOnline" xml:space="preserve">
+        <source>Who Is Online</source>
+      <target/></trans-unit>
+    </body>
+  </file>
+</xliff>

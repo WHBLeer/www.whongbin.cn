@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-29T13:58:40Z" product-name="sll_friend_link">
+		<header/>
+		<body>
+			<trans-unit id="tx_sllfriendlink_domain_model_links">
+				<source>Links</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_links.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_links.webmaster">
+				<source>Webmaster</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_links.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_links.links">
+				<source>Links</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_links.introduction">
+				<source>Introduction</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_links.icon">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_links.nofollow">
+				<source>Nofollow</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_links.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_type.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfriendlink_domain_model_type.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_sll_friend_link_pi1.name">
+				<source>友情链接</source>
+			</trans-unit>
+			<trans-unit id="tx_sll_friend_link_pi1.description">
+				<source>友情链接</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

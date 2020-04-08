@@ -1,0 +1,22 @@
+plugin.tx_news {
+    view {
+        templateRootPath = EXT:sll_news/Resources/Private/Plugin/News/Templates/
+        partialRootPath = EXT:sll_news/Resources/Private/Plugin/News/Partials/
+        layoutRootPath = EXT:sll_news/Resources/Private/Plugin/News/Layouts/
+    }
+}
+
+plugin.tx_sllnew_news {
+    view {
+        # cat=plugin.tx_sllnew_news/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:sll_news/Resources/Private/Templates/
+        # cat=plugin.tx_sllnew_news/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:sll_news/Resources/Private/Partials/
+        # cat=plugin.tx_sllnew_news/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:sll_news/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_sllnew_news//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

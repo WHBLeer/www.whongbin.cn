@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallangExt>
+  <data type="array">
+    <languageKey index="zh" type="array">
+			<label index="Tx_ExtensionBuilder_extension"/>
+			<label index="Tx_ExtensionBuilder_extension.extensionkey"/>
+			<label index="Tx_ExtensionBuilder_extension.title"/>
+			<label index="Tx_ExtensionBuilder_extension.description"/>
+			<label index="Tx_ExtensionBuilder_extension.state"/>
+			<label index="Tx_ExtensionBuilder_extension.languages"/>
+			<label index="Tx_ExtensionBuilder_extension.persons"/>
+			<label index="Tx_ExtensionBuilder_extension.domainobjects"/>
+			<label index="Tx_ExtensionBuilder_person"/>
+			<label index="Tx_ExtensionBuilder_person.name"/>
+			<label index="Tx_ExtensionBuilder_person.email"/>
+			<label index="Tx_ExtensionBuilder_person.role"/>
+			<label index="Tx_ExtensionBuilder_person.extension"/>
+			<label index="Tx_ExtensionBuilder_domainObjects"/>
+			<label index="Tx_ExtensionBuilder_domainObjects.name"/>
+			<label index="Tx_ExtensionBuilder_domainObjects.description"/>
+			<label index="Tx_ExtensionBuilder_domainObjects.relateddomainobjects"/>
+			<label index="Tx_ExtensionBuilder_domainObjects.extension"/>
+			<label index="Tx_ExtensionBuilder_domainObjects.backendconfigurationoptions"/>
+			<label index="Tx_ExtensionBuilder_domainObjects.properties"/>
+			<label index="Tx_ExtensionBuilder_properties"/>
+			<label index="Tx_ExtensionBuilder_properties.name"/>
+			<label index="Tx_ExtensionBuilder_properties.description"/>
+			<label index="Tx_ExtensionBuilder_properties.validationrules"/>
+			<label index="Tx_ExtensionBuilder_properties.isrequired"/>
+			<label index="Tx_ExtensionBuilder_properties.accessmethods"/>
+		</languageKey>
+  </data>
+</T3locallangExt>

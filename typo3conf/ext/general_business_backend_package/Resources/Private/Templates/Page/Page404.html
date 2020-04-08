@@ -1,0 +1,41 @@
+<f:layout name="OnePage" />
+<f:section name="Main">
+    <!-- Begin page -->
+    <div class="ex-pages">
+        <div class="content-center">
+            <div class="content-desc-center">
+                <div class="container">
+                    <div class="card mo-mt-2">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 offset-lg-1">
+                                    <div class="ex-page-content">
+                                        <h1 class="text-dark">404!</h1>
+                                        <h4 class="mb-4">Oops!!! Sorry, page not found</h4>
+                                        <p id="hitokoto" class="mb-5">:D 页面找不到了啊... </p>
+                                        <a class="btn btn-primary mb-5 waves-effect waves-light" href="{BASEURL}"><i
+                                                class="mdi mdi-home"></i> Back to <f:format.raw>{siteTitle}</f:format.raw></a>
+                                    </div>
+    
+                                </div>
+                                <div class="col-lg-5 offset-lg-1">
+                                    <img src="typo3conf/ext/general_business_backend_package/Resources/Public/assets/images/error.png" alt="" class="img-fluid mx-auto d-block">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-dark text-center">
+                        <f:format.raw>{themeCopyrightText}</f:format.raw>.
+                    </div>
+                </div>
+                <!-- end container -->
+            </div>
+        </div>
+    
+    </div>
+    <!-- end error page -->
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+</f:section>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2011-10-17T20:22:37Z" product-name="viewpage" target-language="zh">
+    <header/>
+    <body>
+      <trans-unit id="mlang_labels_tablabel" xml:space="preserve" approved="yes">
+        <source>View page</source>
+      <target state="translated">檢視網頁</target></trans-unit>
+      <trans-unit id="mlang_labels_tabdescr" xml:space="preserve" approved="yes">
+        <source>Shows the look of the current page and lets you edit the content directly.</source>
+      <target state="translated">顯示現有網頁和容計你直接修改內容</target></trans-unit>
+      <trans-unit id="mlang_tabs_tab" xml:space="preserve" approved="yes">
+        <source>View</source>
+      <target state="translated">檢視</target></trans-unit>
+    </body>
+  </file>
+</xliff>

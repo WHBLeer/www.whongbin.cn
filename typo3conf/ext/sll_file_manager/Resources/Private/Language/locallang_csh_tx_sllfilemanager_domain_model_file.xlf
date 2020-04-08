@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-29T14:00:24Z" product-name="sll_file_manager">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>名称</source>
+			</trans-unit>
+			<trans-unit id="slug.description">
+				<source>别名</source>
+			</trans-unit>
+			<trans-unit id="size.description">
+				<source>文件大小</source>
+			</trans-unit>
+			<trans-unit id="absolute_path.description">
+				<source>绝对路径</source>
+			</trans-unit>
+			<trans-unit id="relative_path.description">
+				<source>相对路径</source>
+			</trans-unit>
+			<trans-unit id="teaser.description">
+				<source>介绍</source>
+			</trans-unit>
+			<trans-unit id="download.description">
+				<source>下载次数</source>
+			</trans-unit>
+			<trans-unit id="file_type.description">
+				<source>文件类型</source>
+			</trans-unit>
+			<trans-unit id="file_extension.description">
+				<source>文件后缀</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

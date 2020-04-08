@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-09T01:22:18Z" product-name="core">
+		<header/>
+		<body>
+			<trans-unit id="label1" resname="label1">
+				<source>This is label #1</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="label2" resname="label2">
+				<source>This is label #2</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="label3" resname="label3">
+				<source>This is label #3</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

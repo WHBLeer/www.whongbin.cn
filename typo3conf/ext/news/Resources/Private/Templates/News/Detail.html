@@ -1,0 +1,297 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="Detail" />
+
+<!--
+	=====================
+		News/Detail.html
+-->
+
+<f:section name="content">
+	<f:if condition="{newsItem}">
+		<f:then>
+			<link rel="stylesheet" href="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/css/editormd.preview.css" />
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/marked.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/prettify.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/raphael.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/underscore.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/sequence-diagram.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/flowchart.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/jquery.flowchart.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/editormd.min.js"></script>
+			<script>
+				document.getElementById("articleCategory").innerHTML = '<f:for each="{newsItem.categories}" as="category"><span class="post-category detail-title-category text-white bm-3 {category.categoryclass}">{category.title}</span></f:for>';
+				document.getElementById("articleTitle").innerText = '{newsItem.title}';
+				document.getElementById("authorImage").src = '{newsItem.authorimg}';
+				document.getElementById("author").innerText = '{newsItem.author}';
+				document.getElementById("dateTime").innerText = " - {newsItem.datetime -> f:format.date(format: 'M d, Y')}";
+			</script>
+			<f:if condition="{settings.detail.showPrevNext}">
+				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
+					<f:if condition="{paginated}">
+						<ul class="pager">
+							<f:if condition="{paginated.prev}">
+								<li class="previous">
+									<n:link newsItem="{paginated.prev}" settings="{settings}">
+										<span aria-hidden="true">&larr; </span>{paginated.prev.title}
+									</n:link>
+								</li>
+							</f:if>
+							<f:if condition="{paginated.next}">
+								<li class="next">
+									<n:link newsItem="{paginated.next}" settings="{settings}" class="next">
+										{paginated.next.title} <span aria-hidden="true"> &rarr;</span>
+									</n:link>
+								</li>
+							</f:if>
+						</ul>
+					</f:if>
+				</n:simplePrevNext>
+			</f:if>
+			<f:if condition="{newsItem.teaser}">
+				<!-- 简介 -->
+				<div class="teaser-text" itemprop="description">
+					<f:format.raw>{newsItem.teaser}</f:format.raw>
+				</div>
+			</f:if>
+			<div class="post-content-body" id="article-editormd">
+				<!-- 详情 -->
+				<textarea id="append-test" style="display:none;"><f:format.raw>{newsItem.bodytext}</f:format.raw></textarea>
+				
+			</div>
+			<script type="text/javascript">
+				var testEditor;
+				$(function () {
+					testEditor = editormd.markdownToHTML("article-editormd", {//注意：这里是上面DIV的id
+						htmlDecode: "style,script,iframe",
+						emoji: true,
+						taskList: true,
+						tocm: true,
+						tex: true, // 默认不解析
+						flowChart: true, // 默认不解析
+						sequenceDiagram: true, // 默认不解析
+						codeFold: true
+					});});
+			</script>
+			<div class="pt-5">
+				<p>
+					Categories: <f:for each="{newsItem.categories}" as="category"><a href="#">{category.title}</a>, </f:for>
+					Tags: <f:for each="{newsItem.categories}" as="category"><a href="#">#{category.title}</a>,</f:for>
+				</p>
+			</div>
+			<div class="pt-5">
+				<h3 class="mb-5">6 Comments</h3>
+				<ul class="comment-list">
+					<li class="comment">
+						<div class="vcard">
+							<img src="images/person_1.jpg" alt="Image placeholder">
+						</div>
+						<div class="comment-body">
+							<h3>Jean Doe</h3>
+							<div class="meta">January 9, 2018 at 2:21pm</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,
+								ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum
+								impedit necessitatibus, nihil?</p>
+							<p><a href="#" class="reply rounded">Reply</a></p>
+						</div>
+					</li>
+			
+					<li class="comment">
+						<div class="vcard">
+							<img src="images/person_1.jpg" alt="Image placeholder">
+						</div>
+						<div class="comment-body">
+							<h3>Jean Doe</h3>
+							<div class="meta">January 9, 2018 at 2:21pm</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,
+								ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum
+								impedit necessitatibus, nihil?</p>
+							<p><a href="#" class="reply rounded">Reply</a></p>
+						</div>
+			
+						<ul class="children">
+							<li class="comment">
+								<div class="vcard">
+									<img src="images/person_1.jpg" alt="Image placeholder">
+								</div>
+								<div class="comment-body">
+									<h3>Jean Doe</h3>
+									<div class="meta">January 9, 2018 at 2:21pm</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
+										necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste
+										iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+									<p><a href="#" class="reply rounded">Reply</a></p>
+								</div>
+			
+			
+								<ul class="children">
+									<li class="comment">
+										<div class="vcard">
+											<img src="images/person_1.jpg" alt="Image placeholder">
+										</div>
+										<div class="comment-body">
+											<h3>Jean Doe</h3>
+											<div class="meta">January 9, 2018 at 2:21pm</div>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum
+												necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente
+												iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+											<p><a href="#" class="reply rounded">Reply</a></p>
+										</div>
+			
+										<ul class="children">
+											<li class="comment">
+												<div class="vcard">
+													<img src="images/person_1.jpg" alt="Image placeholder">
+												</div>
+												<div class="comment-body">
+													<h3>Jean Doe</h3>
+													<div class="meta">January 9, 2018 at 2:21pm</div>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem
+														laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe
+														enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?
+													</p>
+													<p><a href="#" class="reply rounded">Reply</a></p>
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+			
+					<li class="comment">
+						<div class="vcard">
+							<img src="images/person_1.jpg" alt="Image placeholder">
+						</div>
+						<div class="comment-body">
+							<h3>Jean Doe</h3>
+							<div class="meta">January 9, 2018 at 2:21pm</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus,
+								ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum
+								impedit necessitatibus, nihil?</p>
+							<p><a href="#" class="reply rounded">Reply</a></p>
+						</div>
+					</li>
+				</ul>
+				<!-- END comment-list -->
+			
+				<div class="comment-form-wrap pt-5">
+					<h3 class="mb-5">Leave a comment</h3>
+					<form action="#" class="p-5 bg-light">
+						<div class="form-group">
+							<label for="name">Name *</label>
+							<input type="text" class="form-control" id="name">
+						</div>
+						<div class="form-group">
+							<label for="email">Email *</label>
+							<input type="email" class="form-control" id="email">
+						</div>
+						<div class="form-group">
+							<label for="website">Website</label>
+							<input type="url" class="form-control" id="website">
+						</div>
+			
+						<div class="form-group">
+							<label for="message">Message</label>
+							<textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Post Comment" class="btn btn-primary">
+						</div>
+			
+					</form>
+				</div>
+			</div>
+			<f:if condition="{settings.backPid}">
+				<!-- 返回按钮 -->
+				<div class="news-backlink-wrap">
+					<f:link.page pageUid="{settings.backPid}">
+						<f:translate key="back-link" />
+					</f:link.page>
+				</div>
+			</f:if>
+
+			<!-- 相关 -->
+			<div class="news-related-wrap">
+				<f:comment>
+					Various options exist to fetch different related information:
+					- {newsItem.allRelatedSorted}: all related news, related und related from, sorted by date
+					- {newsItem.related}: all related
+					- {newsItem.relatedSorted}: all related, sorted by date
+					- {newsItem.relatedFrom}: all related from
+					- {newsItem.relatedFromSorted}: all related from, sorted by date
+				</f:comment>
+
+				<f:if condition="{newsItem.allRelatedSorted}">
+					<!-- 相关新闻记录 -->
+					<div class="news-related news-related-news">
+						<h4>
+							<f:translate key="related-news" />
+						</h4>
+						<ul>
+							<f:for each="{newsItem.allRelatedSorted}" as="related">
+								<li>
+									<span class="news-related-news-date"><f:format.date format="{f:translate(key:'dateFormat')}">{related.datetime}</f:format.date></span>
+									<n:link newsItem="{related}" settings="{settings}" title="{related.title}">
+										{related.title}
+									</n:link>
+								</li>
+
+							</f:for>
+						</ul>
+					</div>
+				</f:if>
+
+				<f:if condition="{newsItem.relatedFiles}">
+					<!-- 相关文件 -->
+					<div class="news-related news-related-files">
+						<h4>
+							<f:translate key="related-files" />
+						</h4>
+						<ul>
+							<f:for each="{newsItem.relatedFiles}" as="relatedFile">
+								<li>
+									<span class="news-related-files-link">
+										<a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
+											{f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
+										</a>
+									</span>
+									<span class="news-related-files-size">
+										{relatedFile.originalResource.size -> f:format.bytes()}
+									</span>
+								</li>
+							</f:for>
+						</ul>
+					</div>
+				</f:if>
+
+				<f:if condition="{newsItem.relatedLinks}">
+					<!-- 相关链接 -->
+					<div class="news-related news-related-links">
+						<h4>
+							<f:translate key="related-links" />
+						</h4>
+						<ul>
+							<f:for each="{newsItem.relatedLinks}" as="relatedLink">
+								<li>
+									<f:link.typolink parameter="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.typolink>
+									<f:if condition="{relatedLink.description}"><span>{relatedLink.description}</span></f:if>
+								</li>
+							</f:for>
+						</ul>
+					</div>
+				</f:if>
+			</div>
+			
+			//具体目录在你下载的文件里都能找到，对号入座
+		</f:then>
+		<f:else>
+
+		</f:else>
+	</f:if>
+</f:section>
+</html>

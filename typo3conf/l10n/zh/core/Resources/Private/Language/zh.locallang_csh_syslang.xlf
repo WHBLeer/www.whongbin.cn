@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-09T01:22:18Z" product-name="core">
+		<header/>
+		<body>
+			<trans-unit id=".description" resname=".description">
+				<source>Defines which languages are alternatively available on each webpage.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id=".details" resname=".details" xml:space="preserve">
+				<source>The Web&gt;Page module has a feature which allows users to edit page content divided into not only columns but also languages. The languages available for translation are determined by the number of Website Language record created.</source>
+			<target/></trans-unit>
+			<trans-unit id="hidden.description" resname="hidden.description">
+				<source>This option will hide the system language from being available in the backend.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="title.description" resname="title.description">
+				<source>Enter the name of this additional system language.</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

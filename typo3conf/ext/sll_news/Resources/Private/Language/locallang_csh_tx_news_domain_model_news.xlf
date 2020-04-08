@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-10-11T16:10:15Z" product-name="article">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>标题</source>
+			</trans-unit>
+			<trans-unit id="slug.description">
+				<source>路径段</source>
+			</trans-unit>
+			<trans-unit id="teaser.description">
+				<source>简介</source>
+			</trans-unit>
+			<trans-unit id="bodytext.description">
+				<source>文章内容</source>
+			</trans-unit>
+			<trans-unit id="reading.description">
+				<source>阅读量</source>
+			</trans-unit>
+			<trans-unit id="datetime.description">
+				<source>发布时间</source>
+			</trans-unit>
+			<trans-unit id="istop.description">
+				<source>是否置顶</source>
+			</trans-unit>
+			<trans-unit id="album.description">
+				<source>文章封面图</source>
+			</trans-unit>
+			<trans-unit id="author.description">
+				<source>作者</source>
+			</trans-unit>
+			<trans-unit id="categories.description">
+				<source>文章分类</source>
+			</trans-unit>
+			<trans-unit id="tags.description">
+				<source>文章标签</source>
+			</trans-unit>
+			<trans-unit id="annexs.description">
+				<source>文章附件</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

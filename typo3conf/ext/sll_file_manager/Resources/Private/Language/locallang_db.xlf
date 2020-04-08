@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-11-29T14:00:24Z" product-name="sll_file_manager">
+		<header/>
+		<body>
+			<trans-unit id="tx_sllfilemanager_domain_model_file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfilemanager_domain_model_file.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfilemanager_domain_model_file.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfilemanager_domain_model_file.size">
+				<source>Size</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfilemanager_domain_model_file.absolute_path">
+				<source>Absolute Path</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfilemanager_domain_model_file.relative_path">
+				<source>Relative Path</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfilemanager_domain_model_file.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfilemanager_domain_model_file.download">
+				<source>Download</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfilemanager_domain_model_file.file_type">
+				<source>File Type</source>
+			</trans-unit>
+			<trans-unit id="tx_sllfilemanager_domain_model_file.file_extension">
+				<source>File Extension</source>
+			</trans-unit>
+			<trans-unit id="tx_sll_file_manager_pi1.name">
+				<source>文件管理</source>
+			</trans-unit>
+			<trans-unit id="tx_sll_file_manager_pi1.description">
+				<source>全局文件管理</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

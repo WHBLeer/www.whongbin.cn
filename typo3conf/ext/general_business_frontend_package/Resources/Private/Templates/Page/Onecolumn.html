@@ -1,0 +1,34 @@
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <div class="site-cover site-cover-sm same-height overlay single-page"
+        style="background-image: url('fileadmin/static_file/img/banner_inner.jpg');">
+        <div class="container">
+            <div class="row same-height justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                    <div class="post-entry text-center">
+                        <p id="articleCategory"></p>
+                        <h1 class="mb-4" id="articleTitle">...</h1>
+                        <div class="post-meta align-items-center text-center">
+                            <figure class="author-figure mb-0 mr-3 d-inline-block"><img src="fileadmin/static_file/img/default_author.jpg" alt="Image" class="img-fluid" id="authorImage"></figure>
+                            <span class="d-inline-block mt-1" id="author">By ???????!</span>
+                            <span id="dateTime">&nbsp;-&nbsp; February 01, 2020</span id="author">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="site-section py-lg">
+        <div class="container">
+            <div class="row blog-entries element-animate">
+                <div class="col-md-12 col-lg-12 main-content">
+                    <!-- <f:cObject typoscriptObjectPath="lib.navigation.breadcrumb" /> -->
+                    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+                </div>
+                <!-- END main-content -->
+            </div>
+        </div>
+    </section>
+    
+</f:section>

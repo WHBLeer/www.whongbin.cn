@@ -1,0 +1,43 @@
+plugin.tx_sllsnow_snow {
+  settings{  
+
+      #cat=plugin.tx_sllsnow_snow//a; type=boolean; label=禁用
+      disablesnow = 0  
+
+      #cat=plugin.tx_sllsnow_snow//b; type=boolean; label=添加jQuery
+      jQuery = 0
+      
+      #cat=plugin.tx_sllsnow_snow//c; type=color; label=雪花颜色
+      flackcolor = white
+
+      #cat=plugin.tx_sllsnow_snow//d; type=int+; label=雪花数量
+      flackcount = 50
+
+      #cat=plugin.tx_sllsnow_snow//e; type=int+; label=最小尺寸
+      minflacksize = 5
+
+      #cat=plugin.tx_sllsnow_snow//f; type=int+; label=最大尺寸
+      maxflacksize = 22
+
+      #cat=plugin.tx_sllsnow_snow//g; type=int+; label=最小下落速度
+      minflackspeed = 2
+
+      #cat=plugin.tx_sllsnow_snow//h; type=int+; label=最大下落速度
+      maxflackspeed = 6
+
+       #cat=plugin.tx_sllsnow_snow//i; type=boolean; label=圆角效果
+      roundflack = 1
+
+      #cat=plugin.tx_sllsnow_snow//j; type=boolean; label=阴影效果
+      shadowflack = 1
+
+      #cat=plugin.tx_sllsnow_snow//k; type=boolean; label=使用图片
+      activeflackimg = 1
+
+      // #cat=plugin.tx_sllsnow_snow//l; type=string; label=图片路径
+      // flackimg = typo3conf/ext/sll_snow/Resources/Public/images/flake.png      
+
+      #cat=plugin.tx_sllsnow_snow//m; type=boolean; label=仅首页显示
+      desktoponly = 0     
+  }
+}

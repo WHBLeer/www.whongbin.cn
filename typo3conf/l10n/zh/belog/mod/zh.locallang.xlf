@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2011-10-17T20:22:32Z" product-name="belog" target-language="zh">
+    <header/>
+    <body>
+      <trans-unit id="adminLog" xml:space="preserve">
+        <source>Administration log</source>
+      <target/></trans-unit>
+      <trans-unit id="allUsers" xml:space="preserve">
+        <source>[All users]</source>
+      <target/></trans-unit>
+      <trans-unit id="any" xml:space="preserve">
+        <source>[Any]</source>
+      <target/></trans-unit>
+      <trans-unit id="live" xml:space="preserve">
+        <source>LIVE</source>
+      <target/></trans-unit>
+      <trans-unit id="draft" xml:space="preserve">
+        <source>Draft</source>
+      <target/></trans-unit>
+      <trans-unit id="self" xml:space="preserve">
+        <source>Self</source>
+      <target/></trans-unit>
+      <trans-unit id="userGroup" xml:space="preserve">
+        <source>Group:</source>
+      <target/></trans-unit>
+      <trans-unit id="thisWeek" xml:space="preserve">
+        <source>This week</source>
+      <target/></trans-unit>
+      <trans-unit id="lastWeek" xml:space="preserve">
+        <source>Last week</source>
+      <target/></trans-unit>
+      <trans-unit id="last7Days" xml:space="preserve">
+        <source>Last 7 days</source>
+      <target/></trans-unit>
+      <trans-unit id="thisMonth" xml:space="preserve">
+        <source>This month</source>
+      <target/></trans-unit>
+      <trans-unit id="lastMonth" xml:space="preserve">
+        <source>Last month</source>
+      <target/></trans-unit>
+      <trans-unit id="last31Days" xml:space="preserve">
+        <source>Last 31 days</source>
+      <target/></trans-unit>
+      <trans-unit id="noLimit" xml:space="preserve">
+        <source>No limit</source>
+      <target/></trans-unit>
+      <trans-unit id="userdefined" xml:space="preserve">
+        <source>User defined</source>
+      <target/></trans-unit>
+      <trans-unit id="set" xml:space="preserve">
+        <source>Set</source>
+      <target/></trans-unit>
+      <trans-unit id="20" xml:space="preserve">
+        <source>20</source>
+      <target/></trans-unit>
+      <trans-unit id="50" xml:space="preserve">
+        <source>50</source>
+      <target/></trans-unit>
+      <trans-unit id="100" xml:space="preserve">
+        <source>100</source>
+      <target/></trans-unit>
+      <trans-unit id="200" xml:space="preserve">
+        <source>200</source>
+      <target/></trans-unit>
+      <trans-unit id="500" xml:space="preserve">
+        <source>500</source>
+      <target/></trans-unit>
+      <trans-unit id="1000" xml:space="preserve">
+        <source>1000</source>
+      <target/></trans-unit>
+      <trans-unit id="actionAll" xml:space="preserve">
+        <source>All</source>
+      <target/></trans-unit>
+      <trans-unit id="actionDatabase" xml:space="preserve">
+        <source>Database</source>
+      <target/></trans-unit>
+      <trans-unit id="actionFile" xml:space="preserve">
+        <source>File</source>
+      <target/></trans-unit>
+      <trans-unit id="actionCache" xml:space="preserve">
+        <source>Cache</source>
+      <target/></trans-unit>
+      <trans-unit id="actionSettings" xml:space="preserve">
+        <source>Settings</source>
+      <target/></trans-unit>
+      <trans-unit id="actionLogin" xml:space="preserve">
+        <source>Login</source>
+      <target/></trans-unit>
+      <trans-unit id="actionErrors" xml:space="preserve">
+        <source>Errors</source>
+      <target/></trans-unit>
+      <trans-unit id="group" xml:space="preserve">
+        <source>Group:</source>
+      <target/></trans-unit>
+      <trans-unit id="user" xml:space="preserve">
+        <source>User:</source>
+      <target/></trans-unit>
+      <trans-unit id="users" xml:space="preserve">
+        <source>Users:</source>
+      <target/></trans-unit>
+      <trans-unit id="time" xml:space="preserve">
+        <source>Time:</source>
+      <target/></trans-unit>
+      <trans-unit id="max" xml:space="preserve">
+        <source>Max:</source>
+      <target/></trans-unit>
+      <trans-unit id="changesInFields" xml:space="preserve">
+        <source>Changes in fields: %s.</source>
+      <target/></trans-unit>
+      <trans-unit id="showHistory" xml:space="preserve">
+        <source>Show History</source>
+      <target/></trans-unit>
+      <trans-unit id="action" xml:space="preserve">
+        <source>Action:</source>
+      <target/></trans-unit>
+      <trans-unit id="workspace" xml:space="preserve">
+        <source>Workspace:</source>
+      <target/></trans-unit>
+      <trans-unit id="groupByPage" xml:space="preserve">
+        <source>Group by page:</source>
+      <target/></trans-unit>
+      <trans-unit id="pagenameWithUID" xml:space="preserve">
+        <source>%s" [UID: %s]</source>
+      <target/></trans-unit>
+      <trans-unit id="overview" xml:space="preserve">
+        <source>Overview</source>
+      <target/></trans-unit>
+      <trans-unit id="timeInfo" xml:space="preserve">
+        <source>These pages have log messages from %s to %s</source>
+      <target/></trans-unit>
+      <trans-unit id="forNonPageRelatedActions" xml:space="preserve">
+        <source>for NON-PAGE related actions</source>
+      <target/></trans-unit>
+      <trans-unit id="forRootLevel" xml:space="preserve">
+        <source>for ROOT LEVEL</source>
+      <target/></trans-unit>
+      <trans-unit id="forPage" xml:space="preserve">
+        <source>for PAGE "%s" (UID: %s)</source>
+      <target/></trans-unit>
+      <trans-unit id="logForNonPageRelatedActionsOrRootLevelOrPage" xml:space="preserve">
+        <source>Log %s from %s to %s</source>
+      <target/></trans-unit>
+      <trans-unit id="type_1" xml:space="preserve" approved="yes">
+        <source>DB</source>
+      <target state="translated">DB</target></trans-unit>
+      <trans-unit id="action_1_1" xml:space="preserve" approved="yes">
+        <source>Insert</source>
+      <target state="translated">插入</target></trans-unit>
+      <trans-unit id="action_1_2" xml:space="preserve" approved="yes">
+        <source>Update</source>
+      <target state="translated">更新</target></trans-unit>
+      <trans-unit id="action_1_3" xml:space="preserve" approved="yes">
+        <source>Delete</source>
+      <target state="translated">刪除</target></trans-unit>
+      <trans-unit id="action_1_4" xml:space="preserve" approved="yes">
+        <source>Check</source>
+      <target state="translated">檢查</target></trans-unit>
+      <trans-unit id="msg_1_0_1" xml:space="preserve" approved="yes">
+        <source>Referer host '%s' and server host '%s' did not match!</source>
+      <target state="translated">轉介主機 '%Ｓ' 與伺服器主機 '%s' 不同!</target></trans-unit>
+      <trans-unit id="msg_1_1_11" xml:space="preserve" approved="yes">
+        <source>Attempt to insert record on page '%s' (%s) where this table, %s, is not allowed</source>
+      <target state="translated">嘗試插入記錄到頁 '%s' (%s), 表格, %s, 不被容許</target></trans-unit>
+      <trans-unit id="msg_1_1_12" xml:space="preserve" approved="yes">
+        <source>Attempt to insert a record on page '%s' (%s) from table '%s' without permissions. Or non-existing page.</source>
+      <target state="translated">嘗試嘗試在沒有準許下從表格 '%s' 插入記錄到頁 '%s' (%s). 或是頁不存在。</target></trans-unit>
+      <trans-unit id="msg_1_2_1" xml:space="preserve" approved="yes">
+        <source>Attempt to modify table '%s' without permission</source>
+      <target state="translated">嘗試在沒有準許下修改表格 '%s'</target></trans-unit>
+      <trans-unit id="msg_1_2_2" xml:space="preserve" approved="yes">
+        <source>Attempt to modify record '%s' (%s) without permission. Or non-existing page.</source>
+      <target state="translated">嘗試在沒有準許下修改記錄 '%s'. 或是頁不存在</target></trans-unit>
+      <trans-unit id="msg_1_2_10" xml:space="preserve" approved="yes">
+        <source>Record '%s' (%s) was updated.</source>
+      <target state="translated">記錄 '%s' (%s) 被更新</target></trans-unit>
+      <trans-unit id="msg_1_2_12" xml:space="preserve" approved="yes">
+        <source>MySQL error: '%s' (%s)</source>
+      <target state="translated">MYSQL 錯誤: '%s' (%s)</target></trans-unit>
+      <trans-unit id="msg_1_4_1" xml:space="preserve" approved="yes">
+        <source>Attempt to move record '%s' (%s) to after a non-existing record (uid=%s)</source>
+      <target state="translated">嘗試移動記錄 '%s' 到一個不存在的記錄 (uid=%s)之後</target></trans-unit>
+      <trans-unit id="msg_1_4_2" xml:space="preserve" approved="yes">
+        <source>Moved record '%s' (%s) to page '%s' (%s)</source>
+      <target state="translated">移動了記錄 '%s' 至頁 '%s' (%s)</target></trans-unit>
+      <trans-unit id="msg_1_4_3" xml:space="preserve" approved="yes">
+        <source>Moved record '%s' (%s) from page '%s' (%s)</source>
+      <target state="translated">從頁 '%s' (%s) 移動了記錄 '%s' (%s)</target></trans-unit>
+      <trans-unit id="msg_1_4_4" xml:space="preserve" approved="yes">
+        <source>Moved record '%s' (%s) on page '%s' (%s)</source>
+      <target state="translated">移動了頁 '%s' (%s) 上的記錄 '%s'</target></trans-unit>
+      <trans-unit id="msg_1_4_10" xml:space="preserve" approved="yes">
+        <source>Attempt to move page '%s' (%s) to inside of its own rootline (at page '%s' (%s))</source>
+      <target state="translated">嘗試移動頁 '%s' (%s) 到自己的根層之內 (在頁 '%s' (%s))</target></trans-unit>
+      <trans-unit id="msg_1_4_11" xml:space="preserve" approved="yes">
+        <source>Attempt to insert record on page '%s' (%s) where this table, %s, is not allowed</source>
+      <target state="translated">嘗試插入記錄至頁 '%s' (%s) ,而表格, %s不被容許</target></trans-unit>
+      <trans-unit id="msg_1_4_12" xml:space="preserve" approved="yes">
+        <source>Attempt to insert a record on page '%s' (%s) from table '%s' without permissions. Or non-existing page.</source>
+      <target state="translated">嘗試在沒有準許下從表格 '%s' 插入記錄至頁 '%s' (%s). 或頁不存在</target></trans-unit>
+      <trans-unit id="msg_1_4_13" xml:space="preserve" approved="yes">
+        <source>Attempt to move record '%s' (%s) to after another record, although the table has no sorting row.</source>
+      <target state="translated">嘗試移動記錄 '%S' (%S) 至另一記錄之後, 雖然表格沒有整理列</target></trans-unit>
+      <trans-unit id="msg_1_4_14" xml:space="preserve" approved="yes">
+        <source>Attempt to move record '%s' (%s) without having permissions to do so</source>
+      <target state="translated">在沒有權限下嘗試移動記錄 '%S' (%S)</target></trans-unit>
+      <trans-unit id="msg_1_5_1" xml:space="preserve" approved="yes">
+        <source>You cannot change the 'doktype' of page '%s' to the desired value.</source>
+      <target state="translated">你不能改變網頁 '%s' 的 'doktype' 至想要的值</target></trans-unit>
+      <trans-unit id="msg_1_5_2" xml:space="preserve" approved="yes">
+        <source>'doktype' of page '%s' could not be changed because the page contains records from disallowed tables; %s</source>
+      <target state="translated">網頁 '%s' 的 'doktype' 不能被改變, 因為網頁內容含有來自不容許的表格的記錄; %s</target></trans-unit>
+      <trans-unit id="msg_1_5_3" xml:space="preserve" approved="yes">
+        <source>Too few items in the list of values. (%s)</source>
+      <target state="translated">數值列表中太少項目 (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_10" xml:space="preserve" approved="yes">
+        <source>Could not delete file '%s' (does not exist). (%s)</source>
+      <target state="translated">不能刪除檔案 '%s' (不存在). (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_11" xml:space="preserve" approved="yes">
+        <source>Copying file '%s' failed!: No destination file (%s) possible!. (%s)</source>
+      <target state="translated">覆製檔案 '%s' 失敗!: 沒有可能 (%S)的目標檔案 (%s)!</target></trans-unit>
+      <trans-unit id="msg_1_5_12" xml:space="preserve" approved="yes">
+        <source>File extension '%s' is not allowed. (%s)</source>
+      <target state="translated">延伸檔名 '%s'不容許. (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_13" xml:space="preserve" approved="yes">
+        <source>File size (%s) of file '%s' exceeds limit (%s). (%s)</source>
+      <target state="translated">檔案大少 (%s)超出限制 (%s). (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_14" xml:space="preserve" approved="yes">
+        <source>The destination (%s) or the source file (%s) does not exist. (%s)</source>
+      <target state="translated">目標 (%s) 或 來源檔案 (%s) 不存在. (%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_15" xml:space="preserve" approved="yes">
+        <source>Copying to file '%s' failed! (%s)</source>
+      <target state="translated">覆製至檔案 '%s' 失敗!(%s)</target></trans-unit>
+      <trans-unit id="msg_1_5_16" xml:space="preserve" approved="yes">
+        <source>Copying file '%s' failed!: The destination path (%s) may be write protected. Please make it write enabled!. (%s)</source>
+      <target state="translated">覆製檔案 '%s' 失敗!: 目標路徑 (%s) 也許有寫入保護. 請使它可以寫入!. (%s)</target></trans-unit>
+      <trans-unit id="type_2" xml:space="preserve" approved="yes">
+        <source>FILE</source>
+      <target state="translated">檔案</target></trans-unit>
+      <trans-unit id="action_2_1" xml:space="preserve" approved="yes">
+        <source>Upload</source>
+      <target state="translated">上載</target></trans-unit>
+      <trans-unit id="action_2_2" xml:space="preserve" approved="yes">
+        <source>Copy</source>
+      <target state="translated">覆製</target></trans-unit>
+      <trans-unit id="action_2_3" xml:space="preserve" approved="yes">
+        <source>Move</source>
+      <target state="translated">移動</target></trans-unit>
+      <trans-unit id="action_2_4" xml:space="preserve" approved="yes">
+        <source>Delete</source>
+      <target state="translated">刪除</target></trans-unit>
+      <trans-unit id="action_2_5" xml:space="preserve" approved="yes">
+        <source>Rename</source>
+      <target state="translated">重新命名</target></trans-unit>
+      <trans-unit id="action_2_6" xml:space="preserve" approved="yes">
+        <source>New</source>
+      <target state="translated">新的</target></trans-unit>
+      <trans-unit id="action_2_7" xml:space="preserve" approved="yes">
+        <source>Unzip</source>
+      <target state="translated">Unzip</target></trans-unit>
+      <trans-unit id="action_2_8" xml:space="preserve" approved="yes">
+        <source>New file</source>
+      <target state="translated">新的檔案</target></trans-unit>
+      <trans-unit id="action_2_9" xml:space="preserve" approved="yes">
+        <source>Edit</source>
+      <target state="translated">修改</target></trans-unit>
+      <trans-unit id="msg_2_9_1" xml:space="preserve" approved="yes">
+        <source>File saved to '%s', bytes: %s, MD5: %s </source>
+      <target state="translated">檔案儲存至 '%s', 位元: %s, MD5: %s</target></trans-unit>
+      <trans-unit id="type_3" xml:space="preserve">
+        <source>CACHE</source>
+      <target/></trans-unit>
+      <trans-unit id="action_3_1" xml:space="preserve">
+        <source>Clear Cache</source>
+      <target/></trans-unit>
+      <trans-unit id="type_254" xml:space="preserve" approved="yes">
+        <source>SETTING</source>
+      <target state="translated">設定</target></trans-unit>
+      <trans-unit id="action_254_1" xml:space="preserve" approved="yes">
+        <source>Change</source>
+      <target state="translated">改變</target></trans-unit>
+      <trans-unit id="type_255" xml:space="preserve" approved="yes">
+        <source>LOGIN</source>
+      <target state="translated">登入</target></trans-unit>
+      <trans-unit id="action_255_1" xml:space="preserve" approved="yes">
+        <source>LOGIN</source>
+      <target state="translated">登入</target></trans-unit>
+      <trans-unit id="action_255_2" xml:space="preserve" approved="yes">
+        <source>LOGOUT</source>
+      <target state="translated">登出</target></trans-unit>
+      <trans-unit id="action_255_3" xml:space="preserve" approved="yes">
+        <source>ATTEMPT</source>
+      <target state="translated">嘗試</target></trans-unit>
+    </body>
+  </file>
+</xliff>

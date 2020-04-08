@@ -1,0 +1,37 @@
+<div class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p id="hitokoto">总有人山高路远为你而来。</p>
+                <p><f:format.raw>{ICP}</f:format.raw> <f:format.raw>{themeCopyrightText}</f:format.raw></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+<img class="footer" id="gotoTop" src="/typo3conf/ext/general_business_frontend_package/Resources/Public/Img/gotop.png" alt="回到顶部" style="position: fixed;right: 50px;bottom: 90px;width: 25px;height: 35px;">
+ 
+<script>
+    (function() {
+        var bp = document.createElement("script");
+        var curProtocol = window.location.protocol.split(":")[0];
+        if (curProtocol === "https") {
+            bp.src = "https://zz.bdstatic.com/linksubmit/push.js"
+        } else {
+            bp.src = "http://push.zhanzhang.baidu.com/push.js"
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s)
+    })();
+</script>
+<f:if condition="{baidukey}!=''">
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?{baidukey}";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>    
+</f:if>

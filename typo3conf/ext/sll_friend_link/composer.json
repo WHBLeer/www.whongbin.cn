@@ -1,0 +1,29 @@
+{
+    "name": "sll/sll-friend-link",
+    "type": "typo3-cms-extension",
+    "description": "\u53cb\u60c5\u94fe\u63a5",
+    "authors": [
+        {
+            "name": "\u4e09\u91cc\u6797",
+            "role": "Developer"
+        }
+    ],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sll\\SllFriendLink\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sll\\SllFriendLink\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "sll_friend_link": "self.version",
+        "typo3-ter/sll-friend-link": "self.version"
+    }
+}

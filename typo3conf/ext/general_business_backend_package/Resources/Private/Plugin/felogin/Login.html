@@ -1,0 +1,220 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-09-25 18:01:14
+ * @LastEditTime: 2019-09-25 18:01:14
+ * @LastEditors: your name
+ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Templates for felogin</title>
+</head>
+<body>
+
+<h1>Common markers</h1>
+<p>These are substituted in all felogin item displaying templates.</p>
+
+<h2>Markers</h2>
+<ul>
+	<li>###ACTION_URI###     - URI of the request for the login/logout form</li>
+	<li>###EXTRA_HIDDEN###   - Hook required (additional hidden field used by kb_md5fepw extension by Kraft Bernhard)</li>
+	<li>###ON_SUBMIT###      - Hook required (used by kb_md5fepw extension by Kraft Bernhard)</li>
+	<li>###PREFIXID###       - Same as class name ('tx_felogin_pi1') useful to get a unique classname prefix</li>
+	<li>###REDIRECT_URL###   - URL of redirection upon login</li>
+	<li>###NOREDIRECT###     - if set, no redirect will be done</li>
+	<li>###STORAGE_PID###    - explicit enough I guess (if not : id of the page where user are stored)</li>
+	<li>###STATUS_HEADER###  - depends of the template</li>
+	<li>###STATUS_MESSAGE### - depends of the template</li>
+</ul>
+
+<h2>Wrap parts</h2>
+<ul>
+	<li>###HEADER_VALID###  - useful to define what to show/hide</li>
+	<li>###MESSAGE_VALID### - useful to define what to show/hide</li>
+	<li>###FORGOTP_VALID### - useful to define what to show/hide</li>
+	<li>###PERMALOGIN_VALID### - useful to define what to show/hide</li>
+</ul>
+
+<h2>felogin Language Markers (see pi/locallang.xlf)</h2>
+<ul>
+	<li>###EMAIL_LABEL###                 - corresponding to 'your_email'</li>
+	<li>###FORGOT_PASSWORD###             - corresponding to 'forgot_password'</li>
+	<li>###FORGOT_PASSWORD_BACKTOLOGIN### - corresponding to 'forgot_password_backToLogin'</li>
+	<li>###FORGOT_PASSWORD_ENTEREMAIL###  - corresponding to 'forgot_password_enterEmail'</li>
+	<li>###LOGIN_LABEL###                 - corresponding to 'login'</li>
+	<li>###PASSWORD_LABEL###              - corresponding to 'password'</li>
+	<li>###SEND_PASSWORD###               - corresponding to 'send_password'</li>
+	<li>###USERNAME_LABEL###              - corresponding to 'username'</li>
+</ul>
+
+<!--###TEMPLATE_LOGIN###-->
+<!-- <div class="home-btn d-none d-sm-block">
+	<a href="/" class="text-dark"><i class="fas fa-home h2"></i></a>
+</div> -->
+<div class="wrapper-page">
+
+	<div class="card overflow-hidden account-card mx-3">
+
+		<div class="bg-primary p-4 text-white text-center position-relative">
+			<h4 class="font-20 m-b-5">Welcome Back !</h4>
+			<p class="text-white-50 mb-4">Sign in to continue to SanLiLin.</p>
+			<a href="index" class="logo logo-admin"><img src="typo3conf/ext/general_business_backend_package/Resources/Public/assets/images/logo-sm.png" height="24" alt="logo"></a>
+		</div>
+		<div class="account-card-content">
+
+			<form class="form-horizontal m-t-30" id="login-form" action="###ACTION_URI###" method="post"
+				onsubmit="###ON_SUBMIT###" target="_top">
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input type="text" class="form-control" id="username" name="user"
+						placeholder="###USERNAME_LABEL###">
+				</div>
+
+				<div class="form-group">
+					<label for="userpassword">Password</label>
+					<input type="password" class="form-control" id="userpassword" name="pass"
+						placeholder="###PASSWORD_LABEL###">
+				</div>
+
+				<div class="form-group row m-t-20">
+					<div class="col-sm-6">
+						<div class="custom-control custom-checkbox">
+							<input type="checkbox" class="custom-control-input" id="customControlInline">
+							<label class="custom-control-label" for="customControlInline">Remember me</label>
+						</div>
+					</div>
+					<div class="col-sm-6 text-right">
+						<button class="btn btn-primary w-md waves-effect waves-light"
+							type="submit">###LOGIN_LABEL###</button>
+						<div class="felogin-hidden">
+							<input type="hidden" name="logintype" value="login" />
+							<input type="hidden" name="pid" value="###STORAGE_PID###" />
+							<input type="hidden" name="redirect_url" value="###REDIRECT_URL###" />
+							<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
+							###EXTRA_HIDDEN###
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group m-t-10 mb-0 row">
+					<div class="col-12 m-t-20">
+						<!--###FORGOT_PASSWORD_LINK###--><i class="mdi mdi-lock"></i>###FORGOT_PASSWORD### <!--###FORGOT_PASSWORD_LINK###-->
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+	<div class="m-t-40 text-center">
+		<p>Don't have an account ? <a href="register" class="font-500 text-primary"> Register now </a> </p>
+		<p>(Copyright)&nbsp;©&nbsp;2019&nbsp;<i class="mdi mdi-heart text-danger"></i>&nbsp; <a href="https://www.whongbin.cn/">build by www.whongbin.cn</a></p>
+	</div>
+
+</div>
+
+<!--###TEMPLATE_LOGIN###-->
+
+<!--###TEMPLATE_LOGOUT###-->
+<div class="logo">
+    <a href="admin/login">
+        <img src="fileadmin/templates/backend/public/images/logo.png" alt="" />
+    </a>
+</div>
+<div class="content">
+    <form role="form" class="login-form" action="###ACTION_URI###" method="post" target="_top">
+        <!-- <h3 class="form-title">###STATUS_HEADER###</h3> -->
+        <div class="alert alert-info">
+            <button class="close" data-close="alert"></button>
+            <span> ###STATUS_MESSAGE###</span>
+        </div>
+        <div class="form-group">
+            <label class="control-label visible-ie8 visible-ie9">###USERNAME_LABEL###</label>
+            <div class="input-icon">
+                <i class="fa fa-user"></i>
+                <div class="form-control">###USERNAME### 已登录</div>
+            </div>
+        </div>
+        <div class="felogin-hidden">
+			<input type="hidden" name="logintype" value="logout" />
+			<input type="hidden" name="pid" value="###STORAGE_PID###" />
+			<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
+		</div>
+        <button type="submit" class="btn btn-block btn-success">###LOGOUT_LABEL###</button>
+    </form>
+</div>
+<!--###TEMPLATE_LOGOUT###-->
+
+<!--###TEMPLATE_FORGOT###-->
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100" style="padding: 85px 130px 85px 96px;">
+			<div class="login100-pic js-tilt" data-tilt>
+				<img src="typo3conf/ext/general_business_backend_package/Resources/Public/Login/images/img-01.png"
+					alt="IMG">
+			</div>
+
+			<form role="form" class="login100-form validate-form login-form" action="###ACTION_URI###" method="post" target="_top">
+				<span class="login100-form-title">找回密码</span>
+
+				<div class="wrap-input100 validate-input" data-validate="请填写邮箱 demo@whongbin.com">
+					<input class="input100" type="text" placeholder="###DATA_LABEL###" name="###FORGOT_EMAIL###" />
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+					</span>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<button type="submit" class="login100-form-btn">###SEND_PASSWORD###</button>
+				</div>
+
+				<div class="text-center p-t-12">
+					<span class="txt1">GoBack: </span>
+					###BACKLINK_LOGIN###
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--###TEMPLATE_FORGOT###-->
+
+<!--###TEMPLATE_CHANGEPASSWORD###-->
+<div class="logo">
+    <a href="admin/login">
+        <img src="fileadmin/templates/backend/public/images/logo.png" alt="" />
+    </a>
+</div>
+<div class="content">
+	<!-- ###CHANGEPASSWORD_FORM### -->
+	<form role="form" class="login-form" id="login-form" action="###ACTION_URI###" method="post" onsubmit="###ON_SUBMIT###" target="_top">
+		<!-- <h3 class="form-title">###STATUS_HEADER###</h3> -->
+		<div class="alert alert-info">
+			<button class="close" data-close="alert"></button>
+			<span> ###STATUS_MESSAGE### </span>
+		</div>
+		<div class="form-group">
+			<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+			<label class="control-label visible-ie8 visible-ie9">###USERNAME_LABEL###</label>
+			<div class="input-icon">
+				<i class="fa fa-user"></i>
+				<input type="password" name="###NEWPASSWORD1###" placeholder="###NEWPASSWORD1_LABEL###" class="form-control placeholder-no-fix" data-rsa-encryption="" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label visible-ie8 visible-ie9">###PASSWORD_LABEL###</label>
+			<div class="input-icon">
+				<i class="fa fa-lock"></i>
+				<input type="password" name="###NEWPASSWORD2###" placeholder="###NEWPASSWORD2_LABEL###" class="form-control placeholder-no-fix" data-rsa-encryption="" />
+			</div>
+		</div>
+		<div class="form-actions">
+			<div class="btn btn-block btn btn-danger uppercase pull-left">###BACKLINK_LOGIN###</div>
+			<button type="submit" class="btn btn-success uppercase pull-right" id="login-sub">###SEND_PASSWORD###</button>
+		</div>
+	</form>
+	<!-- ###CHANGEPASSWORD_FORM### -->
+</div>
+<!--###TEMPLATE_CHANGEPASSWORD###-->

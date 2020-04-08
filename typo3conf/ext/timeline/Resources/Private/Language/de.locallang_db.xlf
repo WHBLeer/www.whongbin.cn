@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+   <file source-language="en" datatype="plaintext" original="messages" date="2017-11-27T17:38:32Z" product-name="timeline">
+      <header/>
+      <body>
+         <trans-unit id="extension.title">
+            <source>Create TimeLine</source>
+            <target>Zeitstrahl erstellen</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent">
+            <source>TimeLine-Event</source>
+            <target>Zeitstrahl-Ereignis</target>
+         </trans-unit>
+         
+         <trans-unit id="tx_timeline_domain_model_timelineevent.description">
+             <source>Create a TimeLine on your website</source>
+             <target>Einen Zeitstrahl auf der Website erstellen</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_title">
+            <source>Title</source>
+            <target>Titel</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_event_title">
+            <source>Link to the Details</source>
+            <target>Link zu den Details</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_description">
+            <source>Description</source>
+            <target>Beschreibung</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_start">
+            <source>Start-Date</source>
+            <target>Start-Datum</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_end">
+            <source>End-Date</source>
+            <target>End-Datum</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_format">
+             <source>Date-Format</source>
+             <target>Datumsformat</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_side">
+             <source>Direction</source>
+             <target>Richtung</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_side.left">
+             <source>Left</source>
+             <target>Links</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timelineevent.item_side.right">
+             <source>Right</source>
+             <target>Rechts</target>
+         </trans-unit>
+         
+         <trans-unit id="tx_timeline_domain_model_timeline">
+             <source>TimeLine</source>
+             <target>Zeitstrahl</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.item_layout">
+             <source>Layout</source>
+             <target>Layout</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.item_year">
+             <source>Show the year only</source>
+             <target>Nur das Jahr zeigen</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.item_color">
+             <source>Color</source>
+             <target>Farbe</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.item_fore_color">
+             <source>Font-Color</source>
+             <target>Schrift-Farbe</target>
+         </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.ts">
+             <source>From Typoscript</source>
+             <target>Von Typoscript</target>
+         </trans-unit>
+          <trans-unit id="tx_timeline_domain_model_timeline.order">
+              <source>Order</source>
+              <source>Sortierung</source>
+          </trans-unit>
+          <trans-unit id="tx_timeline_domain_model_timeline.order.asc">
+              <source>Ascending</source>
+              <source>Aufsteigend</source>
+          </trans-unit>
+          <trans-unit id="tx_timeline_domain_model_timeline.order.desc">
+              <source>Descending</source>
+              <source>Absteigend</source>
+          </trans-unit>
+          <trans-unit id="tx_timeline_domain_model_timeline.order.none">
+              <source>None</source>
+              <source>Keine</source>
+          </trans-unit>
+         <trans-unit id="tx_timeline_domain_model_timeline.custom">
+             <source>Custom CSS-File</source>
+             <source>Eigene CSS-Datei</source>
+         </trans-unit>
+      </body>
+   </file>
+</xliff>

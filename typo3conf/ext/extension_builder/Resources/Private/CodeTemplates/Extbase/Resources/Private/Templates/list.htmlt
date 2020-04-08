@@ -1,0 +1,91 @@
+{namespace k=EBT\ExtensionBuilder\ViewHelpers}<f:format.raw><k:openingTag>html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
+data-namespace-typo3-fluid="true"</k:openingTag>
+	<k:openingTag>f:layout name="Default" /</k:openingTag>
+
+
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers" 
+      data-namespace-typo3-fluid="true">
+
+
+	  
+	This Template is responsible for creating a table of domain objects.
+
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<k:openingTag>f:section name="content"</k:openingTag>
+		<k:openingTag>f:render partial="Messages" arguments="<k:curlyBrackets>flashMessages</k:curlyBrackets>" /</k:openingTag>
+
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<div class="card topaction">
+				<div class="topaction-left">
+					<k:openingTag>f:link.action action="new"</k:openingTag>New {domainObject.name}<k:openingTag>/f:link.action</k:openingTag>
+				</div>
+				<div class="topaction-right">
+					<div class="btn-group">
+						<k:openingTag>f:form action="list" name="search" object="<k:curlyBrackets>search</k:curlyBrackets>"</k:openingTag>
+						<div class="input-group">
+							<div class="input-icon">
+								<input type="hidden" name="id" value="<k:curlyBrackets>pageUid</k:curlyBrackets>" />
+								<k:openingTag>f:form.textfield name="keyword" value="<k:curlyBrackets>keyword</k:curlyBrackets>" class="form-control  input-xs" placeholder="请输入查询条件" /</k:openingTag>
+							</div>
+							<span class="input-group-btn">
+								<k:openingTag>f:form.submit class="btn btn-success btn-sm" value="搜" /</k:openingTag>
+							</span>
+						</div>
+						<k:openingTag>/f:form</k:openingTag>
+					</div>
+				</div>
+				<div class="card-body">
+					<k:openingTag>sll:widget.paginate objects="{domainObject.name -> k:format.lowercaseFirst() -> k:pluralize() -> k:curlyBrackets()}" as="{domainObject.name -> k:format.lowercaseFirst()}Pagination"  configuration="<k:curlyBrackets>settings.paginate</k:curlyBrackets>"</k:openingTag>
+						<table class="table table-hover mb-0">
+							<thead>
+								<k:format.removeMultipleNewlines><tr>
+								<f:comment>Building up the table header</f:comment>
+									<th></th>
+									<th>#</th>
+									<f:for each="{domainObject.properties}" as="property"><f:if condition="{property.isDisplayable}">
+									<th><k:openingTag>f:translate key="{property.labelNamespace}" /</k:openingTag></th>
+									</f:if></f:for>
+									<th>操作</th>
+								</tr>
+								</k:format.removeMultipleNewlines>
+							</thead>
+							<tbody> 
+								<k:openingTag>f:for each="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()}Pagination</k:curlyBrackets>" as="{domainObject.name -> k:format.lowercaseFirst()}" iteration="itemIteration"</k:openingTag>
+									<tr>
+										<td>
+											<div class="checkbox-wrapper-mail">
+												<input type="checkbox" name="test" class="custom-control-input" id="chk<k:curlyBrackets>news.uid</k:curlyBrackets>" value="<k:curlyBrackets>news.uid</k:curlyBrackets>">
+												<label for="chk<k:curlyBrackets>news.uid</k:curlyBrackets>" class="toggle"></label>
+											</div>
+										</td>
+										<td>
+											<k:curlyBrackets>f:cObject(typoscriptObjectPath:'lib.calc',data:'<k:curlyBrackets>itemIteration.cycle</k:curlyBrackets>+(<k:curlyBrackets>page</k:curlyBrackets>-1)*<k:curlyBrackets>settings.paginate.itemsPerPage</k:curlyBrackets>')}
+										</td>
+										<f:for each="{domainObject.properties}" as="property"><f:if condition="{property.isDisplayable}"><td><k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()}.{property.nameToBeDisplayedInFluidTemplate}</k:curlyBrackets></td></f:if></f:for>
+										<td>
+											<k:openingTag>f:link.action action="show" class="btn btn-sm btn-default" arguments="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()} : {domainObject.name -> k:format.lowercaseFirst()}</k:curlyBrackets>"</k:openingTag>查看<k:openingTag>/f:link.action</k:openingTag>
+											<k:openingTag>f:link.action action="edit" class="btn btn-sm btn-info" arguments="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()} : {domainObject.name -> k:format.lowercaseFirst()}</k:curlyBrackets>"</k:openingTag>编辑<k:openingTag>/f:link.action</k:openingTag>
+											<k:openingTag>f:link.action action="delete" class="btn btn-sm btn-danger" arguments="<k:curlyBrackets>{domainObject.name -> k:format.lowercaseFirst()} : {domainObject.name -> k:format.lowercaseFirst()}</k:curlyBrackets>"</k:openingTag>删除<k:openingTag>/f:link.action</k:openingTag>
+										</td>
+									</tr>
+								<k:openingTag>/f:for</k:openingTag>
+							</tbody>
+						</table>
+					<k:openingTag>/sll:widget.paginate</k:openingTag>
+				</div>
+			</div>
+		</div>
+	<k:openingTag>/f:section</k:openingTag>
+<k:openingTag>/html</k:openingTag></f:format.raw>

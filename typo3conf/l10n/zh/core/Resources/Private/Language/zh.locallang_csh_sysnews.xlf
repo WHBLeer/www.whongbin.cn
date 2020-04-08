@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="en" target-language="zh" datatype="plaintext" original="messages" date="2019-12-09T01:22:17Z" product-name="core">
+		<header/>
+		<body>
+			<trans-unit id="content.description" resname="content.description">
+				<source>The news content to let editors know what's coming up. HTML is disabled, however, you can use line breaks.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id=".description" resname=".description">
+				<source>System news are shown at the TYPO3 login screen, allowing admins to inform editors about upcoming system maintenance and similar events.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="hidden.description" resname="hidden.description">
+				<source>This option will hide the news from showing up at the login screen.</source>
+				<target/>
+			</trans-unit>
+			<trans-unit id="title.description" resname="title.description">
+				<source>Enter the title of the news.</source>
+				<target/>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

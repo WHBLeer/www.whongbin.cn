@@ -1,0 +1,32 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "\u96c6\u6210\u4e00\u4e9b\u5e38\u7528\u63d2\u4ef6",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "sll_plugin",
+        "name": "Some Plugins",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [],
+        "plugins": [],
+        "vendorName": "Sll"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2019-12-12 10:29",
+        "extension_builder_version": "9.10.0",
+        "be_user": "\u4e09\u91cc\u6797 (1)"
+    }
+}

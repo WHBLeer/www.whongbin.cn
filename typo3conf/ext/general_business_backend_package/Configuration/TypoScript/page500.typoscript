@@ -1,0 +1,216 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = FILE:EXT:general_business_backend_package/Resources/Public/Img/favicon.ico
+
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName {
+            cObject = TEXT
+            cObject {
+                data = pagelayout
+                required = 1
+                case = uppercamelcase
+                split {
+                    token = pagets__page500
+                    cObjNum = 1
+                    1.current = 1
+                }
+            }
+            ifEmpty = Page500
+        }
+        templateRootPaths {
+            0 = EXT:general_business_backend_package/Resources/Private/Templates/Page/
+            1 = {$page.fluidtemplate.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:general_business_backend_package/Resources/Private/Partials/Page/
+            1 = {$page.fluidtemplate.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:general_business_backend_package/Resources/Private/Layouts/Page/
+            1 = {$page.fluidtemplate.layoutRootPath}
+        }
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            20 {
+                levels = 2
+                includeSpacer = 1
+                as = mainnavigation
+            }
+        }
+
+        variables {
+            pageTitle = TEXT
+            pageTitle.data = page:title
+
+            pageSubTitle = TEXT
+            pageSubTitle.data = page:subtitle
+
+            pageId = TEXT
+            pageId.data = page:uid
+
+            siteTitle = TEXT
+            siteTitle.data = TSFE:tmpl|setup|sitetitle
+
+            baseURL = TEXT
+            baseURL.value = {$config.baseURL}
+
+            userUid = TEXT
+            userUid.data = TSFE:fe_user|user|uid
+
+            userEmail = TEXT
+            userEmail.data = TSFE:fe_user|user|email
+
+            userName = TEXT
+            userName.data = TSFE:fe_user|user|username
+
+            userGroup = TEXT
+            userGroup.data = TSFE:fe_user|user|usergroup
+
+            themeCopyright = TEXT
+            themeCopyright.value = {$page.theme.copyright.enable}
+            themeCopyrightText = TEXT
+            themeCopyrightText.data = date:U
+            themeCopyrightText.strftime = %Y
+            themeCopyrightText.wrap =(Copyright)&nbsp;&copy;&nbsp; | &nbsp;<i class="mdi mdi-heart text-danger"></i>&nbsp; <a href="{$config.baseURL}">{$config.headerComment}</a>
+        }
+    }
+    headerData{
+        1568907945 = TEXT
+        1568907945.value(
+            <link rel="apple-touch-icon" sizes="180x180" href="{$page.favicon.file}">
+            <link rel="icon" type="image/png" sizes="32x32" href="{$page.favicon.file}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{$page.favicon.file}">
+        )
+    }
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        description = {$page.meta.description}
+        description {
+            override.field = description
+        }
+        author = {$page.meta.author}
+        author {
+            override.field = author
+        }
+        keywords = {$page.meta.keywords}
+        keywords {
+            override.field = keywords
+        }
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+
+        # OpenGraph Tags
+        og:title {
+            attribute = property
+            field = title
+        }
+        og:site_name {
+            attribute = property
+            data = TSFE:tmpl|setup|sitetitle
+        }
+        og:description = {$page.meta.description}
+        og:description {
+            attribute = property
+            field = description
+        }
+        og:image {
+            attribute = property
+            stdWrap.cObject = FILES
+            stdWrap.cObject {
+                references {
+                    data = levelfield:-1, media, slide
+                }
+                maxItems = 1
+                renderObj = COA
+                renderObj {
+                    10 = IMG_RESOURCE
+                    10 {
+                        file {
+                            import.data = file:current:uid
+                            treatIdAsReference = 1
+                            width = 1280c
+                            height = 720c
+                        }
+                        stdWrap {
+                            typolink {
+                                parameter.data = TSFE:lastImgResourceInfo|3
+                                returnLast = url
+                                forceAbsoluteUrl = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    includeCSS {
+        css1 = {$page.includePath.assets}css/bootstrap.min.css
+        css2 = {$page.includePath.assets}css/metismenu.min.css
+        css3 = {$page.includePath.assets}css/icons.css
+        css4 = {$page.includePath.assets}css/style.css
+    }
+    includeJSFooterlibs {
+        js1 = {$page.includePath.assets}js/jquery.min.js
+        js2 = {$page.includePath.assets}js/bootstrap.bundle.min.js
+        js3 = {$page.includePath.assets}js/metisMenu.min.js
+        js4 = {$page.includePath.assets}js/jquery.slimscroll.js
+        js5 = {$page.includePath.assets}js/waves.min.js
+        js6 = {$page.includePath.plugins}countdown/jquery.countdown.min.js
+        js7 = {$page.includePath.assets}pages/countdown.int.js
+        js8 = {$page.includePath.assets}js/app.js
+    }
+}
+
+
+################
+#### CONFIG ####
+################
+config {
+    absRefPrefix = auto
+    no_cache = 1
+    uniqueLinkVars = 1
+    pageTitleFirst = 1
+    linkVars = L
+    prefixLocalAnchors = {$config.prefixLocalAnchors}
+    renderCharset = utf-8
+    metaCharset = utf-8
+    doctype = html5
+    removeDefaultJS = 1
+    inlineStyle2TempFile = 1
+    admPanel = 0
+    debug = 0
+    cache_period = 86400
+    sendCacheHeaders = 1
+    intTarget =
+    extTarget =
+    disablePrefixComment = 1
+    index_enable = 1
+    index_externals = 1
+    index_metatags = 1
+    headerComment = {$config.headerComment}
+
+    // Disable Image Upscaling
+    noScaleUp = 1
+
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
+}
