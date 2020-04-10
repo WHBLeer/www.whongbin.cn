@@ -27,34 +27,24 @@ routeEnhancers:
     extension: news
     plugin: Pi1
     routes:
-      -
-        routePath: '/page-{page}'
-        _controller: 'News::list'
-        _arguments:
-          page: '@widget_0/currentPage'
-      -
-        routePath: '/tag-{tag_name}'
-        _controller: 'News::list'
-        _arguments:
-          tag_name: overwriteDemand/tags
-      -
-        routePath: '/{news_title}'
-        _controller: 'News::detail'
-        _arguments:
-          news_title: news
-      -
-        routePath: '/archive/{year}/{month}'
-        _controller: 'News::archive'
+      - { routePath: '/page-{page}', _controller: 'News::list', _arguments: {'page': '@widget_0/currentPage'} }
+      - { routePath: '/tag-{tag_name}', _controller: 'News::list', _arguments: {'tag_name': 'overwriteDemand/tags'}}
+      - { routePath: '/{news_id}', _controller: 'News::detail', _arguments: {'news_id': 'news'} }
+      - { routePath: '/archive/{year}/{month}', _controller: 'News::archive' }
     defaultController: 'News::list'
     aspects:
+      news_id:
+        type: PersistedAliasMapper
+        tableName: 'tx_news_domain_model_news'
+        routeFieldName: 'uid'
       news_title:
         type: PersistedAliasMapper
-        tableName: tx_news_domain_model_news
-        routeFieldName: path_segment
+        tableName: 'tx_news_domain_model_news'
+        routeFieldName: 'path_segment'
     defaults:
       page: '0'
     requirements:
-      page: \d+
+      page: '\d+'
 routes:
   -
     route: sitemap.xml

@@ -78,4 +78,9 @@ config {
     prefixLocalAnchors = all
     headerComment = build by www.whongbin.cn
     sendCacheHeaders = 1
+    // Compression and Concatenation of CSS and JS Files
+    compressJs = 1
+    compressCss = 1
+    concatenateJs = 1
+    concatenateCss = 1
 }

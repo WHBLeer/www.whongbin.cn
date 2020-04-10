@@ -289,9 +289,4 @@ config {
 
     // Disable Image Upscaling
     noScaleUp = 1
-    // Compression and Concatenation of CSS and JS Files
-    compressJs = 0
-    compressCss = 0
-    concatenateJs = 0
-    concatenateCss = 0
 }
