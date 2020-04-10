@@ -2020,8 +2020,6 @@
             
             newMarkdownDoc = editormd.filterHTMLTags(newMarkdownDoc, settings.htmlDecode);
             
-            //console.error("cmValue", cmValue, newMarkdownDoc);
-            
             this.markdownTextarea.text(cmValue);
             
             cm.save();
@@ -3808,7 +3806,6 @@
      */
     
     editormd.filterHTMLTags = function(html, filters) {
-        
         if (typeof html !== "string") {
             html = new String(html);
         }
@@ -3816,7 +3813,6 @@
         if (typeof filters !== "string") {
             return html;
         }
-
         var expression = filters.split("|");
         var filterTags = expression[0].split(",");
         var attrs      = expression[1];

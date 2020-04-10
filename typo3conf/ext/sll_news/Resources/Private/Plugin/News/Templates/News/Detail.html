@@ -52,13 +52,13 @@
 			</f:if>
 			<f:if condition="{newsItem.teaser}">
 				<!-- 简介 -->
-				<div class="teaser-text" itemprop="description">
+				<!-- <div class="teaser-text" itemprop="description">
 					<f:format.html>{newsItem.teaser}</f:format.html>
-				</div>
+				</div> -->
 			</f:if>
 			<div class="post-content-body post_body" id="article-editormd">
 				<!-- 详情 -->
-				<textarea id="append-test" style="display:none;"><f:format.raw>{newsItem.bodytext}</f:format.raw></textarea>
+				<textarea id="append-test" style="display:none;">{newsItem.bodytext}</textarea>
 			</div>
 			<div class="pt-3">
 				<p>
