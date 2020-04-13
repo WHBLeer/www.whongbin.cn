@@ -72,6 +72,16 @@ $boot = function () {
         }
     }
 
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup(trim('
+        config.pageTitleProviders {
+            own {
+                provider = GeorgRinger\News\Utility\PageTitleProvider
+                before = record
+                after = altPageTitle
+            }
+        }
+    '));
+
     /* ===========================================================================
         Default configuration
     =========================================================================== */

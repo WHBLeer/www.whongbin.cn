@@ -12,7 +12,8 @@ use GeorgRinger\News\Utility\Page;
 use GeorgRinger\News\Utility\TypoScript;
 use TYPO3\CMS\Core\TypoScript\TypoScriptService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-
+use GeorgRinger\News\Utility\PageTitleProvider;
+use TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry;
 /**
  * Controller of news records
  *
@@ -362,6 +363,16 @@ class NewsController extends NewsBaseController
         $news = $assignedValues['newsItem'];
         $this->view->assignMultiple($assignedValues);
 
+        /*****************************start 2020年4月13日******************************/
+        //自定义页面标题
+        $titleProvider = GeneralUtility::makeInstance(PageTitleProvider::class);
+        $siteName = $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'];
+        $titleProvider->setTitle($siteName.'-'.$news->getTitle());
+
+        //自定义页面meta标签
+        $this->updateMetaTag($news);
+        /******************************end 2020年4月13日*******************************/
+
         // reset news if type is internal or external
         if ($news && ($news->getType() === '1' || $news->getType() === '2')) {
             $news = null;
@@ -380,6 +391,52 @@ class NewsController extends NewsBaseController
         }
     }
 
+    /**
+     * 更新SEOmeta标签
+     *
+     * @param \GeorgRinger\News\Domain\Model\News $news
+     * @return void
+     * @author wanghongbin
+     * tstamp: 2020-04-13
+     */
+    protected function updateMetaTag(\GeorgRinger\News\Domain\Model\News $news)
+    {
+        // SEO标题
+        $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('og:title');
+        $metaTagManager->removeProperty('og:title');
+        $metaTagManager->addProperty('og:title', $news->getTitle());
+
+        // SEO缩略图
+        $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('og:image');
+        $metaTagManager->removeProperty('og:image');
+        $metaTagManager->addProperty('og:image', '/fileadmin/static_file/img/thumbnail.png', ['width' => 200, 'height' => 200]);
+        
+        // SEO介绍
+        $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('og:description');
+        $metaTagManager->removeProperty('og:description');
+        $metaTagManager->addProperty('og:description', $news->getTeaser());
+        
+        // 介绍
+        $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('description');
+        $metaTagManager->addProperty('description', $news->getTeaser());
+        
+        $keywords = '木木彡,三里林';
+        foreach ($news->getCategories() as $key => $category) {
+            $keywords .= ','.$category->getTitle();
+        }
+        foreach ($news->getTags() as $key => $tag) {
+            $keywords .= ','.$tag->getTitle();
+        }
+
+        // SEO关键字
+        $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('og:keyword');
+        $metaTagManager->removeProperty('og:keyword');
+        $metaTagManager->addProperty('og:keyword', $keywords);
+
+        // 关键字
+        $metaTagManager = GeneralUtility::makeInstance(MetaTagManagerRegistry::class)->getManagerForProperty('keywords');
+        $metaTagManager->addProperty('keywords', $keywords);
+    }
     /**
      * Checks if the news pid could be found in the startingpoint settings of the detail plugin and
      * if the pid could not be found it return NULL instead of the news object.
