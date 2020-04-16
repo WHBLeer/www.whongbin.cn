@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-24T09:35:38Z" product-name="slug">
+		<header/>
+		<body>
+			<trans-unit id="default.maxentries">
+				<source>默认最大条目数</source>
+			</trans-unit>
+			<trans-unit id="default.orderby">
+				<source>默认等级排序</source>
+			</trans-unit>
+			<trans-unit id="default.order">
+				<source>默认顺序</source>
+			</trans-unit>
+			<trans-unit id="default.recordInfoEnabled">
+				<source>启用其他记录信息</source>
+			</trans-unit>
+
+
+            <trans-unit id="news.maxentries">
+				<source>新闻记录的最小最大</source>
+			</trans-unit>
+			<trans-unit id="news.orderby">
+				<source>新闻记录的默认排序</source>
+			</trans-unit>
+			<trans-unit id="news.order">
+				<source>新闻记录的默认顺序</source>
+			</trans-unit>
+			<trans-unit id="news.enabled">
+				<source>新闻已启用</source>
+			</trans-unit>
+
+
+			<trans-unit id="tree.enabled">
+				<source>树已启用</source>
+			</trans-unit>
+                        <trans-unit id="tree.depth">
+				<source>树深</source>
+			</trans-unit>
+                        <trans-unit id="tree.root">
+				<source>树默认根页uid</source>
+			</trans-unit>
+
+
+            <trans-unit id="record.enabled">
+				<source>自定义记录已启用</source>
+			</trans-unit>
+                        <trans-unit id="record.maxentries">
+				<source>自定义记录初始最大尺寸</source>
+			</trans-unit>
+                        <trans-unit id="record.orderby">
+				<source>自定义记录的排序方式</source>
+			</trans-unit>
+                        <trans-unit id="record.order">
+				<source>自定义记录排序</source>
+			</trans-unit>
+
+
+			<trans-unit id="seo.enabled">
+				<source>启用S​​EO模块</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

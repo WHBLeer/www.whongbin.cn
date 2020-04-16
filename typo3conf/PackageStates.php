@@ -65,6 +65,9 @@ return [
         'felogin' => [
             'packagePath' => 'typo3/sysext/felogin/',
         ],
+        'indexed_search' => [
+            'packagePath' => 'typo3/sysext/indexed_search/',
+        ],
         'info' => [
             'packagePath' => 'typo3/sysext/info/',
         ],
@@ -110,9 +113,6 @@ return [
         'general_business_frontend_package' => [
             'packagePath' => 'typo3conf/ext/general_business_frontend_package/',
         ],
-        'site_generator' => [
-            'packagePath' => 'typo3conf/ext/site_generator/',
-        ],
         'sll_fe_user' => [
             'packagePath' => 'typo3conf/ext/sll_fe_user/',
         ],
@@ -130,6 +130,9 @@ return [
         ],
         'sll_snow' => [
             'packagePath' => 'typo3conf/ext/sll_snow/',
+        ],
+        'slug' => [
+            'packagePath' => 'typo3conf/ext/slug/',
         ],
         'staticfilecache' => [
             'packagePath' => 'typo3conf/ext/staticfilecache/',

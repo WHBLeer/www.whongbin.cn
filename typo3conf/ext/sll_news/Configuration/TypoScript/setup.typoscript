@@ -5,41 +5,6 @@ lib.calc {
   current = 1
   prioriCalc = 1
 }
-plugin.tx_news {
-        view {
-                templateRootPaths >
-                templateRootPaths {
-                        0 = EXT:news/Resources/Private/Templates/
-                        1 = EXT:sll_news/Resources/Private/Plugin/News/Templates/
-                }
-                partialRootPaths >
-                partialRootPaths {
-                        0 = EXT:news/Resources/Private/Partials/
-                        1 = EXT:sll_news/Resources/Private/Plugin/News/Partials/
-                }
-                layoutRootPaths >
-                layoutRootPaths {
-                        0 = EXT:news/Resources/Private/Layouts/
-                        1 = EXT:sll_news/Resources/Private/Plugin/News/Layouts/
-                }
-                widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = typo3conf/ext/sll_news/Resources/Plugin/Templates/
-        }
-		settings {
-			link {
-		    	skipControllerAndAction = 1
-		  	}
-		  	list {
-		    	paginate.insertAbove = 0
-		  	}
-            paginate {
-                itemsPerPage = 15
-                insertAbove = 0
-                insertBelow = 1
-                prevNextHeaderTags = 8
-                maximumNumberOfLinks = 10
-            }
-		}
-}
 
 plugin.tx_sllnews_news {
     view {

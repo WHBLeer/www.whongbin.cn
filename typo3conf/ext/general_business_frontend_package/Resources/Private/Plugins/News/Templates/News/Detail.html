@@ -1,6 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+	  xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
 <f:layout name="Detail" />
@@ -13,24 +14,20 @@
 <f:section name="content">
 	<f:if condition="{newsItem}">
 		<f:then>
-			<n:format.nothing>
-				<n:excludeDisplayedNews newsItem="{newsItem}" />
-				<f:if condition="{newsItem.alternativeTitle}">
-					<f:then>
-						<n:titleTag>
-							<f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
-						</n:titleTag>
-					</f:then>
-					<f:else>
-						<n:titleTag>
-							<f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
-						</n:titleTag>
-					</f:else>
-				</f:if>
-				<f:if condition="{settings.detail.showMetaTags}">
-					<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
-				</f:if>
-			</n:format.nothing>
+			<link rel="stylesheet" href="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/css/editormd.css">
+			<link rel="stylesheet" href="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/css/editormd.preview.css">
+			<link rel="stylesheet" href="typo3conf/ext/sll_plugin/Resources/Public/Css/sll.css">
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/marked.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/prettify.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/raphael.min.js"></script>
+			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/editormd.js"></script>
+			<script>
+				document.getElementById("articleCategory").innerHTML = '<f:for each="{newsItem.categories}" as="category"><span class="post-category detail-title-category text-white bm-3 {category.categoryclass}">{category.title}</span></f:for>';
+				document.getElementById("articleTitle").innerText = '{newsItem.title}';
+				document.getElementById("authorImage").src = '{newsItem.authorimg}';
+				document.getElementById("author").innerText = '{newsItem.author}';
+				document.getElementById("dateTime").innerText = " - {newsItem.datetime -> f:format.date(format: 'M d, Y')}";
+			</script>
 			<f:if condition="{settings.detail.showPrevNext}">
 				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
 					<f:if condition="{paginated}">
@@ -53,62 +50,25 @@
 					</f:if>
 				</n:simplePrevNext>
 			</f:if>
-			<div class="header">
-				<h3 itemprop="headline">{newsItem.title}</h3>
+			<f:if condition="{newsItem.teaser}">
+				<!-- 简介 -->
+				<!-- <div class="teaser-text" itemprop="description">
+					<f:format.html>{newsItem.teaser}</f:format.html>
+				</div> -->
+			</f:if>
+			<div class="post-content-body post_body" id="article-editormd">
+				<!-- 详情 -->
+				<textarea id="append-test" style="display:none;">{newsItem.bodytext}</textarea>
 			</div>
-			<div class="footer">
+			<div class="pt-3">
 				<p>
-					<!-- date -->
-					<span class="news-list-date">
-						<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-							<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-						</time>
-					</span>
-
-					<f:if condition="{newsItem.categories}">
-						<f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}" />
-					</f:if>
-
-					<f:if condition="{newsItem.tags}">
-						<!-- Tags -->
-						<span class="news-list-tags" itemprop="keywords">
-						<f:for each="{newsItem.tags}" as="tag">
-							{tag.title}
-						</f:for>
-						</span>
-					</f:if>
-
-					<f:if condition="{newsItem.author}">
-						<!-- author -->
-						<span class="news-list-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
-							<f:translate key="author_simple" /> <span itemprop="name">{newsItem.author}</span>
-						</span>
-					</f:if>
+					Categories: <f:for each="{newsItem.categories}" as="category"><a href="/category/{category.slug}.html">{category.title}</a>, </f:for>
+					Tags: <f:for each="{newsItem.categories}" as="category"><a href="#">#{category.title}</a>,</f:for>
 				</p>
 			</div>
-			<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
-				<f:if condition="{newsItem.teaser}">
-					<!-- teaser -->
-					<div class="teaser-text" itemprop="description">
-						<f:format.html>{newsItem.teaser}</f:format.html>
-					</div>
-				</f:if>
-
-				<f:if condition="{newsItem.contentElements}">
-					<!-- content elements -->
-					<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
-				</f:if>
-
-				<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
-
-				<!-- main text -->
-				<div class="news-text-wrap" itemprop="articleBody" id="articleBody">
-					<textarea style="display: none;">{newsItem.bodytext}</textarea>
-				</div>
-			</n:renderMedia>
-
+			
 			<f:if condition="{settings.backPid}">
-				<!-- Link Back -->
+				<!-- 返回按钮 -->
 				<div class="news-backlink-wrap">
 					<f:link.page pageUid="{settings.backPid}">
 						<f:translate key="back-link" />
@@ -116,25 +76,7 @@
 				</div>
 			</f:if>
 
-			<f:if condition="{settings.detail.showSocialShareButtons}">
-				<f:comment>
-					Care about the privacy of your readers?
-					Checkout https://typo3.org/extensions/repository/view/rx_shariff
-					and it will be used automatically!
-				</f:comment>
-				<n:extensionLoaded extensionKey="rx_shariff">
-					<f:render partial="Detail/Shariff" />
-				</n:extensionLoaded>
-			</f:if>
-
-			<f:if condition="{settings.detail.disqusShortname}">
-				<div id="disqus_thread"></div>
-				<n:social.disqus newsItem="{newsItem}"
-								 shortName="{settings.detail.disqusShortname}"
-								 link="{n:link(newsItem:newsItem, settings:settings, uriOnly:1, configuration:'{forceAbsoluteUrl:1}')}" />
-			</f:if>
-
-			<!-- related things -->
+			<!-- 相关 -->
 			<div class="news-related-wrap">
 				<f:comment>
 					Various options exist to fetch different related information:
@@ -146,7 +88,7 @@
 				</f:comment>
 
 				<f:if condition="{newsItem.allRelatedSorted}">
-					<!-- Related news records -->
+					<!-- 相关新闻记录 -->
 					<div class="news-related news-related-news">
 						<h4>
 							<f:translate key="related-news" />
@@ -166,7 +108,7 @@
 				</f:if>
 
 				<f:if condition="{newsItem.relatedFiles}">
-					<!-- related files -->
+					<!-- 相关文件 -->
 					<div class="news-related news-related-files">
 						<h4>
 							<f:translate key="related-files" />
@@ -189,7 +131,7 @@
 				</f:if>
 
 				<f:if condition="{newsItem.relatedLinks}">
-					<!-- Related links -->
+					<!-- 相关链接 -->
 					<div class="news-related news-related-links">
 						<h4>
 							<f:translate key="related-links" />
@@ -208,16 +150,44 @@
 			<script type="text/javascript">
 				var testEditor;
 				$(function () {
-					testEditor = editormd.markdownToHTML("articleBody", {
+					testEditor = editormd.markdownToHTML("article-editormd", {//注意：这里是上面DIV的id
 						htmlDecode: "style,script,iframe",
 						emoji: true,
 						taskList: true,
-						tex: true,
-						flowChart: true,
-						sequenceDiagram: true,
-						codeFold: true
+						tocm: true,
+						codeFold: true,
+						previewCodeHighlight:true
 					});
 				});
+				// $(function () {
+				// 	// 代码高亮实现
+				// 	hljs.initHighlightingOnLoad();
+				// 	hljs.initLineNumbersOnLoad();
+					
+				// 	// 这里调用了marked框架中的marked函数实现Markdown2HTML的解析
+				// 	var rendererMD = new marked.Renderer();
+				// 	marked.setOptions({
+				// 		renderer: rendererMD,
+				// 		gfm: true,
+				// 		tables: true,
+				// 		breaks: false,
+				// 		pedantic: false,
+				// 		sanitize: false,
+				// 		smartLists: true,
+				// 		smartypants: false
+				// 	});
+				// 	var markdownText = document.getElementById("append-test").value;
+				// 	marked.setOptions({
+				// 		highlight: function (code, lang) {
+				// 			if (lang && hljs.getLanguage(lang)) {    
+				// 				return hljs.highlight(lang, code, true).value;
+				// 			} else {
+				// 				return hljs.highlightAuto(code).value;
+				// 			}
+				// 		}
+				// 	});
+				// 	document.getElementById("article-editormd").innerHTML=marked(markdownText);
+				// })
 			</script>
 		</f:then>
 		<f:else>

@@ -19,19 +19,20 @@ plugin.tx_news {
         widget.GeorgRinger\News\ViewHelpers\Widget\PaginateViewHelper.templateRootPath = EXT:general_business_frontend_package/Resources/Private/Plugins/News/Templates/
     }
     settings {
-        cssFile = EXT:general_business_frontend_package/Resources/Public/Main/css/news-basic.css
+        # cssFile = EXT:general_business_frontend_package/Resources/Public/Main/css/news-basic.css
         defaultImage = EXT:general_business_frontend_package/Resources/Public/Main/images/img_1.jpg
         link {
             skipControllerAndAction = 1
         }
         list {
-            paginate {
-                itemsPerPage = 3
-                insertAbove = 0
-                insertBelow = 1
-                prevNextHeaderTags = 8
-                maximumNumberOfLinks = 10
-            }
+            paginate.insertAbove = 0
+        }
+        paginate {
+            itemsPerPage = 15
+            insertAbove = 0
+            insertBelow = 1
+            prevNextHeaderTags = 8
+            maximumNumberOfLinks = 10
         }
     }
     module {
@@ -47,15 +48,15 @@ plugin.tx_indexedsearch {
     view {
         templateRootPaths {
         	0 = EXT:indexed_search/Resources/Private/Templates/
-            1 = EXT:general_business_frontend_package/Resources/Plugin/indexed_search/Templates/
+            1 = EXT:general_business_frontend_package/Resources/Plugins/indexed_search/Templates/
         }
         partialRootPaths {
         	0 = EXT:indexed_search/Resources/Private/Partials/
-            1 = EXT:general_business_frontend_package/Resources/Plugin/indexed_search/Partials/
+            1 = EXT:general_business_frontend_package/Resources/Plugins/indexed_search/Partials/
         }
         layoutRootPaths {
         	0 = EXT:indexed_search/Resources/Private/Layouts/
-            1 = EXT:general_business_frontend_package/Resources/Plugin/indexed_search/Layouts/
+            1 = EXT:general_business_frontend_package/Resources/Plugins/indexed_search/Layouts/
         }
     }
 }

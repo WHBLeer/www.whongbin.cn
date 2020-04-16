@@ -3,7 +3,7 @@ namespace Sll\SllNews\Domain\Repository;
 class CategoryRepository extends \GeorgRinger\News\Domain\Repository\CategoryRepository {
     
     /**
-     * 获取分类
+     * 获坖分类
      * @param string $categories
      */
     public function findByUids($categories){

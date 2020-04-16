@@ -178,6 +178,24 @@ class NewsRepository extends \GeorgRinger\News\Domain\Repository\NewsRepository{
         return $result;
     }
 
+    /**
+     * 添加数据
+     *
+     * @param string $table
+     * @param array $values
+     * @return void
+     * @author wanghongbin
+     * tstamp: 2020-04-15
+     */
+    public function addValues($table='',$values=[])
+    {
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($table);
+		$affectedRows = $queryBuilder
+		->insert($table)
+		->values($values)
+		->execute();
+    }
+
 	/**
 	 * 删除一组数据
 	 * @param string $uids

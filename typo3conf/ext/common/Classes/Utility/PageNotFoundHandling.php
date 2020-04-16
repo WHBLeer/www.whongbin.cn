@@ -1,8 +1,27 @@
 <?php
+namespace Sll\Common\Utility;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Error\PageErrorHandler\PageErrorHandlerInterface;
+use TYPO3\CMS\Core\Http\RedirectResponse;
 
-class user_pageNotFound {
+class ErrorHandling implements PageErrorHandlerInterface {
+
+	/**
+     * @param ServerRequestInterface $request
+     * @param string $message
+     * @param array $reasons
+     * @return ResponseInterface
+     */
+    public function handlePageError(
+        ServerRequestInterface $request,
+        string $message,
+        array $reasons = []
+    ): ResponseInterface {
+           return new RedirectResponse('/404-page', 404);
+    }
 	/**
 	 * Detect language and redirect to 404 error page
 	 *

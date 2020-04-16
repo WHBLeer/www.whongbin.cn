@@ -118,7 +118,40 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->view->assign('newss', $newss);
 		$this->view->assign('pageUid', $GLOBALS['TSFE']->id);
 		$this->view->assign('page', $page);
+
+		// $this->addPages($categories);
 	}
+
+	public function addPages($categories)
+	{
+		// $categories = $this->categoryRepository->findByParent();
+		// dump($categories);exit;
+		foreach ($categories as $key => $category) {
+			$values = array(
+				'pid' => 40,
+				'tstamp' => time(),
+				'crdate' => time(),
+				'cruser_id' => 1,
+				'l10n_diffsource' => 'a:53:{s:7:\"doktype\";N;s:5:\"title\";N;s:4:\"slug\";N;s:9:\"nav_title\";N;s:8:\"subtitle\";N;s:9:\"seo_title\";N;s:8:\"no_index\";N;s:9:\"no_follow\";N;s:14:\"canonical_link\";N;s:8:\"og_title\";N;s:14:\"og_description\";N;s:8:\"og_image\";N;s:13:\"twitter_title\";N;s:19:\"twitter_description\";N;s:13:\"twitter_image\";N;s:8:\"abstract\";N;s:8:\"keywords\";N;s:11:\"description\";N;s:6:\"author\";N;s:12:\"author_email\";N;s:11:\"lastUpdated\";N;s:6:\"layout\";N;s:8:\"newUntil\";N;s:14:\"backend_layout\";N;s:25:\"backend_layout_next_level\";N;s:16:\"content_from_pid\";N;s:6:\"target\";N;s:13:\"cache_timeout\";N;s:10:\"cache_tags\";N;s:24:\"tx_staticfilecache_cache\";N;s:30:\"tx_staticfilecache_cache_force\";N;s:32:\"tx_staticfilecache_cache_offline\";N;s:33:\"tx_staticfilecache_cache_priority\";N;s:11:\"is_siteroot\";N;s:9:\"no_search\";N;s:13:\"php_tree_stop\";N;s:6:\"module\";N;s:5:\"media\";N;s:17:\"tsconfig_includes\";N;s:8:\"TSconfig\";N;s:8:\"l18n_cfg\";N;s:6:\"hidden\";N;s:8:\"nav_hide\";N;s:9:\"starttime\";N;s:7:\"endtime\";N;s:16:\"extendToSubpages\";N;s:8:\"fe_group\";N;s:13:\"fe_login_mode\";N;s:8:\"editlock\";N;s:10:\"categories\";N;s:14:\"rowDescription\";N;s:9:\"parent_id\";N;s:4:\"icon\";N;}',
+				'sorting' => 256,
+				'perms_userid' => 1,
+				'perms_user' => 31,
+				'perms_group' => 27,
+				'title' => $category->getTitle(),
+				'slug' => '/category/'.$category->getSlug(),
+				'doktype' => 1,
+				'SYS_LASTCHANGED' => time(),
+				'nav_hide' => 1,
+				'backend_layout' => 'pagets__onecolumn',
+				'backend_layout_next_level' => 'pagets__onecolumn',
+				'parent_id' => 'page_',
+				'tx_staticfilecache_cache' => 1
+			);
+			$this->newsRepository->addValues('pages',$values);
+		}
+		
+	}
+
 	public function getTreePids($parent = 0, $as_array = true){
 		$depth = 999999;
 		$queryGenerator = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance( 'TYPO3\\CMS\\Core\\Database\\QueryGenerator' );
@@ -204,6 +237,22 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	}
 
 	/**
+	 * 分类页面
+	 *
+	 * @return void
+	 * @author wanghongbin
+	 * tstamp: 2020-04-14
+	 */
+	public function categoryResultAction()
+	{
+		$urlParams = pathinfo(GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL'));
+		$categoryName = $urlParams['filename'];
+		$categories = $this->categoryRepository->findBySlug($categoryName);
+		$this->view->assign('category', $categories->getFirst());
+		$this->view->assign('pageUid', $GLOBALS['TSFE']->id);
+	}
+
+	/**
 	 * action detail
 	 *
 	 * @param \Sll\SllNews\Domain\Model\News $news
@@ -213,7 +262,6 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function detailAction(\Sll\SllNews\Domain\Model\News $news)
 	{
-		dump($news);
 		$this->view->assign('newsItem', $news);
 	}
 
@@ -225,15 +273,22 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 			$paginate = $this->settings['paginateFe'];
 			$offset = ($page - 1) * $paginate['itemsPerPage'];
 			$limit = (int) $paginate['itemsPerPage'];
-			$categories = $this->categoryRepository->findByParent($this->settings['listType']);
+			if (GeneralUtility::_GP('category')) {
+				$categories = $this->categoryRepository->findByUids(GeneralUtility::_GP('category'));
+			} else {
+				$categories = $this->categoryRepository->findByParent($this->settings['listType']);
+			}
+			
 			$newss = $this->newsRepository->findByPaginate($categories,$offset,$limit);
 			$items = array();
 			foreach ($newss as $key => $news) {
 				$typolink = $this->getTypoLink($this->settings['previewPid']);
-				$typolink = substr_replace($typolink, '/'.$news->getPathSegment().'.html', -5);
+				// $typolink = substr_replace($typolink, '/'.$news->getPathSegment().'.html', -5);
+				$typolink = substr_replace($typolink, '/'.$news->getUid().'.html', -5);
+				$categoryLink = GeneralUtility::getIndpEnv('TYPO3_SITE_URL').'category/';
 				$categorys = array();
 				foreach ($news->getCategories() as $k => $c) {
-					$categorys[] = '<span class="post-category text-white '.$news->getTagclass().' mb-3">'.$c->getTitle().'</span>';
+					$categorys[] = '<a href="/category/'.$c->getSlug().'.html"><span class="post-category text-white '.$news->getTagclass().' mb-3">'.$c->getTitle().'</span></a>';
 				}
 				$itemData = array(
 					'LINK' 		=> $typolink,

@@ -1,7 +1,11 @@
 base: 'https://www.whongbin.cn/'
 baseVariants: {  }
 disableStaticFileCache: false
-errorHandling: {  }
+errorHandling:
+  -
+    errorCode: '404'
+    errorHandler: Page
+    errorPhpClassFQCN: Sll\Common\Utility\ErrorHandling
 languages:
   -
     title: 中文
@@ -22,31 +26,64 @@ routeEnhancers:
     default: .html
     map:
       .html: 0
-  NewsPlugin:
+  News:
     type: Extbase
-    extension: news
+    extension: News
     plugin: Pi1
     routes:
-      - { routePath: '/page-{page}', _controller: 'News::list', _arguments: {'page': '@widget_0/currentPage'} }
-      - { routePath: '/tag-{tag_name}', _controller: 'News::list', _arguments: {'tag_name': 'overwriteDemand/tags'}}
-      - { routePath: '/{news_id}', _controller: 'News::detail', _arguments: {'news_id': 'news'} }
-      - { routePath: '/archive/{year}/{month}', _controller: 'News::archive' }
+      -
+        routePath: /
+        _controller: 'News::list'
+      -
+        routePath: '/page-{page}'
+        _controller: 'News::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/{news-uid}'
+        _controller: 'News::detail'
+        _arguments:
+          news-uid: news
+      -
+        routePath: '/category/{category-name}'
+        _controller: 'News::list'
+        _arguments:
+          category-name: overwriteDemand/categories
+      -
+        routePath: '/tag/{tag-name}'
+        _controller: 'News::list'
+        _arguments:
+          tag-name: overwriteDemand/tags
     defaultController: 'News::list'
-    aspects:
-      news_id:
-        type: PersistedAliasMapper
-        tableName: 'tx_news_domain_model_news'
-        routeFieldName: 'uid'
-      news_title:
-        type: PersistedAliasMapper
-        tableName: 'tx_news_domain_model_news'
-        routeFieldName: 'path_segment'
     defaults:
       page: '0'
-    requirements:
-      page: '\d+'
+    aspects:
+      news-uid:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: uid
+      news-title:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: path_segment
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+      category-name:
+        type: PersistedAliasMapper
+        tableName: sys_category
+        routeFieldName: slug
+      tag-name:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_tag
+        routeFieldName: slug
 routes:
   -
     route: sitemap.xml
     type: uri
-    source: 'https://www.whongbin.cn/?type=1533906435'
+    source: 'https://www.whongbin.cn/typo3conf/ext/common/Classes/Api/sitemap/sitemap_xml.php'
+  -
+    route: sitemap.html
+    type: uri
+    source: 'https://www.whongbin.cn/typo3conf/ext/common/Classes/Api/sitemap/sitemap_html.php'

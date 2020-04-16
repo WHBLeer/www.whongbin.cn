@@ -38,6 +38,10 @@
                                     <numIndex index="0">搜索列表</numIndex>
                                     <numIndex index="1">News->searchResult;News->detail</numIndex>
                                 </numIndex>
+                                <numIndex index="6">
+                                    <numIndex index="0">分类列表</numIndex>
+                                    <numIndex index="1">News->categoryResult;News->detail;News->ajax</numIndex>
+                                </numIndex>
                             </items>
                             <maxitems>1</maxitems>
                             <size>1</size>
@@ -47,6 +51,7 @@
                 <settings.listType>
                     <TCEforms>
                         <label>列表类型</label>
+                        <displayCond>FIELD:switchableControllerActions:IN:News->list;News->detail;News->new;News->create;News->edit;News->update;News->delete;News->multidelete;News->ajax,News->index;News->detail;News->searchResult,News->felist;News->detail;News->searchResult;News->ajax,News->roosters;News->detail;News->searchResult;News->ajax,News->searchResult;News->detail</displayCond>
                         <config>
                             <type>select</type>
                             <default>0</default>

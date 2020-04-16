@@ -7,12 +7,12 @@ if (!defined('TYPO3_MODE')) {
 	'Sll.' . $_EXTKEY,
 	'News',
 	array(
-		'News' => 'list, index, felist, roosters, searchResult, detail, new, create, edit, update, delete, multidelete,ajax',
+		'News' => 'list, index, felist, roosters, searchResult,categoryResult, detail, new, create, edit, update, delete, multidelete,ajax',
 		
 	),
 	// non-cacheable actions
 	array(
-		'News' => 'list, index, felist, roosters, searchResult, detail, new, create, edit, update, delete, multidelete,ajax',
+		'News' => 'list, index, felist, roosters, searchResult,categoryResult, detail, new, create, edit, update, delete, multidelete,ajax',
 		
 	)
 );

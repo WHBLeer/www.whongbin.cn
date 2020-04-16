@@ -367,7 +367,7 @@ class NewsController extends NewsBaseController
         //自定义页面标题
         $titleProvider = GeneralUtility::makeInstance(PageTitleProvider::class);
         $siteName = $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'];
-        $titleProvider->setTitle($siteName.'-'.$news->getTitle());
+        $titleProvider->setTitle($news->getTitle().'-'.$siteName);
 
         //自定义页面meta标签
         $this->updateMetaTag($news);

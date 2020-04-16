@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="ch" source-language="en" datatype="plaintext" original="messages" date="2018-11-24T09:35:38Z" product-name="slug">
+		<header/>
+		<body>
+			<trans-unit id="ext.title">
+				<target>Slug</target>
+			</trans-unit>
+			<trans-unit id="ext.version">
+				<target>版本 %s</target>
+			</trans-unit>
+			<trans-unit id="ext.note">
+				<target><![CDATA[<p>此扩展处于BETA模式。这很管用，但你要小心。你现在有机会直接编辑所有的页面点击！</p>]]></target>
+			</trans-unit>
+                        
+                        
+			<trans-unit id="table.head.uid">
+				<target>Uid</target>
+			</trans-unit>
+                        <trans-unit id="table.head.state">
+				<target>状态</target>
+			</trans-unit>
+                        <trans-unit id="table.head.language">
+				<target>语言</target>
+			</trans-unit>
+                        <trans-unit id="table.head.title">
+				<target>标题</target>
+			</trans-unit>
+                        <trans-unit id="table.head.slug">
+				<target>缩略名</target>
+			</trans-unit>
+                        <trans-unit id="table.head.actions">
+				<target>动作</target>
+			</trans-unit>
+            <trans-unit id="button.save.title">
+				<target>保存Slug</target>
+			</trans-unit>
+                        <trans-unit id="button.refresh.label">
+				<target>更新</target>
+			</trans-unit>
+                        <trans-unit id="button.refresh.title">
+				<target>更新列表模块</target>
+			</trans-unit>
+                        <trans-unit id="button.saveall.label">
+				<target>全部保存</target>
+			</trans-unit>
+                        <trans-unit id="button.saveall.title">
+				<target>保存所有当前输入的Slug，不进行必输检查！</target>
+			</trans-unit>
+                        <trans-unit id="button.generate.label">
+				<target>生成Slug</target>
+			</trans-unit>
+                        <trans-unit id="button.generate.title">
+				<target>生成slug（不保存！）</target>
+			</trans-unit>
+                        <trans-unit id="button.generateall.label">
+				<target>全部生成</target>
+			</trans-unit>
+                        <trans-unit id="button.generateall.title">
+				<target>生成当前视图的所有Slug</target>
+			</trans-unit>
+                        <trans-unit id="button.info.title">
+				<target>显示附加信息和预览</target>
+			</trans-unit>
+                        <trans-unit id="button.filter">
+				<target>过滤</target>
+			</trans-unit>
+                        <trans-unit id="button.pages">
+				<target>页</target>
+			</trans-unit>
+                        <trans-unit id="button.news">
+				<target>新闻</target>
+			</trans-unit>
+            			<trans-unit id="siteselect.options.others">
+				<target>根目录中的其他页面（注意：随下一版本提供）</target>
+			</trans-unit>
+                        <trans-unit id="siteselect.labels.site">
+				<target>站点:</target>
+			</trans-unit>
+                        <trans-unit id="siteselect.labels.language">
+				<target>语言:</target>
+			</trans-unit>
+                    	<trans-unit id="notes.success.saved">
+				<target>保存成功</target>
+			</trans-unit>
+                        <trans-unit id="notes.info.nochanges">
+				<target>没有要保存的更改。。。</target>
+			</trans-unit>
+                        <trans-unit id="notes.info.slugexists">
+				<target>数据库中已存在此slug</target>
+			</trans-unit>
+                        <trans-unit id="notes.info.nopagesfound">
+				<target>错误！找不到子页。。。</target>
+			</trans-unit>
+                        <trans-unit id="notes.confirm.slashonly">
+				<target>Möchten Sie wirklich nur einen Schrägstrich speichern? Was ist mit der Root-Seite?</target>
+			</trans-unit>
+                        <trans-unit id="notes.error.noslug">
+				<target>请输入一个Slug</target>
+			</trans-unit>
+                        <trans-unit id="notes.error.ajax">
+				<target>jQuery和Ajax出现错误，请查看脚本输出: </target>
+			</trans-unit>
+                		<trans-unit id="filter.form.label.search_key">
+				<target>Slug中的搜索关键字</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.label.entries_per_page">
+				<target>每页条目数</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.label.order_by">
+				<target>按字段排序</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.label.order">
+				<target>排序</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.label.action">
+				<target>确定</target>
+			</trans-unit>
+                    	<trans-unit id="filter.form.select.option.creation_date">
+				<target>创建时间</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.tstamp">
+				<target>更新时间</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.title">
+				<target>标题</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.slug">
+				<target>Slug</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.path_segment">
+				<target>路径</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.sys_language_uid">
+				<target>语言</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.is_siteroot">
+				<target>根</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.doktype">
+				<target>页面类型</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.descending">
+				<target>降序</target>
+			</trans-unit>
+                        <trans-unit id="filter.form.select.option.ascending">
+				<target>升序</target>
+			</trans-unit>
+                        
+                    
+			<trans-unit id="tx_slug_domain_model_page">
+				<target>Seite</target>
+			</trans-unit>
+			<trans-unit id="tx_slug_domain_model_page.slug_lock">
+				<target>Slug sperren</target>
+			</trans-unit>
+            <trans-unit id="recordinfo.no_info_available">
+				<target>当前没有此数据集的可用信息</target>
+			</trans-unit>
+                    
+                    
+		</body>
+	</file>
+</xliff>
