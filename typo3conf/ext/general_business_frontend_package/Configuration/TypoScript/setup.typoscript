@@ -145,6 +145,7 @@ page {
         viewport = {$page.meta.viewport}
         robots = {$page.meta.robots}
         apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+        google-site-verification = ncqMc9nM9FMEPhSrP2eOzAS9U7tfJmdwIG3dG90h6LM
         description = {$page.meta.description}
         description {
             override.field = description
