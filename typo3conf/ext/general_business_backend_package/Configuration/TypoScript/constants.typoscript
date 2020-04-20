@@ -20,13 +20,9 @@ styles {
 ### PAGE ###
 ############
 page {
-	logo {
-        # cat=custom: basic/110/file; type=string; label=Logo: Leave blank to use website title from template instead
-        #file = EXT:general_business_backend_package/Resources/Public/Img/logo.png
+    logo {
         file = EXT:general_business_backend_package/Resources/Public/Img/logo.svg
-        # cat=custom: basic/110/height; type=int+; label=Height: The image will not be resized!
         height =
-        # cat=custom: basic/110/width; type=int+; label=Width: The image will not be resized!
         width =
     }
 
@@ -43,11 +39,12 @@ page {
     }
     
 	includePath {
-        # cat=custom: advanced/130/100; type=string; label=Css Include Path: Path to css files
-        # bemain = EXT:general_business_backend_package/Resources/Public/Main/
-        assets = EXT:general_business_backend_package/Resources/Public/assets/
-        plugins = EXT:general_business_backend_package/Resources/Public/plugins/
-        sllPlugins = EXT:sll_plugin/Resources/Public/Libraries/
+        layout = EXT:general_business_backend_package/Resources/Public/Layout/
+        auth = EXT:general_business_backend_package/Resources/Public/Login/
+        main = EXT:general_business_backend_package/Resources/Public/Main/
+        plugins = EXT:general_business_backend_package/Resources/Public/Plugins/
+        login = EXT:general_business_backend_package/Resources/Public/Login/
+        api = EXT:general_business_backend_package/Resources/Public/Api/
     }
     theme {
         copyright {
@@ -55,10 +52,10 @@ page {
             text = SanLiLin
         }
     }
-    meta {
-        description = SanLiLin General Business Backend Package
-        author = SanLiLin
-        keywords = SanLiLin General Business Backend Package
+    meta { 
+        description = 三里林内容管理系统
+        author = 王宏彬
+        keywords = 三里林内容管理系统
         viewport = width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no
         robots = index,follow
         apple-mobile-web-app-capable = no
@@ -77,11 +74,19 @@ page {
 ### CONFIG ###
 ##############
 config {
-	baseURL=https://www.whongbin.cn/
+    baseURL = https://www.whongbin.cn/
+    ftpBaseUrl = http://ftp.whongbin.cn/
     no_cache = 1
     removeDefaultJS = 1
     admPanel = 0
     prefixLocalAnchors = all
     headerComment = build by whongbin.cn
     sendCacheHeaders = 1
+    // Disable Image Upscaling
+    noScaleUp = 1
+    // Compression and Concatenation of CSS and JS Files
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
 }

@@ -1,22 +1,21 @@
-<!-- Preloader -->
-<div class="preloader-it">
-    <div class="la-anim-1"></div>
-</div>
-<!-- /Preloader -->
-<div class="wrapper theme-1-active pimary-color-pink">
-    <!-- Top Menu Items -->
-    <f:render partial="Top" arguments="{_all}" />
-    <!-- /Top Menu Items -->
-
-    <!-- Left Menu Items -->
-    <f:render partial="Left" arguments="{_all}" />
-    <!-- /Left Menu Items -->
-
-    <!-- Right Menu Items -->
-    <f:render partial="Right" arguments="{_all}" />
-    <!-- /Right Menu Items -->
-
-    <!-- Main Content -->
-    <f:render section="Main" />
-    <!-- /Main Content -->
-</div>
+<ul>
+    <f:for each="{mainnavigation}" as="mainnavigationItem">
+        <li class="{f:if(condition: mainnavigationItem.active, then:'active')}">
+            <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" title="{mainnavigationItem.title}">
+                {mainnavigationItem.title}
+            </a>
+            <f:if condition="{mainnavigationItem.children}">
+                <ul>
+                    <f:for each="{mainnavigationItem.children}" as="child">
+                        <li class="{f:if(condition: child.active, then:'active')}">
+                            <a href="{child.link}" target="{child.target}" title="{child.title}">
+                                {child.title}
+                            </a>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:if>
+        </li>
+    </f:for>
+</ul>
+<f:render section="Main" />

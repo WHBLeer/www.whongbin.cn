@@ -246,9 +246,6 @@ page {
         }
     }
 
-    includeCSSLibs {
-    }
-
     includeCSS {
         # <!-- Plugins css -->
         css5 = {$page.includePath.plugins}bootstrap-colorpicker/css/bootstrap-colorpicker.min.css
@@ -256,28 +253,23 @@ page {
         css7 = {$page.includePath.plugins}select2/css/select2.min.css
         css8 = {$page.includePath.plugins}bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css
         css9 = {$page.includePath.plugins}magnific-popup/magnific-popup.css
+        css10 = {$page.includePath.plugins}uikit/dist/css/uikit.css
+        css11 = {$page.includePath.plugins}uikit/dist/css/components/notify.css
 
-        css1  = {$page.includePath.assets}css/bootstrap.min.css
-        css2  = {$page.includePath.assets}css/metismenu.min.css
-        css3  = {$page.includePath.assets}css/icons.css
-        css4  = {$page.includePath.assets}css/style.css
-        css100  = {$page.includePath.assets}css/sll.css
+        css1  = {$page.includePath.main}css/bootstrap.min.css
+        css2  = {$page.includePath.main}css/metismenu.min.css
+        css3  = {$page.includePath.main}css/icons.css
+        css4  = {$page.includePath.main}css/style.css
+        css100  = {$page.includePath.layout}Css/layout.css
 
-
-        // plugin1 = {$page.includePath.sllPlugins}simplemde/dist/simplemde.min.css
-        plugin1 = {$page.includePath.sllPlugins}editorMd/css/editormd.css
-        plugin2 = {$page.includePath.sllPlugins}flexdate/dist/css/flexDate.min.css
-        // plugin2 = {$page.includePath.sllPlugins}uikit/uikit.css
-        // plugin3 = {$page.includePath.sllPlugins}uikit/notify.css
     }
 
     includeJSLibs {
-        js1 = {$page.includePath.assets}js/jquery.min.js
-        // plugin1 = {$page.includePath.sllPlugins}simplemde/dist/simplemde.min.js
-        plugin1 = {$page.includePath.sllPlugins}editorMd/editormd.js
-        plugin2 = {$page.includePath.sllPlugins}flexdate/dist/js/flexDate.min.js
-        // plugin2 = {$page.includePath.sllPlugins}uikit/uikit.js
-        // plugin3 = {$page.includePath.sllPlugins}uikit/notify.js
+        js1 = {$page.includePath.main}js/jquery.min.js
+        js2 = {$page.includePath.plugins}layer/layer.js
+        js3 = {$page.includePath.plugins}uikit/dist/js/uikit.min.js
+        js4 = {$page.includePath.plugins}uikit/dist/js/components/notify.min.js
+        js100 = {$page.includePath.layout}JavaScript/scripts.js
     }
 
     includeJS {
@@ -286,22 +278,22 @@ page {
     includeJSFooterlibs {
     }
 
-    jsFooterInline {
-        10 = TEXT
-        10.value (
-            $("a.no-link").each(function(){$(this).attr('href','javascript:;')});
-            
-            FlexDate.setSkin('#FA8072');
-            var date=new FlexDate({e: '.flexDate',format: 'yyyy-MM-dd HH:mm',value: new Date(),zIndex:999,bindClick:true,confirm: function (value) {}});
-        )
-    }
+    # jsFooterInline {
+    #     10 = TEXT
+    #     10.value (
+    #         layer.config({
+    #             extend: 'mystyle/style.css',
+    #             skin: 'layer-ext-mystyle'
+    #         });
+    #     )
+    # }
 
     includeJSFooter {
 
-        js2 = {$page.includePath.assets}js/bootstrap.bundle.min.js
-        js3 = {$page.includePath.assets}js/metisMenu.min.js
-        js4 = {$page.includePath.assets}js/jquery.slimscroll.js
-        js5 = {$page.includePath.assets}js/waves.min.js
+        js2 = {$page.includePath.main}js/bootstrap.bundle.min.js
+        js3 = {$page.includePath.main}js/metisMenu.min.js
+        js4 = {$page.includePath.main}js/jquery.slimscroll.js
+        js5 = {$page.includePath.main}js/waves.min.js
         #<!-- Plugins js -->
         js6 = {$page.includePath.plugins}bootstrap-colorpicker/js/bootstrap-colorpicker.min.js
         js7 = {$page.includePath.plugins}bootstrap-datepicker/js/bootstrap-datepicker.js
@@ -311,13 +303,18 @@ page {
         js11 = {$page.includePath.plugins}bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js
 
         #<!-- Plugins Init js -->
-        js12 = {$page.includePath.assets}pages/form-advanced.js
+        js12 = {$page.includePath.main}pages/form-advanced.js
         js13 = {$page.includePath.plugins}magnific-popup/jquery.magnific-popup.min.js
-        js14 = {$page.includePath.assets}pages/lightbox.js  
+        js14 = {$page.includePath.main}pages/lightbox.js  
 
         #<!-- App js -->
-        js100 = {$page.includePath.assets}js/app.js
+        js100 = {$page.includePath.main}js/app.js
     }
+
+    includeCSSLibs {
+
+    }
+
 }
 
 
@@ -337,7 +334,7 @@ config {
     removeDefaultJS = {$config.removeDefaultJS}
     inlineStyle2TempFile = 1
     admPanel = {$config.admPanel}
-    debug = 1
+    debug = 0
     cache_period = 86400
     sendCacheHeaders = {$config.sendCacheHeaders}
     intTarget =
@@ -350,9 +347,4 @@ config {
 
     // Disable Image Upscaling
     noScaleUp = 1
-    // Compression and Concatenation of CSS and JS Files
-    compressJs = 0
-    compressCss = 0
-    concatenateJs = 0
-    concatenateCss = 0
 }

@@ -1,20 +1,8 @@
 <f:layout name="Main"/>
 <f:section name="Main">
-    <div class="page-title-box">
-        <div class="row align-items-center">
-            <div class="col-sm-6">
-                <h4 class="page-title">{data.title}</h4>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb" style="float:right;">
-                    <f:cObject typoscriptObjectPath="lib.navigation.breadcrumb" />
-                </ol>
-            </div>
-        </div>
-    </div>
     <!-- content  -->
     <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />

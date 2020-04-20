@@ -144,40 +144,6 @@ page {
             attribute = property
             data = TSFE:tmpl|setup|sitetitle
         }
-        og:description = {$page.meta.description}
-        og:description {
-            attribute = property
-            field = description
-        }
-        og:image {
-            attribute = property
-            stdWrap.cObject = FILES
-            stdWrap.cObject {
-                references {
-                    data = levelfield:-1, media, slide
-                }
-                maxItems = 1
-                renderObj = COA
-                renderObj {
-                    10 = IMG_RESOURCE
-                    10 {
-                        file {
-                            import.data = file:current:uid
-                            treatIdAsReference = 1
-                            width = 1280c
-                            height = 720c
-                        }
-                        stdWrap {
-                            typolink {
-                                parameter.data = TSFE:lastImgResourceInfo|3
-                                returnLast = url
-                                forceAbsoluteUrl = 1
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 
     includeCSSLibs {
@@ -185,10 +151,12 @@ page {
     }
 
     includeCSS {
-        css1  = {$page.includePath.assets}css/bootstrap.min.css
-        css2  = {$page.includePath.assets}css/metismenu.min.css
-        css3  = {$page.includePath.assets}css/icons.css
-        css4  = {$page.includePath.assets}css/style.css
+        css1  = {$page.includePath.main}css/bootstrap.min.css
+        css2  = {$page.includePath.main}css/icons.css
+        css3  = {$page.includePath.login}css/animate.css
+        css4  = {$page.includePath.login}css/animsition.min.css
+        css5  = {$page.includePath.login}css/util.css
+        css6  = {$page.includePath.login}css/main.css
     }
 
     includeJSLibs {
@@ -199,14 +167,11 @@ page {
     }
 
     includeJSFooterlibs {
-        js1    = {$page.includePath.assets}js/jquery.min.js
-        js2    = {$page.includePath.assets}js/bootstrap.bundle.min.js
-        js3    = {$page.includePath.assets}js/metisMenu.min.js
-        js4    = {$page.includePath.assets}js/jquery.slimscroll.js
-        js5    = {$page.includePath.assets}js/waves.min.js
-        js6    = {$page.includePath.plugins}countdown/jquery.countdown.min.js
-        js7    = {$page.includePath.assets}pages/countdown.int.js
-        js8    = {$page.includePath.assets}js/app.js
+        js1    = {$page.includePath.main}js/jquery.min.js
+        js2    = {$page.includePath.login}js/animsition.min.js
+        js3    = {$page.includePath.login}js/popper.min.js
+        js4    = {$page.includePath.main}js/bootstrap.bundle.min.js
+        js5    = {$page.includePath.login}js/main.js
     }
 
     includeJSFooter {
@@ -247,8 +212,8 @@ config {
     noScaleUp = 1
 
     // Compression and Concatenation of CSS and JS Files
-    compressJs = 1
-    compressCss = 1
-    concatenateJs = 1
-    concatenateCss = 1
+    compressJs = 0
+    compressCss = 0
+    concatenateJs = 0
+    concatenateCss = 0
 }
