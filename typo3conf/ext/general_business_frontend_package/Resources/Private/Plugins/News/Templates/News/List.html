@@ -11,26 +11,49 @@
 	<!--TYPO3SEARCH_end-->
 	<f:if condition="{news}">
 		<f:then>
-			<div class="news-list-view" id="news-container-{contentObjectData.uid}">
-				<f:if condition="{settings.hidePagination}">
-					<f:then>
-						<f:for each="{news}" as="newsItem" iteration="iterator">
-							<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-						</f:for>
-					</f:then>
-					<f:else>
+			<f:if condition="{settings.hidePagination}">
+				<f:then>
+					<f:for each="{news}" as="newsItem" iteration="iterator">
+						<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+					</f:for>
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.position}=='index'">
+						<!-- 首页展示 -->
+						<div class="row mb-2">
+							<div class="col-12">
+								<h2>Recent Posts</h2>
+							</div>
+						</div>
 						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
-							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-								<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-							</f:for>
+							<div class="row">
+								<f:for each="{paginatedNews}" as="newsItem" iteration="itemIteration">
+									<f:render partial="List/Index" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								</f:for>
+							</div>
 						</n:widget.paginate>
-					</f:else>
-				</f:if>
-			</div>
+					</f:if>
+					<f:if condition="{settings.position}=='list'">
+						<!-- 内页展示 -->
+						<div class="row mb-2">
+							<div class="col-12">
+								<h2>Recent Posts</h2>
+							</div>
+						</div>
+						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
+							<div class="row">
+								<f:for each="{paginatedNews}" as="newsItem" iteration="itemIteration">
+									<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								</f:for>
+							</div>
+						</n:widget.paginate>
+					</f:if>
+				</f:else>
+			</f:if>
 		</f:then>
 		<f:else>
 			<div class="no-news-found">
-				<f:translate key="list_nonewsfound" />
+				暂时没有文章哦...(⊙o⊙)？
 			</div>
 		</f:else>
 	</f:if>

@@ -28,7 +28,7 @@ plugin.tx_news {
             paginate.insertAbove = 0
         }
         paginate {
-            itemsPerPage = 15
+            itemsPerPage = 12
             insertAbove = 0
             insertBelow = 1
             prevNextHeaderTags = 8

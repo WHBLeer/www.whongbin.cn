@@ -23,11 +23,11 @@
 								<renderType>selectSingle</renderType>
 								<items>
 									<numIndex index="1">
-										<numIndex index="0">LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.news_list</numIndex>
+										<numIndex index="0">列表及详情</numIndex>
 										<numIndex index="1">News->list;News->detail</numIndex>
 									</numIndex>
 									<numIndex index="2">
-										<numIndex index="0">LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.news_listOnly</numIndex>
+										<numIndex index="0">仅列表</numIndex>
 										<numIndex index="1">News->list</numIndex>
 									</numIndex>
 									<numIndex index="3">
@@ -70,7 +70,27 @@
 							</config>
 						</TCEforms>
 					</switchableControllerActions>
-
+					
+					<!-- order -->
+					<settings.position> 
+						<TCEforms>
+							<label>加载位置</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0">首页</numIndex>
+										<numIndex index="1">index</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">列表</numIndex>
+										<numIndex index="1">list</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.position>
 					<!-- order -->
 					<settings.orderBy> 
 						<TCEforms>

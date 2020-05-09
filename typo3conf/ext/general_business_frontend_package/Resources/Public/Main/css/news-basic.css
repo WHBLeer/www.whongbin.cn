@@ -1,0 +1,7 @@
+.news .page-navigation ul li a {
+    display: block;
+    background-color: #2f89fc;
+    padding: 2px 10px;
+    color: #fff;
+    border-radius: 3px;
+}

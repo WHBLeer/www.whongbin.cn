@@ -1,10 +1,3 @@
-<!--
- * @Description: In User Settings Edit
- * @Author: your name
- * @Date: 2019-10-09 09:09:00
- * @LastEditTime: 2019-10-09 09:19:43
- * @LastEditors: Please set LastEditors
- -->
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
     data-namespace-typo3-fluid="true">
@@ -12,12 +5,29 @@
 	=====================
 		Partials/List/Index.html
 -->
-    <n:excludeDisplayedNews newsItem="{newsItem}" />
-    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" class="h-entry v-height gradient" style="background-image: url('{f:if(condition: {newsItem.album}, then: {newsItem.album}, else: {settings.defaultImage})}');">
-        <div class="text">
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            <h2>{newsItem.title}</h2>
-            <span class="date">{f:format.date(date:newsItem.datetime, format:'Y-m-d')}</span>
+    <div class="col-lg-4 mb-3">
+        <div class="entry2">
+            <div class="news-img">
+                <f:link.action pageUid="{settings.detailPid}" extensionName="news" pluginName="pi1" controller="News" action="detail" arguments="{news : newsItem}"><img src="{newsItem.coverlist}" alt="Image" class="img-fluid rounded"></f:link.action>
+            </div>
+            <div class="excerpt">
+                <f:for each="{newsItem.categories}" as="category">
+                    <span class="post-category text-white {newsItem.tagclass} mb-1">{category.title}</span>
+                </f:for>
+                <h2>
+                    <!-- <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                        {newsItem.title}
+                    </n:link> -->
+                    <f:link.action pageUid="{settings.detailPid }" extensionName="news" pluginName="pi1" controller="News" action="detail" arguments="{news : newsItem}">{newsItem.title}.
+                    </f:link.action>
+                </h2>
+                <div class="post-meta align-items-center text-left clearfix">
+                    <figure class="author-figure mb-0 mr-3 float-left"><img src="{newsItem.authorimg}" alt="Image"
+                            class="img-fluid"></figure>
+                    <span class="d-inline-block mt-1">By <a href="javascript:;">{newsItem.author}</a></span>
+                    <span>&nbsp;-&nbsp; {newsItem.datetime -> f:format.date(format: 'M d, Y')}</span>
+                </div>
+            </div>
         </div>
-    </n:link>
+    </div>
 </html>

@@ -1304,6 +1304,26 @@ h1, h2, h3, h4, h5,
     background-color: coral;
 }
 
+/* 分页 */
+.page-navigation ul li span {
+    display: block;
+    background-color: #cccccc;
+    padding: 0 8px;
+    color: #fff;
+    border-radius: 3px;
+}
+.page-navigation ul li a {
+    display: block;
+    background-color: #2f89fc;
+    padding: 0 8px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+a.goback{
+      float: right;
+    border-radius: 3px;
+}
 
 /* 图片鼠标焦点效果 */
 .box{

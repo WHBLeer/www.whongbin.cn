@@ -1531,21 +1531,18 @@ class News extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var string
      */
-    protected $coverimg;
+    protected $coverlist;
+
     /**
-	 * Returns the cover
+	 * Returns the coverlist
 	 * 
-	 * @return string $coverimg
+	 * @return string $coverlist
 	 */
-	public function getCoverimg()
+	public function getCoverlist()
 	{
-        if ($this->getCover()) {
-            $this->coverimg = $this->getCover()->getRelativePath();
-        } else {
-            $random = rand(1,10000);
-            $this->coverimg = "https://picsum.photos/600/800?random=$random.jpg";
-        }
-        return $this->coverimg;
+        $random = rand(1,3360);
+        $this->coverlist = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
+        return $this->coverlist;
     }
 
     /**

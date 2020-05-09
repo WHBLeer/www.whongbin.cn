@@ -10,7 +10,6 @@
 	=====================
 		News/Detail.html
 -->
-
 <f:section name="content">
 	<f:if condition="{newsItem}">
 		<f:then>
@@ -62,19 +61,15 @@
 			</div>
 			<div class="pt-3">
 				<p>
-					Categories: <f:for each="{newsItem.categories}" as="category"><a href="/category/{category.slug}.html">{category.title}</a>, </f:for>
-					Tags: <f:for each="{newsItem.categories}" as="category"><a href="#">#{category.title}</a>,</f:for>
+					分类: <f:for each="{newsItem.categories}" as="category"><a href="/category/{category.slug}.html" class="post-category detail-title-category text-white bg-success"><i class="icon-direction"></i> {category.title}</a></f:for>
+					标签: <f:for each="{newsItem.categories}" as="category"><a href="#" class="post-category detail-title-category text-white bg-warning"><i class="icon-tag"></i> {category.title}</a></f:for>
+
+					<f:if condition="{settings.backPid}">
+						<!-- 返回按钮 -->
+						<f:link.page pageUid="{settings.backPid}" class="btn btn-info btn-sm goback">Go Back</f:link.page>
+					</f:if>
 				</p>
 			</div>
-			
-			<f:if condition="{settings.backPid}">
-				<!-- 返回按钮 -->
-				<div class="news-backlink-wrap">
-					<f:link.page pageUid="{settings.backPid}">
-						<f:translate key="back-link" />
-					</f:link.page>
-				</div>
-			</f:if>
 
 			<!-- 相关 -->
 			<div class="news-related-wrap">
@@ -150,7 +145,7 @@
 			<script type="text/javascript">
 				var testEditor;
 				$(function () {
-					testEditor = editormd.markdownToHTML("article-editormd", {//注意：这里是上面DIV的id
+					testEditor = editormd.markdownToHTML("article-editormd", {
 						htmlDecode: "style,script,iframe",
 						emoji: true,
 						taskList: true,
@@ -159,35 +154,6 @@
 						previewCodeHighlight:true
 					});
 				});
-				// $(function () {
-				// 	// 代码高亮实现
-				// 	hljs.initHighlightingOnLoad();
-				// 	hljs.initLineNumbersOnLoad();
-					
-				// 	// 这里调用了marked框架中的marked函数实现Markdown2HTML的解析
-				// 	var rendererMD = new marked.Renderer();
-				// 	marked.setOptions({
-				// 		renderer: rendererMD,
-				// 		gfm: true,
-				// 		tables: true,
-				// 		breaks: false,
-				// 		pedantic: false,
-				// 		sanitize: false,
-				// 		smartLists: true,
-				// 		smartypants: false
-				// 	});
-				// 	var markdownText = document.getElementById("append-test").value;
-				// 	marked.setOptions({
-				// 		highlight: function (code, lang) {
-				// 			if (lang && hljs.getLanguage(lang)) {    
-				// 				return hljs.highlight(lang, code, true).value;
-				// 			} else {
-				// 				return hljs.highlightAuto(code).value;
-				// 			}
-				// 		}
-				// 	});
-				// 	document.getElementById("article-editormd").innerHTML=marked(markdownText);
-				// })
 			</script>
 		</f:then>
 		<f:else>

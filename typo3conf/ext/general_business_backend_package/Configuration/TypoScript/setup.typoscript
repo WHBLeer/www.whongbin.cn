@@ -255,11 +255,16 @@ page {
         css9 = {$page.includePath.plugins}magnific-popup/magnific-popup.css
         css10 = {$page.includePath.plugins}uikit/dist/css/uikit.css
         css11 = {$page.includePath.plugins}uikit/dist/css/components/notify.css
+        css12 = {$page.includePath.plugins}editorMd/css/editormd.css
+        css13 = {$page.includePath.plugins}flexdate/dist/css/flexDate.min.css
 
         css1  = {$page.includePath.main}css/bootstrap.min.css
         css2  = {$page.includePath.main}css/metismenu.min.css
         css3  = {$page.includePath.main}css/icons.css
         css4  = {$page.includePath.main}css/style.css
+
+        
+
         css100  = {$page.includePath.layout}Css/layout.css
 
     }
@@ -269,6 +274,8 @@ page {
         js2 = {$page.includePath.plugins}layer/layer.js
         js3 = {$page.includePath.plugins}uikit/dist/js/uikit.min.js
         js4 = {$page.includePath.plugins}uikit/dist/js/components/notify.min.js
+        js5 = {$page.includePath.plugins}editorMd/editormd.js
+        js6 = {$page.includePath.plugins}flexdate/dist/js/flexDate.min.js
         js100 = {$page.includePath.layout}JavaScript/scripts.js
     }
 
@@ -278,15 +285,15 @@ page {
     includeJSFooterlibs {
     }
 
-    # jsFooterInline {
-    #     10 = TEXT
-    #     10.value (
-    #         layer.config({
-    #             extend: 'mystyle/style.css',
-    #             skin: 'layer-ext-mystyle'
-    #         });
-    #     )
-    # }
+    jsFooterInline {
+        10 = TEXT
+        10.value (
+            $("a.no-link").each(function(){$(this).attr('href','javascript:;')});
+            
+            FlexDate.setSkin('#FA8072');
+            var date=new FlexDate({e: '.flexDate',format: 'yyyy-MM-dd HH:mm',value: new Date(),zIndex:999,bindClick:true,confirm: function (value) {}});
+        )
+    }
 
     includeJSFooter {
 

@@ -149,18 +149,18 @@ class PaginateController extends \TYPO3\CMS\Fluid\Core\Widget\AbstractWidgetCont
 
             $GLOBALS['TSFE']->page['title'] .= $titleAddition;
 
-            $registerProperties = [
-                'currentPage' => $this->currentPage,
-                'numberOfPages' => $this->numberOfPages,
-                'titleAddition' => $titleAddition,
-            ];
-            \Sll\GeneralBusinessBackendPackage\Utility\Page::setRegisterProperties(
-                implode(',', array_keys($registerProperties)),
-                $registerProperties,
-                'newsPagination'
-            );
+            // $registerProperties = [
+            //     'currentPage' => $this->currentPage,
+            //     'numberOfPages' => $this->numberOfPages,
+            //     'titleAddition' => $titleAddition,
+            // ];
+            // \Sll\GeneralBusinessBackendPackage\Utility\Page::setRegisterProperties(
+            //     implode(',', array_keys($registerProperties)),
+            //     $registerProperties,
+            //     'newsPagination'
+            // );
         }
-        dump(count($this->objects));
+        // dump(count($this->objects));
         $this->view->assign('contentArguments', [
             $this->widgetConfiguration['as'] => $modifiedObjects
         ]);
