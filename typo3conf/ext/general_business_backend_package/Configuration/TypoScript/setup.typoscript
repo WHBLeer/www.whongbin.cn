@@ -268,6 +268,10 @@ page {
         css100  = {$page.includePath.layout}Css/layout.css
 
     }
+    
+    includeCSSLibs {
+
+    }
 
     includeJSLibs {
         js1 = {$page.includePath.main}js/jquery.min.js
@@ -283,16 +287,6 @@ page {
     }
 
     includeJSFooterlibs {
-    }
-
-    jsFooterInline {
-        10 = TEXT
-        10.value (
-            $("a.no-link").each(function(){$(this).attr('href','javascript:;')});
-            
-            FlexDate.setSkin('#FA8072');
-            var date=new FlexDate({e: '.flexDate',format: 'yyyy-MM-dd HH:mm',value: new Date(),zIndex:999,bindClick:true,confirm: function (value) {}});
-        )
     }
 
     includeJSFooter {
@@ -317,9 +311,15 @@ page {
         #<!-- App js -->
         js100 = {$page.includePath.main}js/app.js
     }
-
-    includeCSSLibs {
-
+    
+    jsFooterInline {
+        10 = TEXT
+        10.value (
+            $("a.no-link").each(function(){$(this).attr('href','javascript:;')});
+            
+            FlexDate.setSkin('#FA8072');
+            var date=new FlexDate({e: '.flexDate',format: 'yyyy-MM-dd HH:mm',value: new Date(),zIndex:999,bindClick:true,confirm: function (value) {}});
+        )
     }
 
 }
