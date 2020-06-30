@@ -16,16 +16,6 @@
  
     <f:section name="content">
         <f:render partial="Messages" arguments="{flashMessages}" />
-        <f:flashMessages queueIdentifier="myQueue" as="flashMessages">
-            <f:for each="{flashMessages}" as="flashMessage">
-                <div class="alert {flashMessage.class}">
-                    <f:if condition="{flashMessage.title}">
-                        <strong>{flashMessage.title}</strong><br>
-                    </f:if>
-                    <p>{flashMessage.message -> f:format.html()}</p>
-                </div>
-            </f:for>
-        </f:flashMessages>
         <div class="dataTables_wrapper dt-bootstrap4">
             <div class="row mb-10">
                 <div class="col-sm-12 col-md-9">

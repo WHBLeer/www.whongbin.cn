@@ -15,6 +15,9 @@
 			<trans-unit id="tx_common_domain_model_config.svg_icon">
 				<source>SVG格式图标</source>
 			</trans-unit>
+			<trans-unit id="tx_common_domain_model_config.href_target">
+				<source>链接打开方式(target)</source>
+			</trans-unit>
 			<trans-unit id="pages.tx_extbase_type.Tx_Common_Config">
 				<source>通用配置 Config</source>
 			</trans-unit>

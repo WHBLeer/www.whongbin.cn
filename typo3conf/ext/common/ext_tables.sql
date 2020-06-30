@@ -5,6 +5,7 @@ CREATE TABLE pages (
 
 	parent_id varchar(255) DEFAULT '' NOT NULL,
 	icon varchar(255) DEFAULT '' NOT NULL,
+	href_target varchar(255) DEFAULT '' NOT NULL,
 	svg_icon text,
 
 );

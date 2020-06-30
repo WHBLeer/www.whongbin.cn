@@ -12,6 +12,9 @@
 			<trans-unit id="tx_common_domain_model_config.svg_icon">
 				<source>Svg Icon</source>
 			</trans-unit>
+			<trans-unit id="tx_common_domain_model_config.href_target">
+				<source>Href Target</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

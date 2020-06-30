@@ -51,6 +51,16 @@ $tmp_common_columns = [
             'eval' => 'trim'
         ],
     ],
+    'href_target' => [
+        'exclude' => true,
+        'label' => 'LLL:EXT:common/Resources/Private/Language/locallang_db.xlf:tx_common_domain_model_config.href_target',
+        'config' => [
+            'type' => 'input',
+            'size' => 30,
+            'eval' => 'trim'
+        ],
+    ],
+    
     'svg_icon' => [
         'exclude' => true,
         'label' => 'LLL:EXT:common/Resources/Private/Language/locallang_db.xlf:tx_common_domain_model_config.svg_icon',
@@ -67,6 +77,7 @@ $tmp_common_columns = [
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('pages',$tmp_common_columns,1);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages','parent_id');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages','icon');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages','href_target');
 // \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('pages','svg_icon');
 /* inherit and extend the show items from the parent class */
 
@@ -80,6 +91,6 @@ if (isset($GLOBALS['TCA']['pages']['types']['1']['showitem'])) {
     $GLOBALS['TCA']['pages']['types']['Tx_Common_Config']['showitem'] = '';
 }
 $GLOBALS['TCA']['pages']['types']['Tx_Common_Config']['showitem'] .= ',--div--;LLL:EXT:common/Resources/Private/Language/locallang_db.xlf:tx_common_domain_model_config,';
-$GLOBALS['TCA']['pages']['types']['Tx_Common_Config']['showitem'] .= 'parent_id,icon, svg_icon';
+$GLOBALS['TCA']['pages']['types']['Tx_Common_Config']['showitem'] .= 'parent_id, icon, href_target, svg_icon';
 
 $GLOBALS['TCA']['pages']['columns'][$GLOBALS['TCA']['pages']['ctrl']['type']]['config']['items'][] = ['LLL:EXT:common/Resources/Private/Language/locallang_db.xlf:pages.tx_extbase_type.Tx_Common_Config','Tx_Common_Config'];

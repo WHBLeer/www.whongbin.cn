@@ -17,5 +17,13 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('common', 'Configuration/TypoScript', '通用配置');
 
+        /***************
+        * Add own stylesheet(s) to TYPO3 backend
+        */
+        $GLOBALS['TBE_STYLES']['skins']['common'] = array();
+        $GLOBALS['TBE_STYLES']['skins']['common']['name'] = 'whb-skins';
+        $GLOBALS['TBE_STYLES']['skins']['common']['stylesheetDirectories'] = array(
+            'EXT:common/Resources/Public/Stylesheet/Backend/style.css'
+        );
     }
 );

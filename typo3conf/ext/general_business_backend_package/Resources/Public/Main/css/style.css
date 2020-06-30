@@ -640,6 +640,11 @@ dt {
   color: #b4c9de;
   background-color: #333547;
 }
+.submenu li.mm-active > a i {
+  font-weight: 600;
+  color: #18cdc4;
+}
+
 
 .topbar {
   left: 0;
@@ -650,7 +655,7 @@ dt {
 }
 
 .topbar .topbar-left {
-  background: #333547;
+  background: rgba(23,196,187,0.5);
   float: left;
   text-align: center;
   height: 50px;
@@ -699,7 +704,8 @@ dt {
 .side-menu {
   width: 190px;
   z-index: 10;
-  background: #333547;
+  /* background: #333547; */
+  background: #26344B;
   bottom: 0;
   margin-top: 0;
   padding-bottom: 30px;
@@ -782,8 +788,12 @@ dt {
 }
 
 #sidebar-menu > ul > li > a.mm-active {
-  color: #b4c9de !important;
+  color:#b4c9de !important;
   background-color: #383b4e;
+}
+#sidebar-menu > ul > li > a.mm-active i{
+  color: #18cdc4 !important;
+  font-weight: 600;
 }
 
 .menu-title {

@@ -1541,7 +1541,8 @@ class News extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	public function getCoverlist()
 	{
         $random = rand(1,3360);
-        $this->coverlist = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
+        // $this->coverlist = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
+        $this->coverlist = "https://acg.xydwz.cn/api/api.php?rand=$random";
         return $this->coverlist;
     }
 

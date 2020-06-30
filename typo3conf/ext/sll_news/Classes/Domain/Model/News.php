@@ -194,7 +194,8 @@ class News extends \GeorgRinger\News\Domain\Model\News{
         } else {
             $random = rand(1,3350);
             // $this->coverimg = "https://picsum.photos/600/800?random=$random.jpg";
-            $this->coverimg = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
+            // $this->coverimg = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
+            $this->coverimg = "https://acg.xydwz.cn/api/api.php?rand=$random";
         }
         return $this->coverimg;
     }
@@ -208,7 +209,8 @@ class News extends \GeorgRinger\News\Domain\Model\News{
 	{
         $random = rand(1,3350);
         // $this->coverlist = "https://picsum.photos/400/300?random=$random.jpg";
-        $this->coverlist = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
+        // $this->coverlist = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
+        $this->coverlist = "https://acg.xydwz.cn/api/api.php?rand=$random";
         return $this->coverlist;
     }
     

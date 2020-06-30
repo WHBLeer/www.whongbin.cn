@@ -62,13 +62,14 @@ lib.navigation.main {
                 wrapItemAndSub = <li>|</li>
                 wrapItemAndSub.insertData = 1                
                 stdWrap.dataWrap = <i class="fa fa-fw {field:icon}"></i>|
+				ATagParams.dataWrap = target="{field:href_target}"
             }
             # active 一级选中
             ACT < .NO
             ACT {
                 wrapItemAndSub = <li>|</li>
                 stdWrap.dataWrap = <i class="fa fa-fw {field:icon}"></i>|
-                ATagParams.dataWrap = class="active"
+                ATagParams.dataWrap = target="{field:href_target}" class="active"
             }
 
             # normal 二级父级
@@ -76,6 +77,7 @@ lib.navigation.main {
             IFSUB {
                 wrapItemAndSub = <li>|</li>
                 stdWrap.dataWrap = <i class="fa fa-fw {field:icon}"></i>|
+				ATagParams.dataWrap = target="{field:href_target}"
                 ATagBeforeWrap = 1
             }
             # active 二级父级选中
@@ -83,7 +85,7 @@ lib.navigation.main {
             ACTIFSUB {
                 wrapItemAndSub = <li>|</li>
                 stdWrap.dataWrap = <i class="fa fa-fw {field:icon}"></i>|
-                ATagParams.dataWrap = class="active" data-toggle="collapse" aria-expanded="true" data-target="#submenu-{field:uid}" aria-controls="submenu-{field:uid}"
+                ATagParams.dataWrap = target="{field:href_target}" class="active" data-toggle="collapse" aria-expanded="true" data-target="#submenu-{field:uid}" aria-controls="submenu-{field:uid}"
             }
             stdWrap.debugData=1
         }
@@ -104,16 +106,17 @@ lib.navigation.main {
             ACT < .NO
             ACT {
                 wrapItemAndSub = <li>|</li>
-                ATagParams.dataWrap = class="active"
+                ATagParams.dataWrap = target="{field:href_target}" class="active"
             }
             IFSUB = 1
             IFSUB {
                 wrapItemAndSub = <li>|</li>
+				ATagParams.dataWrap = target="{field:href_target}"
             }
             ACTIFSUB = 1
             ACTIFSUB {
                 wrapItemAndSub = <li>|</li>
-                ATagParams.dataWrap = class="active"
+                ATagParams.dataWrap = target="{field:href_target}" class="active"
             }
         }
     }

@@ -51,7 +51,8 @@ h1, h2, h3, h4, h5,
 
 .text-black {
   color: #000 !important; }
-
+.text-green {
+  color: #0fd59d !important; }
 .bg-black {
   background: #000 !important; }
 
@@ -274,7 +275,14 @@ h1, h2, h3, h4, h5,
   width: 100%;
   background: #fff; }
   .site-navbar .site-logo a {
-    font-size: 1.5rem; }
+    --height: calc(1vh / 3);
+    --width: calc(1vw / 3);
+    --target: calc(var(--height) + var(--width));
+    font-size: calc(var(--target) + 15px);
+    text-decoration: none;
+    font-weight: bold;
+    /* font-family: Tahoma; */
+  }
   .site-navbar .site-navigation.border-bottom {
     border-bottom: 1px solid #f3f3f4 !important; }
   .site-navbar .site-navigation .site-menu {
