@@ -88,10 +88,14 @@ routeEnhancers:
         routeFieldName: slug
 routes:
   -
-    route: sitemap.xml
+    route: sitemap_gg.xml
     type: uri
-    source: 'https://www.whongbin.cn/typo3conf/ext/common/Classes/Api/sitemap/sitemap_xml.php'
+    source: 'https://www.whongbin.cn/typo3conf/ext/common/Classes/Api/sitemap/sitemap_xml_gg.php'
   -
     route: sitemap.html
     type: uri
     source: 'https://www.whongbin.cn/typo3conf/ext/common/Classes/Api/sitemap/sitemap_html.php'
+  -
+    route: sitemap_bd.xml
+    type: uri
+    source: 'https://www.whongbin.cn/typo3conf/ext/common/Classes/Api/sitemap/sitemap_xml_bd.php'

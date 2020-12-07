@@ -72,7 +72,7 @@ page {
 ##############
 config {
     baseURL = https://www.whongbin.cn/
-    no_cache = 1
+    no_cache = 0
     removeDefaultJS = 1
     admPanel = 0
     prefixLocalAnchors = all

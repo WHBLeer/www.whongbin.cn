@@ -167,7 +167,7 @@ page {
 ################
 config {
     absRefPrefix = auto
-    no_cache = 1
+    no_cache = 0
     uniqueLinkVars = 1
     pageTitleFirst = 1
     linkVars = L
@@ -192,8 +192,8 @@ config {
     // Disable Image Upscaling
     noScaleUp = 1
 
-    compressJs = 0
-    compressCss = 0
-    concatenateJs = 0
-    concatenateCss = 0
+    compressJs = 1
+    compressCss = 1
+    concatenateJs = 1
+    concatenateCss = 1
 }

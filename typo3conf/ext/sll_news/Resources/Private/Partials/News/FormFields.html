@@ -53,7 +53,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-md-6">
 			<div class="form-group">
 				<label class="col-form-label">选择文件</label>
@@ -72,19 +72,18 @@
 		<div class="col-md-6">
 			<div class="form-group">
 				<label class="col-form-label">当前封面图 
-					<!-- <a href="#album-model" data-uk-modal class="{f:if(condition: {news.coverimg}, then: '', else: 'hide')}" id="showModel">预览</a> -->
 					<a href="{news.coverimg}" target="_blank" class="{f:if(condition: {news.coverimg}, then: '', else: 'hide')}">预览</a>
 				</label>
 				<input type="text" class="form-control" placeholder="封面图链接" value="{news.coverimg}"/>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- <div class="form-group">
 		<label class="col-form-label">简介</label>
 		<f:form.textarea property="teaser" cols="80" rows="2" class="form-control" />
 	</div> -->
 	<div class="form-group">
-		<label class="col-form-label">内容<font color="red"> *</font></label>
+		<label class="col-form-label">内容<font color="red"> *</font> <button type="button" class="btn btn-info btn-sm">富文本</button> <button type="button" class="btn btn-info btn-sm">MarkDown</button></label>
 		<div id="whongbin-content-textarea"><f:form.textarea style="display: none;" property="bodytext" /></div>
 		<f:form.textfield name="ckRichText" id="ckRichText" style="display:none" />
 	</div>

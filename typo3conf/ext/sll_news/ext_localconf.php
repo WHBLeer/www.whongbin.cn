@@ -12,7 +12,7 @@ if (!defined('TYPO3_MODE')) {
 	),
 	// non-cacheable actions
 	array(
-		'News' => 'list, index, felist, roosters, searchResult,categoryResult, detail, new, create, edit, update, delete, multidelete,ajax',
+		'News' => 'list, searchResult,categoryResult, detail, new, create, edit, update, delete, multidelete,ajax',
 		
 	)
 );

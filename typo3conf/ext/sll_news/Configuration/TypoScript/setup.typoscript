@@ -8,14 +8,14 @@ lib.calc {
 
 plugin.tx_sllnews_news {
     view {
-        templateRootPaths.0 = EXT:sll_news/Resources/Private/Templates/
+        templateRootPaths.0 = EXT:all_views/sll_news/Templates/
         templateRootPaths.1 = {$plugin.tx_sllnews_news.view.templateRootPath}
-        partialRootPaths.0 = EXT:sll_news/Resources/Private/Partials/
+        partialRootPaths.0 = EXT:all_views/sll_news/Partials/
         partialRootPaths.1 = {$plugin.tx_sllnews_news.view.partialRootPath}
-        layoutRootPaths.0 = EXT:sll_news/Resources/Private/Layouts/
+        layoutRootPaths.0 = EXT:all_views/sll_news/Layouts/
         layoutRootPaths.1 = {$plugin.tx_sllnews_news.view.layoutRootPath}
         widget.TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths {
-            10 = EXT:common/Resources/Private/Templates/
+            10 = EXT:all_views/paginate/
         }
     }
     persistence {

@@ -10,47 +10,23 @@
 </div>
 <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <img class="footer" id="gotoTop" src="/typo3conf/ext/general_business_frontend_package/Resources/Public/Img/gotop.png" alt="回到顶部" style="position: fixed;right: 50px;bottom: 90px;width: 25px;height: 35px;">
- 
 <script>
-    (function() {
-        var bp = document.createElement("script");
-        var curProtocol = window.location.protocol.split(":")[0];
-        if (curProtocol === "https") {
-            bp.src = "https://zz.bdstatic.com/linksubmit/push.js"
-        } else {
-            bp.src = "http://push.zhanzhang.baidu.com/push.js"
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s)
-    })();
-</script>
-<f:if condition="{baidukey}!=''">
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?{baidukey}";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-    })();
-
     window.onload = function () {
         var OriginTitile = document.title;
         var titleTime;
         document.addEventListener('visibilitychange', function () {
             if (document.hidden) {
                 $('[rel="shortcut icon"]').attr('href', "/fileadmin/static_file/img/failico.png");
-                document.title = '(●—●)喔哟，崩溃啦！';
+                document.title = '╮(๑•́ ₃•̀๑)╭';
                 clearTimeout(titleTime);
             } else {
                 $('[rel="shortcut icon"]').attr('href', "/fileadmin/static_file/img/favicon.ico");
-                document.title = '(/≧▽≦/)咦！又好了！' + OriginTitile;
+                document.title = '(ง •̀_•́)ง ' + OriginTitile;
                 titleTime = setTimeout(function () {
                     document.title = OriginTitile;
-                }, 2000);
+                }, 1000);
             }
         });
     }
 
-</script>    
-</f:if>
+</script>   

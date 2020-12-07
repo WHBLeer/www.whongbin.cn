@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-10-11T16:10:15Z" product-name="article">
+		<header/>
+		<body>
+			<trans-unit id="tx_article_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_category.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_category.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_category.parent">
+				<source>Parent</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article">
+				<source>Article</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.reading">
+				<source>Reading</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.datetime">
+				<source>Datetime</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.istop">
+				<source>Istop</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.album">
+				<source>Album</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.author">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.tags">
+				<source>Tags</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_article.annexs">
+				<source>Annexs</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_tag">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_tag.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_tag.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_tag.parent">
+				<source>Parent</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_annex">
+				<source>Annex</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_annex.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_annex.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_annex.size">
+				<source>Size</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_annex.download">
+				<source>Download</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_annex.path">
+				<source>Path</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_annex.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_annex.isdown">
+				<source>Isdown</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_annex.tx_article_desc">
+				<source>Desc</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_images.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_images.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_images.size">
+				<source>Size</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_images.width">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_images.height">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_images.suffix">
+				<source>Suffix</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_images.tablename">
+				<source>Tablename</source>
+			</trans-unit>
+			<trans-unit id="tx_article_domain_model_images.recordid">
+				<source>Recordid</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

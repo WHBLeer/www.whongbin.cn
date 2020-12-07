@@ -47,9 +47,6 @@ return [
         'rte_ckeditor' => [
             'packagePath' => 'typo3/sysext/rte_ckeditor/',
         ],
-        'about' => [
-            'packagePath' => 'typo3/sysext/about/',
-        ],
         'adminpanel' => [
             'packagePath' => 'typo3/sysext/adminpanel/',
         ],
@@ -92,12 +89,6 @@ return [
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
         ],
-        'news' => [
-            'packagePath' => 'typo3conf/ext/news/',
-        ],
-        'ns_news_comments' => [
-            'packagePath' => 'typo3conf/ext/ns_news_comments/',
-        ],
         'common' => [
             'packagePath' => 'typo3conf/ext/common/',
         ],
@@ -109,6 +100,9 @@ return [
         ],
         'general_business_frontend_package' => [
             'packagePath' => 'typo3conf/ext/general_business_frontend_package/',
+        ],
+        'news' => [
+            'packagePath' => 'typo3conf/ext/news/',
         ],
         'sll_fe_user' => [
             'packagePath' => 'typo3conf/ext/sll_fe_user/',

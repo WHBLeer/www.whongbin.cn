@@ -1,0 +1,85 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-09-26 11:36:48
+ * @LastEditTime: 2019-10-12 09:03:10
+ * @LastEditors: Please set LastEditors
+ -->
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	Resources:
+	Private:
+	Templates:
+	List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<f:render partial="Messages" arguments="{flashMessages}" />
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<div class="card topaction">
+				<div class="topaction-left">
+					<f:link.action action="new" class="btn btn-info btn-sm">新增</f:link.action>
+				</div>
+				<div class="topaction-right">
+					<div class="btn-group>
+						<f:form class=" form-inline" action="list" object="{search}" name="search">
+						<div class="input-group">
+							<div class="input-icon">
+								<input type="hidden" name="id" value="{pageUid}" />
+								<f:form.textfield name="keyword" value="{keyword}" class="form-control  input-xs"
+									placeholder="请输入查询条件" />
+							</div>
+							<span class="input-group-btn">
+								<f:form.submit class="btn btn-success btn-sm" value="搜" />
+							</span>
+						</div>
+						</f:form>
+					</div>
+				</div>
+				<div class="card-body">
+					<f:widget.paginate objects="{tags}" as="tagsPagination"
+						configuration="{settings.paginate}">
+						<table class="table table-hover mb-0">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th width="50%">名称</th>
+									<th>别名</th>
+									<th>添加时间</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<f:for each="{tagsPagination}" as="tag" iteration="itemIteration">
+									<tr>
+										<td>
+											{f:cObject(typoscriptObjectPath:'lib.calc',data:'{itemIteration.cycle}+({page}-1)*{settings.paginate.itemsPerPage}')}
+										</td>
+										<td>{tag.title}</td>
+										<td>{tag.slug}</td>
+										<td>{tag.crdate -> f:format.date(format: 'Y-m-d H:i')}</td>
+										<td>
+											<f:link.action action="edit" arguments="{tag : tag}"
+												class="btn btn-info btn-xs edit">编辑
+											</f:link.action>
+											<f:link.action action="delete" arguments="{tag : tag}"
+												class="btn btn-danger btn-xs delete btn-del">删除
+											</f:link.action>
+										</td>
+									</tr>
+								</f:for>
+							</tbody>
+						</table>
+					</f:widget.paginate>
+				</div>
+			</div>
+		</div>
+	</f:section>
+
+</html>

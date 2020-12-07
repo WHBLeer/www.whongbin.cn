@@ -1151,7 +1151,8 @@ h1, h2, h3, h4, h5,
         font-size: 18px; }
 
 .search-form-wrap {
-  margin-bottom: 5em;
+  /* margin-bottom: 5em; */
+  margin-bottom: 0em;
   display: block; }
 
 .search-form .form-group {

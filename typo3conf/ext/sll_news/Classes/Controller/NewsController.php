@@ -2,6 +2,7 @@
 namespace Sll\SllNews\Controller;
 
 
+
 /***************************************************************
  *
  *  Copyright notice
@@ -118,8 +119,10 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$this->view->assign('newss', $newss);
 		$this->view->assign('pageUid', $GLOBALS['TSFE']->id);
 		$this->view->assign('page', $page);
-
-		// $this->addPages($categories);
+		/* foreach ($newss as $key => $news) {
+			$res = $this->uploadQiniu($news);
+			dump($res);
+		} */
 	}
 
 	public function addPages($categories)
@@ -292,13 +295,14 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 				}
 				$itemData = array(
 					'LINK' 		=> $typolink,
-					'IMGSRC' 	=> $news->getCoverlist(),
+					'IMGSRC' 	=> "https://qiniu.whongbin.cn/article-{$news->getUid()}.jpg?imageMogr2/thumbnail/640x640/format/webp/blur/1x0/quality/75|watermark/2/text/U2FuTGlMaW4=/font/Y29uc29sYXM=/fontsize/540/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim",
 					'CATEGORYS' => implode('',$categorys),
 					'TITLE' 	=> $news->getTitle(),
 					'AUTHORIMG' => $news->getAuthorimg(),
 					'AUTHOR' 	=> $news->getAuthor(),
 					'DATETIME' 	=> $news->getDatetime()->format('M d, Y'),
 				);
+				// JSON($itemData);
 				$felistItem = file_get_contents(ExtensionManagementUtility::extPath('sll_news') . '/Resources/Private/Templates/AjaxItem/Felist.item');
 				foreach ($itemData as $key => $value) {
 					$felistItem = str_replace('###' . $key . '###', $value, $felistItem);
@@ -335,9 +339,9 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 	 */
 	public function createAction(\Sll\SllNews\Domain\Model\News $news) {
 		$albumFile = $this->request->hasArgument('album')?$this->request->getArgument('album'):[];
-		if ($albumFile['error']==0) {
-			/** @var \Sll\SllFileManager\Controller\FileController $fileContr*/
-			$fileControllor = $this->objectManager->get(\Sll\SllFileManager\Controller\FileController::class);
+		/** @var \Sll\SllFileManager\Controller\FileController $fileContr*/
+		$fileControllor = $this->objectManager->get(\Sll\SllFileManager\Controller\FileController::class);
+		/* if ($albumFile['error']==0) {
 			$fileobj = $fileControllor->addFile($albumFile,['path'=>$this->filepath,'link'=>$this->filelink]);
 			if ($fileobj) $news->setCover($fileobj);
 		}
@@ -348,16 +352,52 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 				$fileobj = $fileControllor->addFile($annexFiles[$i],['path'=>$this->filepath,'link'=>$this->filelink]);
 				$news->addAnnex($fileobj);
 			}
-		}
+		} */
 
 		$wz = new \Sll\SllNews\Method\GetOnlyWord();
 		$news->setPathSegment($wz->strFilter($news->getTitle()));
 		$news->setTeaser(($news->getTeaser()!='') ? $news->getTeaser() : $wz->csubstr($news->getBodytext(), 120));
 		// dump($news);exit;
 		$this->newsRepository->add($news);
+		$persistenceManager = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager::class);
+        $persistenceManager->persistAll();
+		$this->file_exists($news->getUid());
+
+		//清除前台页面缓存
+		$cacheManager = $this->objectManager->get(\TYPO3\CMS\Extbase\Service\CacheService::class);
+		$cacheManager->clearPageCache([1,32,34]);
 
 		$this->addFlashMessage('保存成功！', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::OK);
 		$this->redirect('list');
+	}
+
+	/**
+	 * 创建封面图
+	 *
+	 * @return void
+	 * @author wanghongbin
+	 * tstamp: 2020-08-31
+	 */
+	public function uploadQiniu($uid)
+	{
+		require_once ExtensionManagementUtility::extPath('sll_plugin') . 'Classes/QiniuSDK/autoload.php';
+		$cfg = [
+			'access' => '5-d72zPYQymmaZXR4Igd3cMOULZ03Sy2oZ5JNlzY',
+			'secret' => '7tb1Xc5KfNCr2RWZxTvhP6T-brb4BTBgnlpVagvs',
+			'bucket' => 'whongbin-cn',
+			'domain' => 'https://qiniu.whongbin.cn/'
+		];
+		// 初始化签权对象
+		$auth = new \Qiniu\Auth($cfg['access'], $cfg['secret']);
+		$bucketMgr = new \Qiniu\Storage\BucketManager($auth);
+		if ($key=='') $key = 'article-' . $uid . '.jpg';
+		list($ret, $err) = $bucketMgr->fetch('https://acg.xydwz.cn/api/api.php?rand='.$uid,$cfg['bucket'],$key);
+		if(!$err == false) {
+			$res = array('code' => 0,'msg' => $err);
+		} else {
+			$res = $cfg['domain'] . $ret['key'];
+		}
+		return $res;
 	}
 
 	/**
@@ -382,7 +422,7 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		// dump($news);exit;
         /** @var \Sll\SllFileManager\Controller\FileController $fileContr*/
         $fileControllor = $this->objectManager->get(\Sll\SllFileManager\Controller\FileController::class);
-        $albumFile = $this->request->hasArgument('album')?$this->request->getArgument('album'):[];
+        /* $albumFile = $this->request->hasArgument('album')?$this->request->getArgument('album'):[];
         if ($albumFile['error']==0) {
             $fileobj = $fileControllor->addFile($albumFile,['path'=>$this->filepath,'link'=>$this->filelink]);
             if ($fileobj) {
@@ -398,14 +438,42 @@ class NewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
                 $fileobj = $fileContro->addFile($annexFiles[$i],['path'=>$this->filepath,'link'=>$this->filelink]);
                 $news->addAnnex($fileobj);
             }
-        }
-        
+		} */
+		
+		$this->file_exists($news->getUid());
         $wz = new \Sll\SllNews\Method\GetOnlyWord();
         $news->setPathSegment($wz->strFilter($news->getTitle()));
         $news->setTeaser(($news->getTeaser()!='') ? $news->getTeaser() : $wz->csubstr($news->getBodytext(), 120));
-        $this->newsRepository->update($news);
+		$this->newsRepository->update($news);
+		
+		//清除前台页面缓存
+		$cacheManager = $this->objectManager->get(\TYPO3\CMS\Extbase\Service\CacheService::class);
+		$cacheManager->clearPageCache([1,32,34]);
+
         $this->addFlashMessage('文章编辑成功!', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::OK);
         $this->redirect('list');
+	}
+
+	/**
+	 * 封面图不存在时新建封面
+	 *
+	 * @param [type] $uid
+	 * @return void
+	 * @author wanghongbin
+	 * tstamp: 2020-11-04
+	 */
+	public function file_exists($uid)
+	{
+		$url = "https://qiniu.whongbin.cn/article-{$uid}.jpg";
+		$ch = curl_init();
+		$timeout = 10;
+		curl_setopt ($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_HEADER, 1);
+		curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+
+		$result = curl_exec($ch);
+		if (preg_match("/404/", $result)) $this->uploadQiniu($uid);
 	}
 
 	/**

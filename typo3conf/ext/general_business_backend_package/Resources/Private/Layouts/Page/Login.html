@@ -1,2 +1,9 @@
-
 <f:render section="Main" />
+<script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
+<script>
+    const pattern = trianglify({
+        width: window.innerWidth,
+        height: window.innerHeight
+    })
+    document.body.appendChild(pattern.toCanvas())
+</script>

@@ -119,7 +119,7 @@ page {
 
             ICP = TEXT
             ICP.data = GLOBAL:TYPO3_CONF_VARS|FE|icp
-            ICP.wrap =<a href="http://www.beian.miit.gov.cn/" target="_blank" >|</a>
+            ICP.wrap =<a href="http://beian.miit.gov.cn/" target="_blank" >|</a>
 
             themeCopyright = TEXT
             themeCopyright.value = {$page.theme.copyright.enable}
@@ -198,7 +198,8 @@ page {
         file10 = {$page.includePath.main}css/aos.css
 
         file11 = {$page.includePath.main}css/style.css
-        // file12 = https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
+        file12 = {$page.includePath.main}lightbox2/dist/css/lightbox.min.css
+        // file13 = https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
     }
 
     includeJSLibs {
@@ -207,9 +208,27 @@ page {
 
     includeJS {
         file1 = {$page.includePath.main}js/jquery-3.3.1.min.js
+        file2 = {$page.includePath.main}lightbox2/dist/js/lightbox.min.js
         // file2 = https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js
     }
-
+    jsInline {
+        10 = TEXT
+        10.value (
+            var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?2e7b78aaf5c4fbada76dfcf6a2de10ef";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+            (function () {
+                var bp = document.createElement("script");
+                bp.src = "https://zz.bdstatic.com/linksubmit/push.js"
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s)
+            })();
+        )
+    }
     includeJSFooterlibs {
 
     }
@@ -239,7 +258,7 @@ config {
     absRefPrefix = auto
     no_cache = {$config.no_cache}
     uniqueLinkVars = 1
-    pageTitleFirst = 1
+    pageTitleFirst = 0
     linkVars = L
     prefixLocalAnchors = {$config.prefixLocalAnchors}
     renderCharset = utf-8

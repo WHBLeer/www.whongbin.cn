@@ -1,1 +1,0 @@
-Classname which implements the validator.

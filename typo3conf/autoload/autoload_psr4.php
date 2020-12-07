@@ -7,7 +7,6 @@ $typo3InstallDir = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/';
 return array(
     'EBT\\ExtensionBuilder\\' => array($typo3InstallDir . 'typo3conf/ext/extension_builder/Classes'),
     'GeorgRinger\\News\\' => array($typo3InstallDir . 'typo3conf/ext/news/Classes'),
-    'Nitsan\\NsNewsComments\\' => array($typo3InstallDir . 'typo3conf/ext/ns_news_comments/Classes'),
     'SFC\\Staticfilecache\\' => array($typo3InstallDir . 'typo3conf/ext/staticfilecache/Classes'),
     'SIMONKOEHLER\\Slug\\' => array($typo3InstallDir . 'typo3conf/ext/slug/Classes'),
     'Sll\\Common\\' => array($typo3InstallDir . 'typo3conf/ext/common/Classes'),

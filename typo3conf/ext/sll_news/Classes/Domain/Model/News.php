@@ -189,14 +189,15 @@ class News extends \GeorgRinger\News\Domain\Model\News{
 	 */
 	public function getCoverimg()
 	{
-        if ($this->getCover()) {
+        /* if ($this->getCover()) {
             $this->coverimg = $this->getCover()->getRelativePath();
         } else {
             $random = rand(1,3350);
             // $this->coverimg = "https://picsum.photos/600/800?random=$random.jpg";
             // $this->coverimg = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
             $this->coverimg = "https://acg.xydwz.cn/api/api.php?rand=$random";
-        }
+        } */
+        $this->coverimg = "https://qiniu.whongbin.cn/article-{$this->getUid()}.jpg?imageMogr2/thumbnail/640x640/format/webp/blur/1x0/quality/75|watermark/2/text/U2FuTGlMaW4=/font/Y29uc29sYXM=/fontsize/540/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim";
         return $this->coverimg;
     }
     
@@ -207,10 +208,11 @@ class News extends \GeorgRinger\News\Domain\Model\News{
 	 */
 	public function getCoverlist()
 	{
-        $random = rand(1,3350);
+        /* $random = rand(1,3350);
         // $this->coverlist = "https://picsum.photos/400/300?random=$random.jpg";
         // $this->coverlist = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
-        $this->coverlist = "https://acg.xydwz.cn/api/api.php?rand=$random";
+        $this->coverlist = "https://acg.xydwz.cn/api/api.php?rand=$random"; */
+        $this->coverimg = "https://qiniu.whongbin.cn/article-{$this->getUid()}.jpg?imageMogr2/thumbnail/640x640/format/webp/blur/1x0/quality/75|watermark/2/text/U2FuTGlMaW4=/font/Y29uc29sYXM=/fontsize/540/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim";
         return $this->coverlist;
     }
     

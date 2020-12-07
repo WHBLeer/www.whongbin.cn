@@ -9,8 +9,6 @@ namespace GeorgRinger\News\Utility;
  * LICENSE.txt file that was distributed with this source code.
  */
 use TYPO3\CMS\Core\PageTitle\AbstractPageTitleProvider;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 /**
  * Page Utility class
@@ -20,7 +18,7 @@ class PageTitleProvider extends AbstractPageTitleProvider
 {
     public function __construct()
     {
-        $this->title = '三里林-页面';
+        $this->title = '三里林';
     }
 
     /**

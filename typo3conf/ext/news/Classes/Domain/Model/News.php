@@ -1542,7 +1542,9 @@ class News extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	{
         $random = rand(1,3360);
         // $this->coverlist = "https://wallpaper.infinitynewtab.com/wallpaper/$random.jpg";
-        $this->coverlist = "https://acg.xydwz.cn/api/api.php?rand=$random";
+        // $this->coverlist = "https://acg.xydwz.cn/api/api.php?rand=$random";
+        $this->coverlist = "https://qiniu.whongbin.cn/article-{$this->getUid()}.jpg?imageMogr2/thumbnail/640x640/format/webp/blur/1x0/quality/75|watermark/2/text/U2FuTGlMaW4=/font/Y29uc29sYXM=/fontsize/540/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim";
+
         return $this->coverlist;
     }
 

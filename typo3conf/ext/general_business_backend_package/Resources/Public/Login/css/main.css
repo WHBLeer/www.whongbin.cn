@@ -120,7 +120,12 @@ iframe {
   width: 100%;
   margin: 0 auto;
 }
-
+canvas {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
 .container-login100 {
   width: 100%;  
   min-height: 100vh;
@@ -133,7 +138,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #e9faff;
+  /* background: #e9faff; */
 }
 
 .wrap-login100 {

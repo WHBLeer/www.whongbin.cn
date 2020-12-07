@@ -1,0 +1,104 @@
+﻿<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:sll="http://typo3.org/ns/Sll/Common/ViewHelpers" 
+      data-namespace-typo3-fluid="true">
+    <f:layout name="Default" />
+
+    This Template is responsible for creating a table of domain objects.
+
+    If you modify this template, do not forget to change the overwrite settings
+    in /Configuration/ExtensionBuilder/settings.yaml:
+    Resources:
+    Private:
+    Templates:
+    List.html: keep
+
+    Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+ 
+    <f:section name="content">
+        <div class="py-2 bg-light">
+            <div class="container">
+                <div class="row">
+                    <f:if condition="{settings.listType}==1">
+                        <f:then>
+                            <div class="col-md-6">
+                                <span>文章动态</span>
+                                <h3>Articles</h3>
+                                <p>十年前,我也曾怀有鸿鹄之志!但是,越伟大的梦想越容易被消磨...是的,没错,我现在的目标就是解决温饱!嗯~ o(*￣▽￣*)o还算实际的吧~</p>
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <div class="col-md-6">
+                                <span>媒体分享</span>
+                                <h3>Media</h3>
+                                <p>愿世间美好与你环环相扣!( •̀ ω •́ )y</p>
+                            </div>
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+        
+        <div class="site-section bg-white">
+            <div class="container">
+                <div class="row" id="article-container">
+                </div>
+            </div>
+        </div>       
+        <section class="loading-box">
+            <div class="loader loader-13">
+                <div class="css-heart heart1"></div>
+                <div class="css-heart heart2"></div>
+                <div class="css-heart heart3"></div>
+                <div class="css-heart heart4"></div>
+            </div>
+        </section> 
+        <f:link.action action="ajax" pageUid="{pageUid}" id="ajaxurl"></f:link.action>
+        <script type="text/javascript">
+            //滚动加载更多
+            var pullRefreshss = true;
+            var url = $('#ajaxurl').attr('href');
+            var page = 1;
+            getItems(url,page);
+            $(window).scroll(
+                function () {
+                    /*当前滚动条到顶部的距离*/
+                    var top = $(document).scrollTop();
+                    /*当前浏览器的可是高度*/
+                    var height = document.body.clientHeight;
+                    /*当前网页（body）的高度*/
+                    var z_height = $(document).height();
+                    /*判断（网页的body高度减去当前浏览器的可视高度是否等于滚动条到顶部的距离）
+                    * 相等：则判定当前页面在底部
+                    * 不相等：判定当前页面不在底部
+                    * */
+                    var stats = (z_height - height - top < 1);
+                    console.log(stats)
+
+                    if (stats) {
+                        /*当前网页在最底部，执行该函数*/
+                        page++;
+                        setTimeout(getItems(url,page), 1000); //为加载列表的方法控制滚动加载显示的时间
+                        // getItems(url,page);//调用加载列表的方法
+                    } else {
+                        if (!pullRefreshss) {
+                            $("#article-container").html("没有更多的数据");
+                        }
+                    }
+                }
+            );
+            function getItems(url,page) {
+                $.ajax({
+                    type:'POST',
+                    data:{cmd:'getFelistItem',page:page},
+                    url:url,
+                    dataType:'html',
+                    success:function(data){
+                        $('#article-container').append(data);
+                        $('.loading-box').css('display','none');
+                    }
+                });
+            }
+        </script>
+    </f:section>
+
+</html>

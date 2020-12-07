@@ -9,11 +9,11 @@ plugin.tx_news {
 plugin.tx_sllnew_news {
     view {
         # cat=plugin.tx_sllnew_news/file; type=string; label=Path to template root (FE)
-        templateRootPath = EXT:sll_news/Resources/Private/Templates/
+        templateRootPath = EXT:all_views/sll_news/Templates/
         # cat=plugin.tx_sllnew_news/file; type=string; label=Path to template partials (FE)
-        partialRootPath = EXT:sll_news/Resources/Private/Partials/
+        partialRootPath = EXT:all_views/sll_news/Partials/
         # cat=plugin.tx_sllnew_news/file; type=string; label=Path to template layouts (FE)
-        layoutRootPath = EXT:sll_news/Resources/Private/Layouts/
+        layoutRootPath = EXT:all_views/sll_news/Layouts/
     }
     persistence {
         # cat=plugin.tx_sllnew_news//a; type=string; label=Default storage PID

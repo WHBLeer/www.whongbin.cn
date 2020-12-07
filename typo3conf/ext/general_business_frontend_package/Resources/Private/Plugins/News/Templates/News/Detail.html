@@ -13,6 +13,22 @@
 <f:section name="content">
 	<f:if condition="{newsItem}">
 		<f:then>
+			<f:if condition="{newsItem.alternativeTitle}">
+				<f:then>
+					<n:format.nothing>
+						<n:titleTag>
+							{newsItem.alternativeTitle}
+						</n:titleTag>
+					</n:format.nothing>
+				</f:then>
+				<f:else>
+					<n:format.nothing>
+						<n:titleTag>
+							{newsItem.title}
+						</n:titleTag>
+					</n:format.nothing>
+				</f:else>
+			</f:if>
 			<link rel="stylesheet" href="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/css/editormd.css">
 			<link rel="stylesheet" href="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/css/editormd.preview.css">
 			<link rel="stylesheet" href="typo3conf/ext/sll_plugin/Resources/Public/Css/sll.css">
@@ -21,12 +37,12 @@
 			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/lib/raphael.min.js"></script>
 			<script src="typo3conf/ext/sll_plugin/Resources/Public/Libraries/editorMd/editormd.js"></script>
 			<script>
-				document.getElementById("articleCategory").innerHTML = '<f:for each="{newsItem.categories}" as="category"><span class="post-category detail-title-category text-white bm-3 {category.categoryclass}">{category.title}</span></f:for>';
 				document.getElementById("articleTitle").innerText = '{newsItem.title}';
 				document.getElementById("authorImage").src = '{newsItem.authorimg}';
 				document.getElementById("author").innerText = '{newsItem.author}';
 				document.getElementById("dateTime").innerText = " - {newsItem.datetime -> f:format.date(format: 'M d, Y')}";
 			</script>
+			
 			<f:if condition="{settings.detail.showPrevNext}">
 				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
 					<f:if condition="{paginated}">
@@ -143,6 +159,8 @@
 				</f:if>
 			</div>
 			<script type="text/javascript">
+				var lightboxId = '{newsItem.uid}';
+				var lightboxTitle = '{newsItem.title}';
 				var testEditor;
 				$(function () {
 					testEditor = editormd.markdownToHTML("article-editormd", {
@@ -152,6 +170,11 @@
 						tocm: true,
 						codeFold: true,
 						previewCodeHighlight:true
+					});
+					$("#article-editormd img").each(function () {
+						var img_url = $(this).attr("src");
+						var img_box = '<a href="'+ img_url+'" data-lightbox="Article-'+ lightboxId+'" data-title="'+ lightboxTitle+'"><img src="'+ img_url+'" /></a>';
+						$(this).parent().empty().append(img_box);
 					});
 				});
 			</script>
