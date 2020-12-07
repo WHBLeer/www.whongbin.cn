@@ -3,23 +3,12 @@
       data-namespace-typo3-fluid="true">
     <f:layout name="Default" />
 
-    This Template is responsible for creating a table of domain objects.
-
-    If you modify this template, do not forget to change the overwrite settings
-    in /Configuration/ExtensionBuilder/settings.yaml:
-    Resources:
-    Private:
-    Templates:
-    List.html: keep
-
-    Otherwise your changes will be overwritten the next time you save the extension in the extension builder
- 
     <f:section name="content">
         <f:render partial="Messages" arguments="{flashMessages}" />
         <div class="dataTables_wrapper dt-bootstrap4">
             <div class="row mb-10">
                 <div class="col-sm-12 col-md-9">
-                    <f:link.action action="new" class="btn btn-info" arguments="{t:t}">新增**</f:link.action>
+                    <f:link.action action="new" class="btn btn-info" arguments="{t:t}">新增文章</f:link.action>
                 </div>
                 <div class="col-sm-12 col-md-3">
                     <f:form action="list" object="{search}" name="search">
